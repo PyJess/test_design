@@ -1,0 +1,11 @@
+Here you find the software requirement:
+
+{input}
+
+Use the following field mapping as the ground truth for your generation if needed:
+
+{mapping}
+
+Here you find some additional informations that you can use to generate more accurate and dettailed test cases:
+
+{context}

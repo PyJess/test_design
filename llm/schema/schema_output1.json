@@ -1,0 +1,129 @@
+{
+  "name": "AI_Test_Case_Generation_Schema",
+  "description": "Schema for AI-generated Polarion-compatible test cases. The AI must fill only the listed fields and ignore all others.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "Title": {
+        "type": "string",
+        "description": "Concise descriptive title summarizing the scope and objective of the test scenario."
+      },
+      "ID": {
+        "type": "string",
+        "description": "Unique identifier number or code for the test case."
+      },
+      "Steps": {
+        "type": "array",
+        "description": "List of ordered steps for executing the test case.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Step": { "type": "integer", "description": "Sequential number of the step." },
+            "Step Description": { "type": "string", "description": "Detailed description of the action to perform in this step." },
+            "Expected Result": { "type": "string", "description": "Expected outcome after executing this step." }
+          },
+          "required": ["Step", "Step Description", "Expected Result"]
+        }
+      },
+      "Test Group": {
+        "type": "string",
+        "description": "Device category or family on which the test will be executed."
+      },
+      "Channel": {
+        "type": "string",
+        "description": "Channel or interface used to interact with the application under test (e.g., Web, App, IVR, Chatbot)."
+      },
+      "Device": {
+        "type": "string",
+        "description": "Hardware device involved in the test (e.g., Smartphone, Laptop, Tablet)."
+      },
+      "Priority": {
+        "type": "string",
+        "enum": ["High", "Medium", "Low"],
+        "description": "Execution priority level for this test case."
+      },
+      "Test Stage": {
+        "type": "string",
+        "description": "Testing environment or stage where the test is executed (e.g., SIT, UAT, PREPROD)."
+      },
+      "Reference System": {
+        "type": "string",
+        "description": "Functional area or application component under test."
+      },
+      "Preconditions": {
+        "type": "string",
+        "description": "Conditions or configurations required to execute the test case."
+      },
+      "Execution Mode": {
+        "type": "string",
+        "enum": ["Manual", "Automated"],
+        "description": "Mode in which the test case will be executed."
+      },
+      "Functionality": {
+        "type": "string",
+        "description": "Specific functionality or feature covered by this test case."
+      },
+      "Test Type": {
+        "type": "string",
+        "enum": ["functional", "automation", "ux_ui", "content", "vapt", "performance", "seo"],
+        "description": "Main category of the test case."
+      },
+      "No Regression Test": {
+        "type": "boolean",
+        "description": "Indicates whether this test should be included in regression test suites."
+      },
+      "Automation": {
+        "type": "boolean",
+        "description": "Indicates whether this test should be considered for automation."
+      },
+      "Dataset": {
+        "type": "string",
+        "description": "Data required for test execution (e.g., specific user credentials, input files, environment data)."
+      },
+      "Expected Result": {
+        "type": "string",
+        "description": "Overall expected result after all steps have been executed (final objective of the scenario)."
+      },
+      "Country": {
+        "type": "string",
+        "description": "Geographical indication related to the specific application under test."
+      },
+      "Type": {
+        "type": "string",
+        "description": "Polarion element type (e.g., Test Case, Test Scenario)."
+      },
+      "Partial Coverage Description": {
+        "type": "string",
+        "description": "Optional field describing any partial coverage of the functionality under test."
+      },
+      "_polarion": {
+        "type": "string",
+        "description": "Polarion ID(s) of related requirements, user stories, or test cases from which this test is derived."
+      }
+    },
+    "required": [
+      "Title",
+      "ID",
+      "Steps",
+      "Test Group",
+      "Channel",
+      "Device",
+      "Priority",
+      "Test Stage",
+      "Reference System",
+      "Preconditions",
+      "Execution Mode",
+      "Functionality",
+      "Test Type",
+      "No Regression Test",
+      "Automation",
+      "Dataset",
+      "Expected Result",
+      "Country",
+      "Type",
+      "_polarion",
+      "Partial Coverage Description"
+    ],
+    "additionalProperties": false
+  }
+}

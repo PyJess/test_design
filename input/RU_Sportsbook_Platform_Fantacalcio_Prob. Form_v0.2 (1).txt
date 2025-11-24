@@ -1,0 +1,360 @@
++---+--------------------------------------------------------------------------------------------------------------------+---+
+|   |                                                                                                                    |   |
++===+:==================================================================================================================:+===+
+|   | **Fantacalcio -- Probabili Formazioni e "Ultime dai campi"**                                                       |   |
++---+--------------------------------------------------------------------------------------------------------------------+---+
+|   |                                                                                                                    |   |
++---+--------------------------------------------------------------------------------------------------------------------+---+
+|   |                                                                                                                    |   |
++---+--------------------------------------------------------------------------------------------------------------------+---+
+|   | +----------------------------------+:----------------------------:+:------------:+:-------------------------:+     |   |
+|   | | **Ciclo di emissione**           | **Acronimi**                 | **Data**     | **Firma**                 |     |   |
+|   | +----------------------------------+------------------------------+--------------+---------------------------+     |   |
+|   | | Redatto da:                      | Sportsbook Experience        | 27/03/2025   |                           |     |   |
+|   | |                                  | Specialist                   |              |                           |     |   |
+|   | | Domenico Romeo                   |                              |              |                           |     |   |
+|   | +----------------------------------+------------------------------+--------------+---------------------------+     |   |
+|   | | Verificato da:                   | Sportsbook Experience        | 27/03/2025   |                           |     |   |
+|   | |                                  | Manager                      |              |                           |     |   |
+|   | | Marco Rebuglio                   |                              |              |                           |     |   |
+|   | +----------------------------------+------------------------------+--------------+---------------------------+     |   |
+|   | | Approvato da:                    |                              |              |                           |     |   |
+|   | +----------------------------------+------------------------------+--------------+---------------------------+     |   |
+|   |                                                                                                                    |   |
+|   |   ------------ -------------------------------------------------------------------------- ------------------------ |   |
+|   |   **Rev. N.**                         **Oggetto della revisione**                                 **Data**         |   |
+|   |                                                                                                                    |   |
+|   |       0.1                                   Prima emissione                                                        |   |
+|   |                                                                                                                    |   |
+|   |       0.2                                Integrazione requisiti                                  11/04/2025        |   |
+|   |                                                                                                                    |   |
+|   |                                                                                                                    |   |
+|   |                                                                                                                    |   |
+|   |                                                                                                                    |   |
+|   |                                                                                                                    |   |
+|   |                                                                                                                    |   |
+|   |   ------------ -------------------------------------------------------------------------- ------------------------ |   |
++---+--------------------------------------------------------------------------------------------------------------------+---+
+
+# Summary {#summary .TOC-Heading}
+
+[1 Introduzione [4](#introduzione)](#introduzione)
+
+[1.1 Pre-condizione utilizzo API Fantacalcio
+[4](#pre-condizione-utilizzo-api-fantacalcio-ru-1)](#pre-condizione-utilizzo-api-fantacalcio-ru-1)
+
+[1.1.1 Modifiche attuali API Fantacalcio [4](#modifiche-attuali-api-fantacalcio)](#modifiche-attuali-api-fantacalcio)
+
+[1.1.2 OPTA Mappings Feed [4](#opta-mappings-feed)](#opta-mappings-feed)
+
+[2 Requisiti [5](#requisiti)](#requisiti)
+
+[2.1 Utilizzo API Fantacalcio per specifica manifestazione su brand
+[5](#utilizzo-api-fantacalcio-per-specifica-manifestazione-su-brand)](#utilizzo-api-fantacalcio-per-specifica-manifestazione-su-brand)
+
+[2.1.1 Priorità Fantacalcio su Manifestazione/Brand
+[5](#priorità-fantacalcio-su-manifestazionebrand-ru-2)](#priorità-fantacalcio-su-manifestazionebrand-ru-2)
+
+[2.1.2 Esclusione Fantacalcio su specifico match -Eventi rinviati
+[5](#esclusione-fantacalcio-su-specifico-match--eventi-rinviati-ru-3)](#esclusione-fantacalcio-su-specifico-match--eventi-rinviati-ru-3)
+
+[2.1.3 Esclusione Fantacalcio su specifico match -- Recuperi e Match Day
+[5](#esclusione-fantacalcio-su-specifico-match-recuperi-e-match-day-ru-4)](#esclusione-fantacalcio-su-specifico-match-recuperi-e-match-day-ru-4)
+
+[2.1.4 Soluzione di Fallback in caso di esclusione Fantacalcio
+[6](#soluzione-di-fallback-in-caso-di-esclusione-fantacalcio-ru-5)](#soluzione-di-fallback-in-caso-di-esclusione-fantacalcio-ru-5)
+
+[2.2 Sezione Giocatori -- Manifestazioni con Fantacalcio
+[6](#sezione-giocatori-manifestazioni-con-fantacalcio)](#sezione-giocatori-manifestazioni-con-fantacalcio)
+
+[2.2.1 Vista Campo - Formazioni Probabili/Ufficiali
+[6](#vista-campo---formazioni-probabiliufficiali-ru-6)](#vista-campo---formazioni-probabiliufficiali-ru-6)
+
+[2.2.2 Vista Campo - Modulo di gioco [6](#vista-campo---modulo-di-gioco-ru-7)](#vista-campo---modulo-di-gioco-ru-7)
+
+[2.2.3 Vista Campo -- Gestione Panchina [7](#vista-campo-gestione-panchina-ru-8)](#vista-campo-gestione-panchina-ru-8)
+
+[2.2.4 Probabili formazioni - % di titolarità
+[7](#probabili-formazioni---di-titolarità-ru-9)](#probabili-formazioni---di-titolarità-ru-9)
+
+[2.2.5 Ultime dai campi [8](#ultime-dai-campi-ru-10)](#ultime-dai-campi-ru-10)
+
+[2.2.6 Giocatori Diffidati [8](#giocatori-diffidati-ru-11)](#giocatori-diffidati-ru-11)
+
+[2.2.7 Giocatori Squalificati [8](#giocatori-squalificati-ru-12)](#giocatori-squalificati-ru-12)
+
+[2.2.8 Giocatori indisponibili [9](#giocatori-indisponibili-ru-13)](#giocatori-indisponibili-ru-13)
+
+[2.2.9 Giocatori in ballottaggio [9](#giocatori-in-ballottaggio-ru-14)](#giocatori-in-ballottaggio-ru-14)
+
+[2.2.10 Giocatori in dubbio [9](#giocatori-in-dubbio-ru-15)](#giocatori-in-dubbio-ru-15)
+
+[2.2.11 Stadio [9](#stadio-ru-16)](#stadio-ru-16)
+
+[2.2.12 Arbitro [9](#arbitro-ru-17)](#arbitro-ru-17)
+
+[2.2.13 Broadcaster [9](#broadcaster-ru-19)](#broadcaster-ru-19)
+
+[2.2.14 Ultimo Aggiornamento [9](#ultimo-aggiornamento-ru-18)](#ultimo-aggiornamento-ru-18)
+
+# Introduzione
+
+All'interno di questo documento vengono normati i requisiti per l'integrazione delle informazioni provenienti dalle
+seguenti API fornite da Fantacalcio
+
+- "ProbableLineupFULL"
+
+- "MatchCalendar"
+
+- "LastFromFields"
+
+Fantacalcio e le sue API vanno ad integrarsi come nuovo fornitore per l'alimentazione della vista campetti prematch
+nella quale grazie alle API Fantacalcio sarà possibile inserire:
+
+- Probabili formazioni
+
+- Formazioni ufficiali
+
+- Percentuali di titolarità dei player
+
+- Altre informazioni come diffidati, squalificati o infortunati
+
+- Sezione testuale di news sulle squadre ('Ultime dai campi')
+
+L'utilizzo e la renderizzazione delle informazioni provenienti dalle API Fantacalcio deve essere potenzialmente
+possibile su tutti i client di tutti i brand all'interno di cui la piattaforma Betting Sisal opera
+
+## Pre-condizione utilizzo API Fantacalcio (RU 1)
+
+### Modifiche attuali API Fantacalcio
+
+Perché le API Fantacalcio possano essere utilizzate sulla piattaforma Betting Sisal è necessario che il fornitore
+integri all'interno dei propri servizi 'ProbableLineUpFULL' e 'LastFromFields' gli ID OPTA delle varie entità riportate
+nel servizio stesso (player, match ecc)
+
+### OPTA Mappings Feed
+
+Per poter usufruire delle API Fantacalcio sarà inoltre necessario integrare il servizio OPTA Sports Data Soccer API -
+Mappings feed (MAP)
+(<https://documentation.statsperform.com/docs/rh/sdapi/Topics/soccer/opta-sdapi-soccer-api-mappings.htm#main-guide>) che
+consentirà di convertire gli ID Opta in formato XML (in possesso a Fantacalcio) con quelli in formato SDAPI
+correntemente in uso all'interno della piattaforma Sisal.
+
+# Requisiti 
+
+## Utilizzo API Fantacalcio per specifica manifestazione su brand 
+
+### Priorità Fantacalcio su Manifestazione/Brand (RU 2)
+
+Su specifiche manifestazioni della disciplina Calcio e per uno specifico Brand deve essere possibile inserire in
+priorità di utilizzo per la vista dei Campetti Prematch il fornitore Fantacalcio.
+
+Deve essere possibile ad esempio poter mettere in priorità Fantacalcio per la visualizzazione dei campetti prematch
+sulla manifestazione Serie A sul solo Brand Sisal, mantenendo sulla stessa manifestazione l'attuale soluzione standard
+(V4 Soccer Sportradar) su altri brand (Pokerstars, MDJS).
+
+Sarà business a indicare a IT su quali manifestazioni e per quali brand inserire Fantacalcio in priorità sui campetti
+prematch. Non sarà necessario l'utilizzo di un tool di backoffice e una configurazione a caldo per questo tipo di
+settaggi, che potranno essere resi attivi anche a valle di un rilascio.
+
+NB: per i campetti del palinsesto live si continuerà a utilizzare la soluzione offerta dalle API Soccer V4 di Sportradar
+anche per manifestazioni e brand su cui è stata indicata la priorità per Fantacalcio.
+
+Tutti i requisiti indicati nel documento si intendono validi e da applicare per il Metatemplate/tab giocatori prematch
+sulle sole manifestazioni e brand con il fornitore Fantacalcio in priorità
+
+### Esclusione Fantacalcio su specifico match -Eventi rinviati (RU 3)
+
+Gli eventi che vengono rinviati presentano all'interno dell'API stato "6" all'interno del campo "Status"
+
+![](media/image1.png){width="6.6930555555555555in" height="0.6013888888888889in"}
+
+Per eventi che presentano questo valore all'interno del suddetto deve essere escluso l'uso dell'API Fantacalcio dalla
+piattaforma Sisal.
+
+Per la valorizzazione dei campetti di tali eventi, Sisal continuerà ad utilizzare le sole formazioni ufficiali dalle API
+Sportradar Soccer V4 attualmente in uso.
+
+### Esclusione Fantacalcio su specifico match -- Recuperi e Match Day (RU 4)
+
+Al fine di escludere le API di Fantacalcio per i match di recupero di turni precedenti e utilizzarle solo sugli eventi
+del turno corrente o imminente, per tutti i match quotati per una specifica manifestazione deve essere controllato il
+"Match Day" associato all'interno delle API "MatchCalendar". Le API di Fantacalcio vanno utilizzate per gli eventi
+quotati in palinsesto che presentano il valore "Match Day" più alto all'interno dell'API.
+
+Esempio: per la Serie A (con Fantacalcio in priorità) in data mercoledì 12/3 si gioca il recupero del match Bologna --
+Milan della giornata numero 7. Nel weekend 15/3 e 16/3 si giocheranno i match della giornata numero 20. Su sisal sono
+presenti le quote sia di Bologna-Milan che dei match del weekend. Secondo la logica descritta in questo capitolo
+Fantacalcio verrà quindi scartata per Bologna-Milan (che si appoggerà a Sportradar per le sole formazioni ufficiali) e
+usata per le partite del weekend del turno numero 20
+
+### Soluzione di Fallback in caso di esclusione Fantacalcio (RU 5)
+
+Per le manifestazioni e i brand su cui business ha indicato la priorità per il fornitore Fantacalcio, Sisal sul prematch
+continuerà ad utilizzare come soluzione di fallback le sole formazioni ufficiali prese dalle API Sportradar Soccer V4
+attualmente in uso sui match per cui le API di Fantacalcio non sono utilizzabili secondo i criteri descritti sopra.
+
+## Sezione Giocatori -- Manifestazioni con Fantacalcio
+
+Si descrivono in questa sezione le informazioni da visualizzare all'interno delle sezioni dedicate ai giocatori
+(Metatemplate Giocatori/Tab Giocatori) di match per cui vengono utilizzate le API di Fantacalcio. Si fa quindi
+riferimento a manifestazioni per cui è stata indicata Fantacalcio come priorità per lo specifico Brand.
+
+### Vista Campo - Formazioni Probabili/Ufficiali (RU 6)
+
+Le API Fantacalcio per uno specifico match forniscono sia le formazioni probabili che quelle ufficiali. Ne deriva che
+per le manifestazioni e i brand con Fantacalcio in priorità la vista *Campo* deve essere quella su cui l'utente atterra
+di default (all'ingresso sul metatemplate / tab giocatori) nel momento in cui viene selezionato un evento per cui sono
+disponibili o le formazioni probabili oppure quelle ufficiali.
+
+All'atterraggio sulla vista Campo di un match appartenente a una manifestazione/brand con Fantacalcio in priorità deve
+essere presente un wording riportante
+
+- ***Probabili Formazioni*** \> se i giocatori riportati come titolari dalle API Fantacalcio hanno una % di titolarità
+  inferiore al 100%
+
+- ***Formazioni Ufficiali*** \> se tutti i giocatori riportati come titolari dalle API di Fantacalcio hanno una % di
+  titolarità pari al 100
+
+Nelle API *ProbableLineupsFULL* i titolari sono riportati come *starter* e la percentuale è indicata nel tag *percent*
+
+### Vista Campo - Modulo di gioco (RU 7)
+
+Per disegnare gli schieramenti di gioco delle squadre presenti nella versione "Campetto" dei client di gioco Sisal
+devono essere presi in considerazione i campi "Starter" e "Trend" presenti nell'API *ProbableLineup Full.*
+
+Il campo "*Trend"* contiene il modulo di gioco di ogni team in questione (es 4231)
+
+![Immagine che contiene testo, Carattere, schermata, bianco Descrizione generata
+automaticamente](media/image2.png){width="4.5503947944007in" height="0.8750754593175853in"}
+
+Il campo "*Starter"* contiene la lista dei giocatori titolari di ogni team.
+
+![Immagine che contiene testo, schermata, Carattere Descrizione generata
+automaticamente](media/image3.png){width="5.775500874890638in" height="3.0836001749781277in"}
+
+Al fine di inserire ogni giocatore nella corretta posizione all'interno del campetto, non si dovrà tenere in
+considerazione l\'attributo \"position\" associato a ogni giocatore nel servizio *ProbableLineup* *Full* ma si dovrà
+tenere conto del solo modulo (\"trend\":\"4231\") e dell\'ordine in cui vengono riportati i giocatori all\'interno della
+risposta di Fantacalcio. Seguendo l\'ordine dei giocatori contenuto nella risposta del servizio, Sisal dovrà ordinarli
+dall\'alto verso il basso e da destra verso sinistra.
+
+Esempio su un 4-2-3-1: 1°: portiere 2°: terzino dx 3° dif centrale dx 4° dif centrale sx 5° terzino sx 6° mediano di dx
+7° mediano di sx 8° ala dx 9° trequartista 10° ala sx 11° centravanti/punta.
+
+### Vista Campo -- Gestione Panchina (RU 8)
+
+Al fine di costruire la sezione "Panchina" dei campetti deve essere preso in considerazione il campo "Bench".
+All'interno di questo campo viene fornita la lista dei giocatori non presenti in formazione titolare e devono essere
+riportati sui client rispettando l'ordine di risposta del servizio Fantacalcio.
+
+![Immagine che contiene testo, Carattere, schermata Descrizione generata
+automaticamente](media/image4.png){width="4.5920647419072615in" height="1.1500995188101488in"}
+
+### Probabili formazioni - % di titolarità (RU 9)
+
+Solo per le probabili formazioni, soltanto nella vista Campo in corrispondenza di ogni item player, sia tra i giocatori
+titolari che quelli in panchina, deve essere riportata apposita indicazione visiva che indica la percentuale di
+titolarità.
+
+Devono essere distinte 3 diverse casistiche:
+
+- Da 0% a 49%
+
+- Da 50% a 84%
+
+- Da 85% a 100%
+
+Tutte le diverse casistiche devono prevedere apposite caratteristiche e colorazioni descritte nei Figma forniti da UX.
+
+Anche quando la formazione diventa ufficiale e tutte le % di titolarità sono al 100, le % di titolarità devono comunque
+essere mostrate sul client.
+
+Tale indicazione è relativa soltanto alla vista Campo e non è richiesta all'interno della vista Lista.
+
+#### Adeguamento UI vista campo (RU 20)
+
+È previsto, per la vista "Campo" della sezione Giocatori (a prescindere dal fornitore di riferimento) un adeguamento
+della UI a quanto riportato sui Figma di questa feature.
+
+NB: la UI viene unificata a quanto già sviluppato in App Scommesse.
+
+### Ultime dai campi (RU 10)
+
+All'interno della vista Campo, per ognuna delle 2 squadre, deve essere integrato il testo riportato nell'API
+*LastFromFields* esposta dal fornitore Fantacalcio.
+
+All'interno di questo servizio, viene riportato all'interno del campo "*Text"* apposito testo HTML da riportare sui FE
+dei Client di gioco.
+
+![Immagine che contiene testo, schermata, Carattere Descrizione generata
+automaticamente](media/image5.png){width="6.6930555555555555in" height="3.3465277777777778in"}
+
+Se sul client di gioco è selezionata la Squadra 1 deve essere riportato il testo relativo alla Squadra 1, Se sul client
+di gioco è selezionata la Squadra 2 deve essere riportato il testo relativo alla Squadra 2
+
+### Giocatori Diffidati (RU 11)
+
+Soltanto all'interno della vista Campo, per ognuna delle 2 squadre, deve essere integrato l'elenco dei giocatori
+diffidati, riportato all'interno del campo *cautionedsPlayers* dell'API *ProbableLineupFULL*
+
+![](media/image6.png){width="6.686805555555556in" height="0.1909722222222222in"}
+
+### Giocatori Squalificati (RU 12)
+
+Soltanto all'interno della vista Campo, per ognuna delle 2 squadre, deve essere integrato l'elenco dei giocatori
+diffidati, riportato all'interno del campo *disqualifiedsPlayers* dell'API *ProbableLineupFULL*
+
+### Giocatori indisponibili (RU 13)
+
+Soltanto all'interno della vista Campo, per ognuna delle 2 squadre, deve essere integrato l'elenco dei giocatori
+indisponibili con le motivazioni testuali dell'indisponibilità. Queste informazioni sono riportate all'interno del campo
+*unavailablesPlayers* dell'API *ProbableLineupFULL*
+
+![](media/image7.png){width="6.686805555555556in" height="0.36527777777777776in"}
+
+### Giocatori in ballottaggio (RU 14)
+
+Soltanto all'interno della vista Campo, per ognuna delle 2 squadre, devono essere integrate le coppie di giocatori in
+ballottaggio per un posto da titolare nello stesso ruolo. Per ogni giocatore in ballottaggio deve essere riportata la %
+di titolarità. . Queste informazioni sono riportate all'interno del campo *ballotsPlayers* dell'API *ProbableLineupFULL*
+
+![](media/image8.png){width="6.686805555555556in" height="0.44375in"}
+
+### Giocatori in dubbio (RU 15) 
+
+Soltanto all'interno della vista Campo, per ognuna delle 2 squadre, deve essere integrato l'elenco dei giocatori in
+dubbio con le motivazioni testuali. Queste informazioni sono riportate all'interno del campo *doubtsPlayers* dell'API
+*ProbableLineupFULL*
+
+![](media/image9.png){width="5.747916666666667in" height="0.6520833333333333in"}
+
+### Stadio (RU 16)
+
+Soltanto all'interno della vista Campo deve essere riportato il nome dello stadio in cui si svolge lo specifico
+incontro, l'informazione è presente per ogni partita nell'API *ProbableLineupFULL* in corrispondenza di *Stadium*
+
+![](media/image10.png){width="5.490349956255468in" height="0.5104877515310586in"}
+
+### Arbitro (RU 17)
+
+Soltanto all'interno della vista Campo deve essere riportato il nome dell'arbitro del match, presente per ogni partita
+nell'API *ProbableLineupFULL* in corrispondenza di *referee*
+
+![](media/image11.png){width="2.1461329833770777in" height="0.22919838145231847in"}
+
+### Broadcaster (RU 19)
+
+Per ogni incontro, sia nella vista Lista che Campo, per cui vengono utilizzate le informazioni provenienti da
+Fantacalcio non devono essere riportate le informazioni relative al Broadcaster.
+
+Resta valido, invece, quanto sviluppato as-is per gli altri fornitori.
+
+### Ultimo Aggiornamento (RU 18)
+
+Per ogni incontro, sia nella vista Lista che nella vista Campo deve essere riportata data e ora dell'ultimo
+aggiornamento delle informazioni riportate nel formato GG/MM/AAAA - HH:MM.
+
+L'informazione è presente per ogni partita nell'API *ProbableLineupFULL* in corrispondenza di *lastUpdate*
+
+![](media/image12.png){width="3.0108366141732286in" height="0.22919838145231847in"}

@@ -1,0 +1,2081 @@
+{
+  "test_cases": [
+    {
+      "Title": "ProbableLineupFULL_001_Web_TEST_Desktop",
+      "ID": "TC-001",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the application and navigate to the pre-match view.",
+          "Expected Result": "The pre-match view page loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Request data from the 'ProbableLineupFULL' API.",
+          "Expected Result": "Data from the 'ProbableLineupFULL' API is fetched without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the probable lineups are displayed.",
+          "Expected Result": "Probable formations are visible in the interface."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged in and has internet access.",
+      "Execution Mode": "Manual",
+      "Functionality": "API Integration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid session with API endpoints authorized.",
+      "Expected Result": "Probable formations are successfully rendered from the API.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Introduzione",
+      "Partial Coverage Description": "Validates data fetching for probable lineups only."
+    },
+    {
+      "Title": "MatchCalendar_002_Web_TEST_Desktop",
+      "ID": "TC-002",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the match calendar section of the application.",
+          "Expected Result": "Calendar section loads without issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Send a request to the 'MatchCalendar' API.",
+          "Expected Result": "Match calendar data is retrieved successfully."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check that matches and their details are displayed on the calendar.",
+          "Expected Result": "All scheduled matches are visible with their proper details."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged in, and the API key is validated.",
+      "Execution Mode": "Manual",
+      "Functionality": "API Integration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid API keys and credentials for the calls.",
+      "Expected Result": "Match details are displayed correctly on the match calendar.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Introduzione",
+      "Partial Coverage Description": "Confirms the retrieval of scheduled matches; does not test individual match detail views."
+    },
+    {
+      "Title": "LastFromFields_003_Web_TEST_Desktop",
+      "ID": "TC-003",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Go to the relevant section to view last from fields.",
+          "Expected Result": "The fields section loads without delay."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Request data from the 'LastFromFields' API.",
+          "Expected Result": "The system successfully fetches last from fields data."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Validate that the fetched data is rendered correctly in the UI.",
+          "Expected Result": "Last from fields data is displayed accurately with the relevant player information."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have access to the necessary UI section; APIs are valid.",
+      "Execution Mode": "Manual",
+      "Functionality": "API Integration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid access credentials to user interfaces.",
+      "Expected Result": "Last from fields information is displayed properly in the application.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Introduzione",
+      "Partial Coverage Description": "Validates the retrieval process; does not cover error scenarios."
+    },
+    {
+      "Title": "API_Pre-condition_Fantacalcio_001_Backend_TEST_Server",
+      "ID": "TC-004",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Ensure the server is running and accessible.",
+          "Expected Result": "The server responds to a status check request."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the API endpoint for Fantacalcio is correctly configured.",
+          "Expected Result": "Configuration details are verified and accessible."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check if necessary API keys or tokens are generated and valid.",
+          "Expected Result": "API keys/tokens are valid and ready for use."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Confirm that required data sources (databases, external services) are available.",
+          "Expected Result": "All required data sources are operational."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "DEV",
+      "Reference System": "Linux, Backend API",
+      "Preconditions": "All related services are installed and running.",
+      "Execution Mode": "Manual",
+      "Functionality": "API Configuration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid API keys, Server configuration settings",
+      "Expected Result": "Server is ready with valid configurations to utilize the API.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Pre-condizione utilizzo API Fantacalcio (RU 1)",
+      "Partial Coverage Description": "Covers only the preconditions for API utilization; actual API functionalities are not tested."
+    },
+    {
+      "Title": "API_Pre-condition_Fantacalcio_002_Backend_TEST_Server",
+      "ID": "TC-005",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the API documentation page.",
+          "Expected Result": "API documentation is displayed without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Review the API endpoint and authentication methods listed.",
+          "Expected Result": "Endpoint and authentication methods are clearly outlined in the documentation."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Test an example API request using valid credentials.",
+          "Expected Result": "The API returns a successful response with data as per documentation."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Check for the list of available endpoints in the documentation.",
+          "Expected Result": "A comprehensive list of endpoints is provided."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "DEV",
+      "Reference System": "Linux, Backend API",
+      "Preconditions": "User has access to the network and API documentation.",
+      "Execution Mode": "Manual",
+      "Functionality": "API Documentation Review",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "API credentials, Documentation URL",
+      "Expected Result": "User is able to access and understand the API documentation for utilization.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Pre-condizione utilizzo API Fantacalcio (RU 1)",
+      "Partial Coverage Description": "Covers only API documentation; does not verify documentation accuracy against the actual API response."
+    },
+    {
+      "Title": "API_Integration_001_Backend_TEST_Server",
+      "ID": "TC-006",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Integrate 'ProbableLineUpFULL' API with OPTA IDs for players.",
+          "Expected Result": "The API is integrated successfully without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Call 'ProbableLineUpFULL' API and check for valid OPTA IDs in the response.",
+          "Expected Result": "The response includes valid OPTA IDs for players."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Integrate 'LastFromFields' API with OPTA IDs for matches.",
+          "Expected Result": "The API is integrated successfully without errors."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Call 'LastFromFields' API and verify the presence of OPTA IDs for the matches.",
+          "Expected Result": "The response includes valid OPTA IDs for matches."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, Node.js Application",
+      "Preconditions": "APIs are deployed and the server is running.",
+      "Execution Mode": "Automated",
+      "Functionality": "API Integration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "OPTA IDs data for players and matches",
+      "Expected Result": "Both APIs work correctly with the required OPTA IDs integrated.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Modifiche attuali API Fantacalcio",
+      "Partial Coverage Description": "Covers only the integration of specified APIs; does not cover error handling."
+    },
+    {
+      "Title": "API_Error_Handling_002_Backend_TEST_Server",
+      "ID": "TC-007",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Simulate a scenario where invalid OPTA IDs are provided.",
+          "Expected Result": "The API should return an error response indicating invalid IDs."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Call 'ProbableLineUpFULL' with invalid OPTA IDs.",
+          "Expected Result": "Receive appropriate error response from the API."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Call 'LastFromFields' with invalid match OPTA IDs.",
+          "Expected Result": "Receive appropriate error response from the API."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, Node.js Application",
+      "Preconditions": "APIs are deployed and the server is running.",
+      "Execution Mode": "Automated",
+      "Functionality": "API Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "Invalid OPTA IDs",
+      "Expected Result": "APIs correctly handle error cases for invalid OPTA IDs.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Modifiche attuali API Fantacalcio",
+      "Partial Coverage Description": "Focuses on error handling; does not cover successful API calls."
+    },
+    {
+      "Title": "OPTA_Mappings_Feed_001_Backend_TEST_Server",
+      "ID": "TC-008",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Request the OPTA mappings API using valid Opta IDs.",
+          "Expected Result": "The API returns successfully with a 200 status code and the correct mappings in XML format."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Receive the response and parse the XML content.",
+          "Expected Result": "The XML content is parsed without errors, and all mappings are correctly extracted."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Linux Server, OPTA Sports API",
+      "Preconditions": "The API service must be up and reachable. Valid Opta IDs should be known.",
+      "Execution Mode": "Manual",
+      "Functionality": "OPTA Mappings Feed",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid Opta IDs",
+      "Expected Result": "Mappings successfully returned and parsed from the OPTA feed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "OPTA Mappings Feed",
+      "Partial Coverage Description": "Covers successful mappings retrieval only; error scenarios not included."
+    },
+    {
+      "Title": "OPTA_Mappings_Feed_002_Backend_TEST_Server",
+      "ID": "TC-009",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Request the OPTA mappings API using invalid Opta IDs.",
+          "Expected Result": "The API returns an error response with a 404 status code indicating 'Not Found'."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Review the error message returned by the API.",
+          "Expected Result": "The error message provides clear information about the invalid request."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Linux Server, OPTA Sports API",
+      "Preconditions": "The API service must be up and reachable. Invalid Opta IDs should be prepared.",
+      "Execution Mode": "Manual",
+      "Functionality": "OPTA Mappings Feed",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Invalid Opta IDs",
+      "Expected Result": "Error response received correctly for invalid mappings retrieval.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "OPTA Mappings Feed",
+      "Partial Coverage Description": "Covers only handling of invalid IDs; performance testing not included."
+    },
+    {
+      "Title": "Requirements_Check_001_Backend_TEST_Server",
+      "ID": "TC-010",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the backend service for evaluation of requirements.",
+          "Expected Result": "The backend service is reachable and functioning."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Retrieve the list of all defined requirements from the database.",
+          "Expected Result": "The system returns the complete list of requirements without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that all requirements are formatted correctly according to the predefined schema.",
+          "Expected Result": "All requirements should adhere to the expected format with no misalignments or missing fields."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "Backend",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Ubuntu 20.04, Backend Application",
+      "Preconditions": "The backend server is operational, and the database contains requirement data.",
+      "Execution Mode": "Manual",
+      "Functionality": "Requirements Management",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Database records of requirements",
+      "Expected Result": "All requirements are correctly retrieved and formatted.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Requisiti",
+      "Partial Coverage Description": "Covers only retrieval and formatting; updates or deletions not tested."
+    },
+    {
+      "Title": "Requirements_Max_Length_Check_002_Backend_TEST_Server",
+      "ID": "TC-011",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Attempt to create a new requirement exceeding maximum character limits.",
+          "Expected Result": "The system returns a validation error indicating the requirement exceeds the maximum length."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check that the maximum length for requirements is enforced in the database.",
+          "Expected Result": "The database should not allow the insertion of requirements that exceed the allowed character limit."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "Backend",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Ubuntu 20.04, Backend Application",
+      "Preconditions": "The backend server is operational.",
+      "Execution Mode": "Manual",
+      "Functionality": "Requirements Management",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Test data exceeding length limits",
+      "Expected Result": "Validation checks correctly prevent exceeding character limit.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Requisiti",
+      "Partial Coverage Description": "Tests only maximum length enforcement; other validation criteria not included."
+    },
+    {
+      "Title": "API_Fantacalcio_001_Backend_TEST_Server",
+      "ID": "TC-012",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Send a GET request to the Fantacalcio API endpoint for the specified manifestation on the brand.",
+          "Expected Result": "A valid response containing manifestation details is returned."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the response status code is 200.",
+          "Expected Result": "The status code is 200, indicating the request was successful."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the response body for the expected structure and data types.",
+          "Expected Result": "The response body contains the correct fields as per API documentation."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, Backend Application",
+      "Preconditions": "The Fantacalcio API is operational and accessible.",
+      "Execution Mode": "Automated",
+      "Functionality": "API Integration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "Valid API endpoint for Fantacalcio",
+      "Expected Result": "API returns successfully with correct data.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Utilizzo API Fantacalcio per specifica manifestazione su brand",
+      "Partial Coverage Description": "Covers only success scenarios; error handling not tested."
+    },
+    {
+      "Title": "API_Fantacalcio_002_Backend_TEST_Server",
+      "ID": "TC-013",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Send a GET request to the Fantacalcio API with an invalid endpoint.",
+          "Expected Result": "An error response is returned."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the response status code is 404.",
+          "Expected Result": "The status code is 404, indicating the endpoint was not found."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the error message in the response.",
+          "Expected Result": "The error message indicates a valid description of the error."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, Backend Application",
+      "Preconditions": "The Fantacalcio API is operational and accessible.",
+      "Execution Mode": "Automated",
+      "Functionality": "API Integration",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "Invalid API endpoint",
+      "Expected Result": "API returns error with appropriate status code.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Utilizzo API Fantacalcio per specifica manifestazione su brand",
+      "Partial Coverage Description": "Covers invalid endpoint scenarios; does not cover rate limiting."
+    },
+    {
+      "Title": "Fantacalcio_Priority_001_Web_TEST_Desktop",
+      "ID": "TC-014",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the application and navigate to the configuration settings for the Serie A manifestation.",
+          "Expected Result": "The configuration settings for Serie A are displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select the Brand 'Sisal' from the list of available brands.",
+          "Expected Result": "Option for Brand 'Sisal' is selected successfully."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enable Fantacalcio priority for the Prematch view.",
+          "Expected Result": "Fantacalcio has been successfully prioritized for the Prematch view."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Check the priority settings for other brands (Pokerstars and MDJS) for the same manifestation.",
+          "Expected Result": "The current standard solution (V4 Soccer Sportradar) is still active for Pokerstars and MDJS on Serie A."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Save the changes and verify that the priority settings have been applied.",
+          "Expected Result": "The changes are saved successfully and reflected in the settings."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has admin access and valid credentials to modify settings.",
+      "Execution Mode": "Manual",
+      "Functionality": "Fantacalcio Priority Setting",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Brand configurations, Serie A manifestation settings",
+      "Expected Result": "Fantacalcio in priority for Sisal, standard solution for others.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Priorità Fantacalcio su Manifestazione/Brand (RU 2)",
+      "Partial Coverage Description": "Validates the priority set for Fantacalcio; does not cover live events."
+    },
+    {
+      "Title": "Fantacalcio_Priority_Negative_002_Web_TEST_Desktop",
+      "ID": "TC-015",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Attempt to set Fantacalcio priority without selecting a valid brand.",
+          "Expected Result": "An error message is displayed stating 'Please select a valid brand to set priority'."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Try to save the settings without enabling any priority.",
+          "Expected Result": "An error message is displayed stating 'Priority setting is required'."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has admin access and is on the priority settings page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Fantacalcio Priority Setting",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Invalid brand selection, no priority enabled",
+      "Expected Result": "System prevents invalid settings and provides appropriate error messages.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Priorità Fantacalcio su Manifestazione/Brand (RU 2)",
+      "Partial Coverage Description": "Validates error handling; does not include valid priority settings."
+    },
+    {
+      "Title": "Exclusion_Fantacalcio_001_Backend_TEST_Server",
+      "ID": "TC-016",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Trigger the event API request with a match that has a status of '6'.",
+          "Expected Result": "The API response returns correct event data for the match, indicating the status is '6'."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Validate that the Fantacalcio API does not allow processing for this match.",
+          "Expected Result": "An error response or indication that the Fantacalcio API is excluded for this match appears."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Linux Server, API Endpoint",
+      "Preconditions": "The match with status '6' must be available in the database.",
+      "Execution Mode": "Automated",
+      "Functionality": "Fantacalcio Exclusion",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "Match ID with status '6'",
+      "Expected Result": "Fantacalcio API usage for the match is correctly excluded.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Esclusione Fantacalcio su specifico match -Eventi rinviati (RU 3)",
+      "Partial Coverage Description": "Only tests exclusion based on status; does not verify match data integrity."
+    },
+    {
+      "Title": "Validation_Fantacalcio_002_Backend_TEST_Server",
+      "ID": "TC-017",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Query the API with a match not having status '6'.",
+          "Expected Result": "The API returns match details allowing Fantacalcio processing."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Attempt to access Fantacalcio for the queried match.",
+          "Expected Result": "Fantacalcio API processes the request normally without errors."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Linux Server, API Endpoint",
+      "Preconditions": "There must be a match available that does not have a status of '6'.",
+      "Execution Mode": "Automated",
+      "Functionality": "Fantacalcio Validation",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "Match ID without status '6'",
+      "Expected Result": "Fantacalcio API processes the match correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Esclusione Fantacalcio su specifico match -Eventi rinviati (RU 3)",
+      "Partial Coverage Description": "Tests normal Fantacalcio access; does not cover all potential match statuses."
+    },
+    {
+      "Title": "Fantacalcio_Exclusion_001_API_Test_Desktop",
+      "ID": "TC-018",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Call the MatchCalendar API to retrieve matches for the specified date.",
+          "Expected Result": "The MatchCalendar API returns a list of matches along with their associated Match Day values."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Determine the current and upcoming Match Days from the returned data.",
+          "Expected Result": "Correct identification of current and upcoming Match Days."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the match details for the specified event (e.g., Bologna vs. Milan).",
+          "Expected Result": "The match details correctly identify the Match Day as part of a recovery match."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Evaluate whether the Fantacalcio API can be called for this specific match.",
+          "Expected Result": "The system should respond with a decision not to use the Fantacalcio API for the recovery match."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Check for upcoming matches to ensure they use the Fantacalcio API.",
+          "Expected Result": "The system confirms the use of the Fantacalcio API for matches on the current or upcoming Match Days."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "API",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The system should be set up to access MatchCalendar and Fantacalcio APIs, and simulate the match data for testing.",
+      "Execution Mode": "Automated",
+      "Functionality": "Fantacalcio API Exclusion Logic",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "Match data for Bologna vs. Milan and upcoming weekend matches.",
+      "Expected Result": "Correct functionality of excluding Fantacalcio API for recovery matches while using it for upcoming matches.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Esclusione Fantacalcio su specifico match – Recuperi e Match Day (RU 4)",
+      "Partial Coverage Description": "Covers the exclusion logic based on Match Day; does not cover error handling for API failures."
+    },
+    {
+      "Title": "Fantacalcio_MatchDay_Validation_002_API_Test_Desktop",
+      "ID": "TC-019",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Simulate a call to MatchCalendar API with a date that has multiple Match Day matches.",
+          "Expected Result": "The API returns multiple matches with their respective Match Day values."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Sort the returned match data by Match Day value.",
+          "Expected Result": "Matches are correctly sorted by Match Day in descending order."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the logic that distinguishes and identifies which matches are eligible for Fantacalcio.",
+          "Expected Result": "System identifies the matches that are eligible for using the Fantacalcio API, excluding all others."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Implement a test for an edge case where no matches are eligible.",
+          "Expected Result": "The system should return a message indicating that no matches are eligible for the Fantacalcio API."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "API",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "API simulation must be configured to return a set of matches for the test date.",
+      "Execution Mode": "Automated",
+      "Functionality": "Match Day Exclusion Logic",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "Simulated match data with various Match Day values.",
+      "Expected Result": "The evaluation correctly identifies eligible matches for the Fantacalcio API based on Match Day criteria.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Esclusione Fantacalcio su specifico match – Recuperi e Match Day (RU 4)",
+      "Partial Coverage Description": "Tests for various Match Day scenarios but does not validate API response structure."
+    },
+    {
+      "Title": "Fallback_Solution_001_Web_TEST_Desktop",
+      "ID": "TC-020",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Simulate the unavailability of the Fantacalcio API during a scheduled match.",
+          "Expected Result": "The system acknowledges that the Fantacalcio API is unavailable."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if the fallback solution triggers the use of official formations from Sportradar Soccer V4 API.",
+          "Expected Result": "The official formations from Sportradar Soccer V4 API are displayed correctly instead of Fantacalcio data."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the user can still view match-related data with the fallback.",
+          "Expected Result": "Match-related data is accessible and correctly displayed while using the fallback."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The system must be connected, and the Fantacalcio API must be configured but currently failing.",
+      "Execution Mode": "Manual",
+      "Functionality": "Fallback Solution",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "The system effectively uses the Sportradar API as a fallback, ensuring data continuity.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Soluzione di Fallback in caso di esclusione Fantacalcio (RU 5)",
+      "Partial Coverage Description": "Test only the behavior of the fallback without testing the integration of complete Fantacalcio API."
+    },
+    {
+      "Title": "Player_Section_001_App_IOS_TEST_Mobile",
+      "ID": "TC-021",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the Fantacalcio application on an iOS device.",
+          "Expected Result": "The application opens successfully without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Sezione Giocatori' section from the main menu.",
+          "Expected Result": "'Sezione Giocatori' is displayed, showing a list of players."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Select a specific tournament from the list.",
+          "Expected Result": "Details of the selected tournament are displayed in the player section."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Verify that the player's information is correctly retrieved using the Fantacalcio API.",
+          "Expected Result": "Player information, such as stats and attributes, is displayed accurately."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App IOS",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 15, Fantacalcio Application",
+      "Preconditions": "User must have the Fantacalcio app installed and an internet connection.",
+      "Execution Mode": "Manual",
+      "Functionality": "Player Section",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "User account and tournament data",
+      "Expected Result": "Player information displayed correctly according to the specified tournament using defined APIs.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Sezione Giocatori – Manifestazioni con Fantacalcio",
+      "Partial Coverage Description": "Covers only player information display; actions for player modification are not included."
+    },
+    {
+      "Title": "Player_Api_Validation_002_App_Android_TEST_Mobile",
+      "ID": "TC-022",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the Fantacalcio application on an Android device.",
+          "Expected Result": "The application launches successfully without any issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Access the 'Manifestazioni' section and choose a tournament that prioritizes Fantacalcio.",
+          "Expected Result": "The tournament details are displayed as expected."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Select a player from the player list in the tournament.",
+          "Expected Result": "The player's profile page opens with relevant details."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Check the network requests to ensure the correct API calls are made to fetch player data.",
+          "Expected Result": "API responds with the appropriate player data and status codes (200 OK)."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, Fantacalcio Application",
+      "Preconditions": "User must be logged in and connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "API Validation",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "User login credentials and API endpoint configurations",
+      "Expected Result": "Functions properly display and retrieve player data via APIs without discrepancies.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Sezione Giocatori – Manifestazioni con Fantacalcio",
+      "Partial Coverage Description": "Focuses on API data retrieval; UI performance of the player section not tested."
+    },
+    {
+      "Title": "Formation_View_001_Web_TEST_Desktop",
+      "ID": "TC-023",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Select a specific match that has available probable or official formations.",
+          "Expected Result": "The user is redirected to the Campo view for the selected match."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if the wording on the screen indicates either 'Probabili Formazioni' or 'Formazioni Ufficiali' based on player starting percentage.",
+          "Expected Result": "The wording reflects the correct status based on the players' starting percentages."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged into the application and has selected a match with available formations.",
+      "Execution Mode": "Manual",
+      "Functionality": "Expected Lineups Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Match ID with available formations",
+      "Expected Result": "Display of correct wording based on player starting percentages.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Vista Campo - Formazioni Probabili/Ufficiali (RU 6)",
+      "Partial Coverage Description": "Covers basic display of formations; specific player details not tested."
+    },
+    {
+      "Title": "Formation_View_002_Web_TEST_Desktop",
+      "ID": "TC-024",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Select a specific match where all players have a starting percentage of 100%.",
+          "Expected Result": "The user is redirected to the Campo view for the selected match."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check that the wording on the Campo view indicates 'Formazioni Ufficiali'.",
+          "Expected Result": "The wording should clearly indicate 'Formazioni Ufficiali'."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged into the application and has selected a match with all players at 100% starting percentage.",
+      "Execution Mode": "Manual",
+      "Functionality": "Expected Lineups Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Match ID with all players 100% likely to start",
+      "Expected Result": "Display of 'Formazioni Ufficiali' based on player starting percentages.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Vista Campo - Formazioni Probabili/Ufficiali (RU 6)",
+      "Partial Coverage Description": "Validates only the display for players at 100%; does not cover player statistics."
+    },
+    {
+      "Title": "Game_Module_Team_Formation_001_Web_TEST_Desktop",
+      "ID": "TC-025",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Fetch the team lineup data from the 'ProbableLineup Full' API.",
+          "Expected Result": "The API returns the correct 'Trend' and 'Starter' fields for each team."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Parse the 'Trend' field to identify the formation (e.g., 4231).",
+          "Expected Result": "The formation is correctly extracted and displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Retrieve the list of players from the 'Starter' field and order them according to their position from the 'Trend'.",
+          "Expected Result": "Players are ordered from top to bottom and from right to left based on their assigned positions."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Render the team formation on the game field based on the ordered list.",
+          "Expected Result": "The game field displays the correct positions for each player according to the selected formation."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "API is accessible and returns valid team data.",
+      "Execution Mode": "Manual",
+      "Functionality": "Game Module - Team Formation",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Sample team data with valid 'Trend' and 'Starter' formats.",
+      "Expected Result": "Team formation is displayed accurately on the game field.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Vista Campo - Modulo di gioco (RU 7)",
+      "Partial Coverage Description": "Covers only the ordering and display of players; does not verify individual player attributes."
+    },
+    {
+      "Title": "Game_Module_Team_Formation_ErrorHandling_002_Web_TEST_Desktop",
+      "ID": "TC-026",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Fetch the team lineup data from the 'ProbableLineup Full' API with invalid parameters.",
+          "Expected Result": "The system returns an appropriate error message indicating the issue."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Attempt to parse the 'Trend' field from the API response.",
+          "Expected Result": "The system handles the error gracefully without crashing."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that no player data is rendered when the response data is incomplete or incorrect.",
+          "Expected Result": "The game field does not display any erroneous player data in case of API failure."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "API is not accessible or returns malformed data.",
+      "Execution Mode": "Manual",
+      "Functionality": "Game Module - Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Invalid API responses.",
+      "Expected Result": "System handles errors without crashing and does not display invalid player positions.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Vista Campo - Modulo di gioco (RU 7)",
+      "Partial Coverage Description": "Tests error handling; does not check for valid displays."
+    },
+    {
+      "Title": "Gestione_Panchina_001_Web_TEST_Desktop",
+      "ID": "TC-027",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the 'Vista Campo' management interface.",
+          "Expected Result": "The management interface loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select the 'Panchina' section.",
+          "Expected Result": "The 'Panchina' section is displayed correctly with the appropriate layout."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the list of players displayed in the 'Bench' section.",
+          "Expected Result": "The list of players not included in the starting formation is displayed."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Verify the order of players listed matches the response order from the Fantacalcio service.",
+          "Expected Result": "Player order matches the expected response from the service."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is authenticated and has access to management functions.",
+      "Execution Mode": "Manual",
+      "Functionality": "Bench Management",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "The 'Panchina' section is populated correctly with non-starter players in the right order.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Vista Campo – Gestione Panchina (RU 8)",
+      "Partial Coverage Description": "Covers display and ordering of players; does not cover player addition/removal."
+    },
+    {
+      "Title": "Gestione_Panchina_002_Web_TEST_Desktop",
+      "ID": "TC-028",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the 'Vista Campo' management interface.",
+          "Expected Result": "The management interface loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Panchina' section.",
+          "Expected Result": "The 'Panchina' section is displayed correctly."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Simulate a failure of the Fantacalcio service response.",
+          "Expected Result": "An error message is displayed, indicating the service is unavailable."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is authenticated and has access to management functions.",
+      "Execution Mode": "Manual",
+      "Functionality": "Bench Management Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "Error message displayed for service unavailability.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Vista Campo – Gestione Panchina (RU 8)",
+      "Partial Coverage Description": "Covers error handling during service failure; does not cover recovery mechanisms."
+    },
+    {
+      "Title": "Probabili_formazioni_Perc_Support_001_App_TEST_MobileIOS",
+      "ID": "TC-029",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the Game View in the application.",
+          "Expected Result": "The Game View displays all players in the current formation."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the indication for players with ownership percentage from 0% to 49%.",
+          "Expected Result": "Players in this range are visually represented with specified UX colors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the visual representation for players with ownership percentage from 50% to 84%.",
+          "Expected Result": "Players in this range are visually represented with different specified UX colors."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Examine the visual representation for players with ownership percentage from 85% to 100%.",
+          "Expected Result": "Players in this range are visually represented with yet another set of specified UX colors."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Change the formation to official and verify ownership percentages.",
+          "Expected Result": "All ownership percentages displayed as 100%, still visually represented."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Mobile IOS",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is logged into the application and has access to the formation screen.",
+      "Execution Mode": "Manual",
+      "Functionality": "Probabili formazioni - % di titolarità",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Player ownership percentages for testing.",
+      "Expected Result": "All ownership percentages correctly displayed with appropriate visual indications in the Game View.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Probabili formazioni - % di titolarità (RU 9)",
+      "Partial Coverage Description": "Tests only the visual representation of ownership percentages; real data integration not covered."
+    },
+    {
+      "Title": "Probabili_formazioni_Perc_Panel_Support_002_App_TEST_Android",
+      "ID": "TC-030",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and go to the Players list within the Game View.",
+          "Expected Result": "The screen displays the list of all players."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that there is no ownership percentage display in the Player List view.",
+          "Expected Result": "No ownership percentages should be visible in the Player List."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Mobile Android",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Mobile Application",
+      "Preconditions": "User has the application installed and is logged in.",
+      "Execution Mode": "Manual",
+      "Functionality": "Probabili formazioni - % di titolarità",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Player details for validation.",
+      "Expected Result": "Ownership percentages are not displayed in the Players List view.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Probabili formazioni - % di titolarità (RU 9)",
+      "Partial Coverage Description": "Confirms absence of percentage in Player List; does not verify gameplay functionalities."
+    },
+    {
+      "Title": "UI_Update_Campo_001_App_OS_Desktop_TEST_Desktop",
+      "ID": "TC-031",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the app and navigate to the 'Giocatori' section.",
+          "Expected Result": "The 'Giocatori' section is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select the 'Campo' view.",
+          "Expected Result": "The 'Campo' view is shown, and it adheres to the updated UI guidelines as per the Figma designs."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the UI elements (buttons, layouts, text) against the Figma specifications.",
+          "Expected Result": "All UI elements match the specifications provided in the Figma design."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "App",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, App",
+      "Preconditions": "User is logged into the application and has access to the 'Giocatori' section.",
+      "Execution Mode": "Manual",
+      "Functionality": "UI Update",
+      "Test Type": "UX/UI",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "Figma design specifications",
+      "Expected Result": "The UI of the 'Campo' view in the 'Giocatori' section is correctly updated.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Adeguamento UI vista campo (RU 20)",
+      "Partial Coverage Description": "Focuses solely on visual elements; functionality of the buttons is not covered."
+    },
+    {
+      "Title": "UI_Update_Campo_002_App_OS_Desktop_TEST_Desktop",
+      "ID": "TC-032",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the 'Giocatori' section.",
+          "Expected Result": "The 'Giocatori' section is accessible and loaded without issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Switch to the 'Campo' view and observe the UI.",
+          "Expected Result": "The updated 'Campo' UI is displayed as per the Figma design."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Interact with various UI components (e.g., buttons, dropdowns) in the 'Campo' view.",
+          "Expected Result": "All components respond correctly and maintain the updated design layout."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "App",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, App",
+      "Preconditions": "User is logged into the application under the appropriate user role to access 'Giocatori'.",
+      "Execution Mode": "Manual",
+      "Functionality": "UI Update",
+      "Test Type": "UX/UI",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "User access permissions",
+      "Expected Result": "Interactive functions within the 'Campo' view operate smoothly with visual updates.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Adeguamento UI vista campo (RU 20)",
+      "Partial Coverage Description": "Checks UI interactions but does not assess backend processes."
+    },
+    {
+      "Title": "Last_From_Fields_001_App_ANDROID_TEST_Android",
+      "ID": "TC-033",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game client application.",
+          "Expected Result": "The home screen of the application is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select 'Squadra 1' from the team selection option.",
+          "Expected Result": "The content related to 'Squadra 1' is displayed in the Campo view."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the HTML content displayed corresponds to the 'Text' field from the LastFromFields API for 'Squadra 1'.",
+          "Expected Result": "The display matches the expected HTML content for 'Squadra 1'."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Android Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Game Client Application",
+      "Preconditions": "The LastFromFields API is accessible, and there is content available for 'Squadra 1'.",
+      "Execution Mode": "Manual",
+      "Functionality": "Display Last From Fields",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "LastFromFields API data for 'Squadra 1'",
+      "Expected Result": "Correct HTML content for 'Squadra 1' is displayed in the Campo view.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Ultime dai campi (RU 10)",
+      "Partial Coverage Description": "Tests retrieval of content for 'Squadra 1' only."
+    },
+    {
+      "Title": "Last_From_Fields_002_App_ANDROID_TEST_Android",
+      "ID": "TC-034",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game client application.",
+          "Expected Result": "The home screen of the application is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select 'Squadra 2' from the team selection option.",
+          "Expected Result": "The content related to 'Squadra 2' is displayed in the Campo view."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the HTML content displayed corresponds to the 'Text' field from the LastFromFields API for 'Squadra 2'.",
+          "Expected Result": "The display matches the expected HTML content for 'Squadra 2'."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Android Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Game Client Application",
+      "Preconditions": "The LastFromFields API is accessible, and there is content available for 'Squadra 2'.",
+      "Execution Mode": "Manual",
+      "Functionality": "Display Last From Fields",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "LastFromFields API data for 'Squadra 2'",
+      "Expected Result": "Correct HTML content for 'Squadra 2' is displayed in the Campo view.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Ultime dai campi (RU 10)",
+      "Partial Coverage Description": "Tests retrieval of content for 'Squadra 2' only."
+    },
+    {
+      "Title": "CautionedsPlayers_001_App_TEST_Mobile",
+      "ID": "TC-035",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the Campo view within the application.",
+          "Expected Result": "The Campo view is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check for the display of the cautionedsPlayers list for Team A.",
+          "Expected Result": "The list of diffidati players for Team A is displayed correctly."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check for the display of the cautionedsPlayers list for Team B.",
+          "Expected Result": "The list of diffidati players for Team B is displayed correctly."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App IOS",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is logged into the application and has selected a match in the Campo view.",
+      "Execution Mode": "Manual",
+      "Functionality": "Cautioneds Players Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Match data with cautioneds players information",
+      "Expected Result": "Player cautioneds lists are correctly loaded and displayed for both teams.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori Diffidati (RU 11)",
+      "Partial Coverage Description": "Tests only the display of players without validating the underlying API call."
+    },
+    {
+      "Title": "Disqualified_Players_001_Field_TEST_Desktop",
+      "ID": "TC-036",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the Field view within the application.",
+          "Expected Result": "The Field view is displayed without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the disqualified players list for Team A is displayed.",
+          "Expected Result": "The disqualified players for Team A are correctly listed as per the 'disqualifiedsPlayers' field in the API."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the disqualified players list for Team B is displayed.",
+          "Expected Result": "The disqualified players for Team B are correctly listed as per the 'disqualifiedsPlayers' field in the API."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is authenticated and has access to the Field view; API is available and returns valid data.",
+      "Execution Mode": "Manual",
+      "Functionality": "Disqualified Players Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Team A and Team B disqualified players data",
+      "Expected Result": "The disqualified players for both teams are displayed correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori Squalificati (RU 12)",
+      "Partial Coverage Description": "Covers display functionality only; does not verify data source integrity."
+    },
+    {
+      "Title": "Disqualified_Players_ErrorHandling_002_Field_TEST_Desktop",
+      "ID": "TC-037",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Simulate an API failure when retrieving disqualified players.",
+          "Expected Result": "The application displays a user-friendly error message indicating the inability to retrieve data."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is authenticated and attempts to access the Field view with a mock API failure.",
+      "Execution Mode": "Manual",
+      "Functionality": "Disqualified Players Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": false,
+      "Dataset": "Mock API failure scenario",
+      "Expected Result": "User-friendly error message is displayed indicating data retrieval failure.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori Squalificati (RU 12)",
+      "Partial Coverage Description": "Verifies error handling; does not include normal behavior tests."
+    },
+    {
+      "Title": "Unavailable_Players_Display_001_App_ANDROID_TEST_Mobile",
+      "ID": "TC-038",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and navigate to the 'Campo' view.",
+          "Expected Result": "The 'Campo' view is displayed correctly with team information."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the integration of unavailable players list for the first team.",
+          "Expected Result": "The unavailable players list for the first team is displayed with textual reasons."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the integration of unavailable players list for the second team.",
+          "Expected Result": "The unavailable players list for the second team is displayed with textual reasons."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Check the values displayed in the unavailable players list from the API.",
+          "Expected Result": "The list matches the data in the field *unavailablesPlayers* of the API *ProbableLineupFULL*."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Android",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Mobile Application",
+      "Preconditions": "The application is installed and has access to the appropriate API.",
+      "Execution Mode": "Manual",
+      "Functionality": "Unavailable Players Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "API response for *ProbableLineupFULL*",
+      "Expected Result": "Unavailable players and their reasons are correctly displayed for both teams in the Campo view.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori indisponibili (RU 13)",
+      "Partial Coverage Description": "Tests only the display aspect, not the API response validation."
+    },
+    {
+      "Title": "Unavailable_Players_Navigation_002_App_IOS_TEST_Mobile",
+      "ID": "TC-039",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the application and go to the 'Campo' view.",
+          "Expected Result": "The 'Campo' view is opened successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if there is a displayed message when no players are unavailable.",
+          "Expected Result": "A message indicating that all players are available is shown if applicable."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "iOS",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "The application is available on an iOS device.",
+      "Execution Mode": "Manual",
+      "Functionality": "Unavailable Players Navigation",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "API response when no players are unavailable",
+      "Expected Result": "User is informed about the availability status of players in the Campo view.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori indisponibili (RU 13)",
+      "Partial Coverage Description": "Covers scenario of no unavailable players without verification of other functionalities."
+    },
+    {
+      "Title": "BallotsPlayers_001_API_TEST_Backend",
+      "ID": "TC-040",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Send a request to the ProbableLineupFULL API.",
+          "Expected Result": "The API responds with a JSON object containing the field 'ballotsPlayers' for both teams."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the response contains two teams.",
+          "Expected Result": "The response should include entries for both teams with their respective players in ballot."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check that each player in the ballotsPlayers field has an associated 'role' and '% title'.",
+          "Expected Result": "All players listed under ballotsPlayers should have valid roles and corresponding percentages indicating their likelihood of starting."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, ProbableLineupFULL API",
+      "Preconditions": "API service is up and running, and there are players in the ballotsPlayers field.",
+      "Execution Mode": "Automated",
+      "Functionality": "Ballots Players",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "N/A",
+      "Expected Result": "The response correctly lists the players in ballot along with their roles and percentages.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori in ballottaggio (RU 14)",
+      "Partial Coverage Description": "Test focuses on the API response structure and content; additional player data not included."
+    },
+    {
+      "Title": "BallotsPlayers_002_EmptyResponse_TEST_Backend",
+      "ID": "TC-041",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Send a request to the ProbableLineupFULL API when there are no players in ballot.",
+          "Expected Result": "The API responds without any players in the ballotsPlayers field."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check the response structure.",
+          "Expected Result": "The response should still include the ballotsPlayers field, but it should be empty."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, ProbableLineupFULL API",
+      "Preconditions": "No players are available in the ballotsPlayers field.",
+      "Execution Mode": "Automated",
+      "Functionality": "Ballots Players",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "N/A",
+      "Expected Result": "The API correctly reflects that there are no players in ballot in the response.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori in ballottaggio (RU 14)",
+      "Partial Coverage Description": "Verifies response handling for the case when no players are available, checking for proper response structure."
+    },
+    {
+      "Title": "BallotsPlayers_003_InvalidAPIResponse_TEST_Backend",
+      "ID": "TC-042",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Send a malformed request to the ProbableLineupFULL API.",
+          "Expected Result": "The API should respond with an error message indicating invalid request."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the error code returned by the API.",
+          "Expected Result": "The response should contain an appropriate error code (e.g., 400 Bad Request)."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Linux, ProbableLineupFULL API",
+      "Preconditions": "API service is operational.",
+      "Execution Mode": "Automated",
+      "Functionality": "Ballots Players",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "N/A",
+      "Expected Result": "The API appropriately handles the invalid request and returns a proper error response.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori in ballottaggio (RU 14)",
+      "Partial Coverage Description": "Covers API error handling; valid data scenarios are not included."
+    },
+    {
+      "Title": "Doubtful_Players_Display_001_App_Test_Mobile",
+      "ID": "TC-043",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and navigate to the 'Campo' view.",
+          "Expected Result": "The 'Campo' view is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Identify the two teams displayed on the 'Campo' view.",
+          "Expected Result": "Both teams are visible in the 'Campo' view."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the integration for the list of 'giocatori in dubbio' per team.",
+          "Expected Result": "The list of players in doubt is displayed for both teams."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Verify that each player in doubt has a textual reason associated with them.",
+          "Expected Result": "Each player listed in doubt displays a valid text motivation."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is logged in and has selected an active match in the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Display Doubtful Players",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Active match with players listed in API doubtsPlayers field.",
+      "Expected Result": "Correct integration of 'giocatori in dubbio' displayed in 'Campo' view with associated motivations.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori in dubbio (RU 15)",
+      "Partial Coverage Description": "Tests display of players in doubt; does not cover API data integrity."
+    },
+    {
+      "Title": "Doubtful_Players_Empty_Listing_002_App_Test_Mobile",
+      "ID": "TC-044",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and navigate to the 'Campo' view where no players are in doubt.",
+          "Expected Result": "The 'Campo' view is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Identify the two teams displayed on the 'Campo' view.",
+          "Expected Result": "Both teams are visible with no players in doubt."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the integration for the list of 'giocatori in dubbio' per team.",
+          "Expected Result": "The list of players in doubt is empty for both teams."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Verify that no textual reasons are displayed.",
+          "Expected Result": "No motivations should be displayed when there are no players in doubt."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is logged in and has selected an active match with no players in doubt.",
+      "Execution Mode": "Manual",
+      "Functionality": "Display Doubtful Players",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Active match with no entries in API doubtsPlayers field.",
+      "Expected Result": "No players displayed in 'Campo' view for 'giocatori in dubbio'.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Giocatori in dubbio (RU 15)",
+      "Partial Coverage Description": "Tests handling of empty player list; does not include performance metrics."
+    },
+    {
+      "Title": "Display_Stadium_Name_001_App_ANDROID_TEST_Android",
+      "ID": "TC-045",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the Stadio application and navigate to the Campo view.",
+          "Expected Result": "The Campo view is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Fetch the data from the API ProbableLineupFULL and verify the Stadium field.",
+          "Expected Result": "The stadium name is correctly retrieved from the API and displayed in the Campo view."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Stadio Application",
+      "Preconditions": "The user is logged into the Stadio app and has internet access.",
+      "Execution Mode": "Manual",
+      "Functionality": "Stadium Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "API data for ProbableLineupFULL containing stadium information.",
+      "Expected Result": "The stadium name is visible in the Campo view.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Stadio (RU 16)",
+      "Partial Coverage Description": "Covers only the display of stadium names, does not include data accuracy or API response time."
+    },
+    {
+      "Title": "Display_Stadium_Name_Negative_002_App_ANDROID_TEST_Android",
+      "ID": "TC-046",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the Stadio application and navigate to the Campo view.",
+          "Expected Result": "The Campo view is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Simulate a failure in fetching data from the API ProbableLineupFULL.",
+          "Expected Result": "An error message or default value is displayed indicating that the stadium information is unavailable."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Stadio Application",
+      "Preconditions": "The user is logged into the Stadio app and has internet access.",
+      "Execution Mode": "Manual",
+      "Functionality": "Stadium Display Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Simulated API failure.",
+      "Expected Result": "An error message is shown indicating the stadium name could not be retrieved.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Stadio (RU 16)",
+      "Partial Coverage Description": "Tests error handling for the stadium name retrieval, no checks on other UI elements."
+    },
+    {
+      "Title": "Display_Referee_Name_001_App_ANDROID_TEST_Mobile",
+      "ID": "TC-047",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the match view in the application.",
+          "Expected Result": "The match view loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check for the presence of the referee's name within the match details.",
+          "Expected Result": "The referee's name retrieved from the API appears correctly in the match details."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Match Application",
+      "Preconditions": "The user must be logged in to the application and have access to view the match.",
+      "Execution Mode": "Manual",
+      "Functionality": "Display Referee Name",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid match data with referee information",
+      "Expected Result": "The referee's name is displayed correctly in the match details.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Arbitro (RU 17)",
+      "Partial Coverage Description": "Covers only the display of the referee's name; API response validation is not included."
+    },
+    {
+      "Title": "Referee_Name_Not_Present_002_App_IOS_TEST_Mobile",
+      "ID": "TC-048",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the match view in the application.",
+          "Expected Result": "The match view loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Simulate a situation where no referee name is provided in the API response.",
+          "Expected Result": "The application should handle the absence gracefully and display a default message or hide the referee section."
+        }
+      ],
+      "Test Group": "Mobile iOS",
+      "Channel": "App iOS",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Match Application",
+      "Preconditions": "The user must be logged in to the application and have access to view the match.",
+      "Execution Mode": "Manual",
+      "Functionality": "Handle Missing Referee Name",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Match data without referee information",
+      "Expected Result": "The application handles the missing referee name gracefully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Arbitro (RU 17)",
+      "Partial Coverage Description": "Covers error handling for missing referee information."
+    },
+    {
+      "Title": "API_Referee_Name_Validation_003_Backend_TEST_Servizio",
+      "ID": "TC-049",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Make a request to the 'ProbableLineupFULL' API for a specific match.",
+          "Expected Result": "The API responds with the expected data structure."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Inspect the API response for the 'referee' field.",
+          "Expected Result": "The 'referee' field contains a valid name of the referee associated with the match."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "DEV",
+      "Reference System": "Server-side API",
+      "Preconditions": "The match exists in the database.",
+      "Execution Mode": "Automated",
+      "Functionality": "API Response Validation",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "Match ID for the API call",
+      "Expected Result": "The API returns the correct referee name for the match.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Arbitro (RU 17)",
+      "Partial Coverage Description": "Covers only API response structure and content; behavior during errors is not tested."
+    },
+    {
+      "Title": "Broadcaster_001_List_View_TEST_Desktop",
+      "ID": "TC-050",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the List View of the application.",
+          "Expected Result": "The List View is displayed without any information related to the Broadcaster."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select a match and view its details.",
+          "Expected Result": "The match details are displayed correctly without mentioning the Broadcaster."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged in and has access to matches information.",
+      "Execution Mode": "Manual",
+      "Functionality": "Broadcaster Information Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Match Information from Fantacalcio",
+      "Expected Result": "No Broadcaster information is displayed in the List View.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Broadcaster (RU 19)",
+      "Partial Coverage Description": "Focuses only on List View and does not cover Campo View."
+    },
+    {
+      "Title": "Broadcaster_002_Field_View_TEST_Desktop",
+      "ID": "TC-051",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the Campo View of the application.",
+          "Expected Result": "The Campo View is displayed correctly without any information related to the Broadcaster."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select a match and check the information displayed.",
+          "Expected Result": "The match information is displayed without mentioning the Broadcaster."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged in and has access to matches information.",
+      "Execution Mode": "Manual",
+      "Functionality": "Broadcaster Information Display",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Match Information from Fantacalcio",
+      "Expected Result": "No Broadcaster information is displayed in the Campo View.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Broadcaster (RU 19)",
+      "Partial Coverage Description": "Focuses only on Campo View and does not cover List View."
+    },
+    {
+      "Title": "Last_Update_Feature_001_Web_TEST_Desktop",
+      "ID": "TC-052",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the event list view in the web application.",
+          "Expected Result": "The event list is displayed with all the details of each event."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the last update date and time are displayed for each event in the format GG/MM/AAAA - HH:MM.",
+          "Expected Result": "Each event should show the last update information correctly formatted."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged into the web application and has access to event listings.",
+      "Execution Mode": "Manual",
+      "Functionality": "Last Update",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "Last update information is displayed correctly for each event in the specified format.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Ultimo Aggiornamento (RU 18)",
+      "Partial Coverage Description": "Only verifies display functionality; does not test API data retrieval."
+    },
+    {
+      "Title": "Last_Update_API_Integration_002_Backend_TEST_Server",
+      "ID": "TC-053",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Call the API endpoint ProbableLineupFULL.",
+          "Expected Result": "The API responds with a valid JSON object containing event data."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the lastUpdate field is present for each event.",
+          "Expected Result": "Each event must have a lastUpdate field with a valid timestamp."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check that the lastUpdate field is in the format GG/MM/AAAA - HH:MM.",
+          "Expected Result": "The lastUpdate timestamps for all events must match the required format."
+        }
+      ],
+      "Test Group": "Server",
+      "Channel": "API",
+      "Device": "Server",
+      "Priority": "High",
+      "Test Stage": "DEV",
+      "Reference System": "Linux Server, Backend API",
+      "Preconditions": "Server is running and accessible; API is available.",
+      "Execution Mode": "Automated",
+      "Functionality": "API Data Retrieval",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": true,
+      "Dataset": "N/A",
+      "Expected Result": "API returns all events with correct last update information.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Ultimo Aggiornamento (RU 18)",
+      "Partial Coverage Description": "Covers API response structure; does not check frontend integration."
+    },
+    {
+      "Title": "Last_Update_View_Field_003_App_TEST_iOS",
+      "ID": "TC-054",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the mobile application and navigate to the event field view.",
+          "Expected Result": "The event field view is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the last update date and time are present for each event in the field view in the format GG/MM/AAAA - HH:MM.",
+          "Expected Result": "Each event in the field view should show the last update information correctly formatted."
+        }
+      ],
+      "Test Group": "iOS",
+      "Channel": "App",
+      "Device": "iPhone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 15, Mobile Application",
+      "Preconditions": "User is logged into the application and has a stable internet connection.",
+      "Execution Mode": "Manual",
+      "Functionality": "Last Update",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "Last update information is displayed correctly for each event in the specified format.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Ultimo Aggiornamento (RU 18)",
+      "Partial Coverage Description": "Only tests display; does not validate data synchronization with the backend."
+    }
+  ],
+  "total_count": 54
+}

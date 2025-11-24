@@ -1,0 +1,17 @@
+{
+  "title": "TestCaseTitleCorrection",
+  "description": "Schema defining the structure of the output for a test case title correction tool.",
+  "type": "object",
+  "properties": {
+    "original_title": {
+      "type": "string",
+      "description": "The original title of the test case as found in the input source."
+    },
+    "corrected_title": {
+      "type": "string",
+      "description": "The corrected title that follows the naming convention: Nome-proj_numero_requisito_funzionalità/applicativo_TEST_Device (android/ios/Desktop)."
+    }
+  },
+  "required": ["original_title", "corrected_title"],
+  "additionalProperties": false
+}
