@@ -14,6 +14,7 @@ import asyncio
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from Input_extraction.extract_polarion_field_mapping import *
 from utils.simple_functions import *
+from utils.excel_fix_output import *
 from llm.llm import *
 import base64
 #from Processing.controllo_sintattico import fill_excel_file
@@ -350,9 +351,11 @@ async def run_pipeline(input_word_path: str):
         save_updated_json(updated_json, output_json_path)
         convert_json_to_excel(updated_json, output_excel_path)
 
-        print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+        #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
 
-        return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output_excel_path),
+        output=fix_labels_with_order(output_excel_path)
+
+        return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
                 "total_cases": len(updated_json["test_cases"])}
 
 
