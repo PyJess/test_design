@@ -3,6 +3,7 @@
 # from langchain_openai import OpenAIEmbeddings
 # from langchain.vectorstores import FAISS
 import pandas as pd
+import shutil
 # from langchain_openai import ChatOpenAI
 from docx import Document
 import sys
@@ -212,6 +213,67 @@ async def process_paragraphs(paragraphs, headers, vectorstore, mapping):
     return new_TC
 
 
+async def gen_TC_with_image(paragraph, context, mapping):
+        print("=== gen_TC ===")
+        print(f"Paragrafo: {paragraph[:200]}...")
+        """Call LLM to generate test cases from paragraph"""
+        paragraph = paragraph.page_content if hasattr(paragraph, 'page_content') else str(paragraph)
+        #messages, schema = await prepare_prompt(paragraph, context, mapping)
+        print("starting calling llm")
+        #print(f"{messages}")
+        print("prepare prompts with images")
+        system_prompt2 = load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts",  "system_prompt.txt"))
+        user_prompt = load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts",  "user_prompt.txt"))
+        user_prompt = user_prompt.replace("{input}", json.dumps(paragraph)) 
+        #schema = load_json(os.path.join(os.path.dirname(__file__), "..", "llm", "schema", "schema_output.json"))
+        response = await llm_client.process_images_from_folder(system_prompt2, "image", user_prompt)
+        #response = await llm_client.a_invoke_model(messages, schema)
+        print("Test Case generato con successo!")
+        #print("Risposta dall'LLM:")
+        #print(response)
+        return response
+
+
+async def process_paragraphs_with_image(paragraphs, headers, vectorstore, mapping):
+    """Process all paragraphs asynchronously to generate test cases."""
+    
+    async def process_single_paragraph(i, par):
+        print(f"numero: {i}")
+        print(f"\n--- Paragrafo {i}/{len(paragraphs)} ---")
+        #print(f"\n--- Paragrafo {i}/{len(paragraphs)} ---")
+        print(f"Contenuto paragrafo: {str(par)[:200]}...")  # stampa i primi 200 caratteri
+
+        #context = create_vectordb(par, vectorstore, k=3, similarity_threshold=0.75)
+        #print(f"Context retrieved: {context}")
+        print("Preparazione chiamata LLM")
+
+        context = ""
+        max_attempts = 5
+        attempts = 0
+        while attempts < max_attempts:
+            attempts += 1
+            print(f"Generazione nuovo TC, tentativo {attempts}")
+            tc = await gen_TC_with_image(par, context, mapping)
+            #rint(f"[TEST CASES] {tc}")
+            if isinstance(tc, str):
+                tc = json.loads(tc)
+            if isinstance(tc, dict) and "test_cases" in tc:
+                for test_case in tc["test_cases"]:
+                    test_case["_polarion"] = headers[i - 1] 
+                return tc
+            else:
+
+                print(f"⚠️ Output non valido per il paragrafo {i}: {tc}")
+                return {"test_cases": []}
+
+    # Crea tutte le tasks e le esegue in parallelo
+    print("process single paragraf")
+    tasks = [process_single_paragraph(i, par) for i, par in enumerate(paragraphs, 1)]
+    new_TC = await asyncio.gather(*tasks)
+    
+    return new_TC
+
+
 def encode_image(image_path: str) -> str:
     """
     Encode an image file as a base64 string.
@@ -294,74 +356,266 @@ async def main():
 # if __name__ == "__main__":
 #     asyncio.run(main())
 
-async def run_pipeline(input_word_path: str):
-    print(f"Avvio pipeline generazione test case su {input_word_path}")
+async def run_pipeline(dizionario: dict):
+    tipi=set()
+    for key in dizionario:
+        value = dizionario[key]
+        if value== "testo":
+            tipi.add("testo")
+        if value=="image":
+            tipi.add("image")
+        if value=="excel":
+            tipi.add("excel")
+        
+    if tipi =={"testo"}:
+            print("only text")
+            for key, value in dizionario.items():
+                input_word_path=key
 
-    word_path = Path(input_word_path)
-    if not word_path.exists():
-        raise FileNotFoundError(f"Word non trovato: {word_path}")
-    
-    if word_path.endswith("pdf"):
+                word_path = Path(input_word_path)
+                if not word_path.exists():
+                    raise FileNotFoundError(f"Word non trovato: {word_path}")
+                
+                if word_path.endswith("pdf"):
+                    print("ciao")
+
+                if word_path.endswith("docx"):
+
+                    # Elaborazione Word
+                    paragraphs, headers = process_docx(word_path, word_path.parent)
+
+                    # Filtraggio intestazioni
+                    filtered_paragraphs = []
+                    filtered_headers = []
+                    for par, head in zip(paragraphs, headers):
+                        if not head:
+                            continue
+                        head_clean = head.strip().lower()
+                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
+                            continue
+                        filtered_paragraphs.append(par)
+                        filtered_headers.append(head)
+
+                    # Preparazione RAG / chunks
+                    chunks, _ = process_docx(word_path, word_path.parent)
+                    vectorstore = None  # eventualmente implementa embeddings/FAISS
+
+                    # Mapping campi
+                    mapping = extract_field_mapping()
+
+                    # Generazione nuovi test case
+                    new_TC = await process_paragraphs(filtered_paragraphs, filtered_headers, vectorstore, mapping)
+                    updated_json = merge_TC(new_TC)
+                    print("Generazione test case completata tramite LLM")
+
+                    # Assegnazione ID
+                    start_number = 1
+                    prefix = "TC"
+                    padding = 3
+                    for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
+                        test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+
+                    print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
+
+                    # Salvataggio JSON e Excel
+                    #output_dir = word_path.parent.parent / "outputs"
+                    output_dir = Path(__file__).parent.parent / "outputs"
+                    output_dir.mkdir(exist_ok=True)
+                    output_json_path = output_dir / f"{word_path.stem}_feedbackAI.json"
+                    output_excel_path = output_dir / f"{word_path.stem}_feedbackAI.xlsx"
+
+                    save_updated_json(updated_json, output_json_path)
+                    convert_json_to_excel(updated_json, output_excel_path)
+
+                    #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+
+                    output=fix_labels_with_order(output_excel_path)
+                    output_excel_path.unlink() 
+
+                    return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
+                            "total_cases": len(updated_json["test_cases"])}
+                
+
+    if tipi== {"image"}:
+            print("only image")
+            os.makedirs("image", exist_ok=True)
+
+            for file in os.listdir("image"):
+                file_path = os.path.join("image", file)
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+
+            for key, value in dizionario.items():
+                input_image_path=key
+                filename = os.path.basename(input_image_path)
+                dest_path = os.path.join("image", filename)
+                shutil.copy(input_image_path, "image")
+                print(f"Salvata immagine: {dest_path}")
+            
+            for root, dirs, files in os.walk("image"):  
+                for file in files:
+                    full_path = os.path.join(root, file)
+                    if file.lower().endswith("docx"):
+                        images_path= estrai_immagini_da_docx(full_path)
+                    elif file.lower().endswith("pdf"):
+                        images_path= estrai_immagini_da_pdf(full_path)
+
+            system_prompt=load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts", "Figma", "system_prompt1.txt"))
+            response= await llm_client.process_images_from_folder(system_prompt, "image")
+
+            system_prompt2= load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts", "system_prompt.txt"))
+            user_prompt=load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts", "Figma", "user_prompt.txt")) 
+            user_prompt=user_prompt.replace("{flow}", response)
+
+            while True:
+                tc = await llm_client.process_images_from_folder(system_prompt2, "image", user_prompt)
+                print(f"[OUTPUT]: {tc}")
+                tc = json.loads(tc)
+                if isinstance(tc, dict) and "test_cases" in tc:
+                    for test_case in tc["test_cases"]:
+                        test_case["_polarion"] = "Image from Figma"
+
+                    print("Output LLM ricevuto:")
+                    print(tc)
+                    break
+
+            start_number = 1
+            prefix = "TC"
+            padding = 3
+            for i, test_case in enumerate(tc["test_cases"], start=start_number):
+                test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+
+            print(f"Totale test case aggiornati: {len(tc['test_cases'])}")
+
+            # Salvataggio JSON e Excel
+            output_dir = "outputs"
+            os.makedirs(output_dir, exist_ok=True)
+            output_json_path = os.path.join(output_dir, "image_feedbackAI.json")
+            output_excel_path = os.path.join(output_dir, "image_feedbackAI.xlsx")
+
+            save_updated_json(tc, output_json_path)
+            convert_json_to_excel(tc, output_excel_path)
+
+            #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+
+            output=fix_labels_with_order(output_excel_path)
+            output_excel_path.unlink(missing_ok=True)
+
+            return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
+                    "total_cases": len(tc["test_cases"])}
+
+
+    if tipi == {"testo", "excel"}:
         print("ciao")
 
-    if word_path.endswith("docx"):
+    if tipi == {"testo", "image"}:
+        print("text and image")
 
-        # Elaborazione Word
-        paragraphs, headers = process_docx(word_path, word_path.parent)
+        for key, value in dizionario.items():
+                if value== "image":
+                    print(value)
+                    #salvo tutte le immagini nella specifica folder per poter pocessare llm con immagine
+                    os.makedirs("image", exist_ok=True)
 
-        # Filtraggio intestazioni
-        filtered_paragraphs = []
-        filtered_headers = []
-        for par, head in zip(paragraphs, headers):
-            if not head:
-                continue
-            head_clean = head.strip().lower()
-            if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
-                continue
-            filtered_paragraphs.append(par)
-            filtered_headers.append(head)
+                    for file in os.listdir("image"):
+                        file_path = os.path.join("image", file)
+                        if os.path.isfile(file_path):
+                            os.remove(file_path)
 
-        # Preparazione RAG / chunks
-        chunks, _ = process_docx(word_path, word_path.parent)
-        vectorstore = None  # eventualmente implementa embeddings/FAISS
+                    input_image_path=key
+                    filename = os.path.basename(input_image_path)
+                    dest_path = os.path.join("image", filename)
+                    shutil.copy(input_image_path, "image")
+                    print(f"Salvata immagine: {dest_path}")
 
-        # Mapping campi
-        mapping = extract_field_mapping()
+                    for root, dirs, files in os.walk("image"):  
+                        for file in files:
+                            full_path = os.path.join(root, file)
+                            if file.lower().endswith("docx"):
+                                images_path= estrai_immagini_da_docx(full_path)
+                            elif file.lower().endswith("pdf"):
+                                images_path= estrai_immagini_da_pdf(full_path)
 
-        # Generazione nuovi test case
-        new_TC = await process_paragraphs(filtered_paragraphs, filtered_headers, vectorstore, mapping)
-        updated_json = merge_TC(new_TC)
-        print("Generazione test case completata tramite LLM")
+        #una volta salvate le immagini processo il testo
+        for key, value in dizionario.items():
+            if value== "testo":
+                print(value)
+                input_word_path=key
 
-        # Assegnazione ID
-        start_number = 1
-        prefix = "TC"
-        padding = 3
-        for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
-            test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+                word_path = Path(input_word_path)
+                if not word_path.exists():
+                    raise FileNotFoundError(f"Word non trovato: {word_path}")
+                
+                if word_path.suffix.lower() == ".pdf":
+                    print("ciao")
 
-        print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
+                elif word_path.suffix.lower() == ".docx":
 
-        # Salvataggio JSON e Excel
-        output_dir = word_path.parent.parent / "outputs"
-        output_dir.mkdir(exist_ok=True)
-        output_json_path = output_dir / f"{word_path.stem}_feedbackAI.json"
-        output_excel_path = output_dir / f"{word_path.stem}_feedbackAI.xlsx"
+                    # Elaborazione Word
+                    paragraphs, headers = process_docx(word_path, word_path.parent)
 
-        save_updated_json(updated_json, output_json_path)
-        convert_json_to_excel(updated_json, output_excel_path)
+                    # Filtraggio intestazioni
+                    filtered_paragraphs = []
+                    filtered_headers = []
+                    for par, head in zip(paragraphs, headers):
+                        if not head:
+                            continue
+                        head_clean = head.strip().lower()
+                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
+                            continue
+                        filtered_paragraphs.append(par)
+                        filtered_headers.append(head)
 
-        #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+                    # Preparazione RAG / chunks
+                    chunks, _ = process_docx(word_path, word_path.parent)
+                    vectorstore = None  # eventualmente implementa embeddings/FAISS
 
-        output=fix_labels_with_order(output_excel_path)
+                    # Mapping campi
+                    mapping = extract_field_mapping()
 
-        return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
-                "total_cases": len(updated_json["test_cases"])}
+                    # Generazione nuovi test case
+                    print("process paragraph with image")
+                    new_TC = await process_paragraphs_with_image(filtered_paragraphs, filtered_headers, vectorstore, mapping)
+                    updated_json = merge_TC(new_TC)
+                    print("Generazione test case completata tramite LLM")
 
+                    # Assegnazione ID
+                    start_number = 1
+                    prefix = "TC"
+                    padding = 3
+                    for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
+                        test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+
+                    print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
+
+                    # Salvataggio JSON e Excel
+                    #output_dir = word_path.parent.parent / "outputs"
+                    output_dir = Path(__file__).parent.parent / "outputs"
+                    output_dir.mkdir(exist_ok=True)
+                    output_json_path = output_dir / f"{word_path.stem}_feedbackAI.json"
+                    output_excel_path = output_dir / f"{word_path.stem}_feedbackAI.xlsx"
+
+                    save_updated_json(updated_json, output_json_path)
+                    convert_json_to_excel(updated_json, output_excel_path)
+
+                    #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+
+                    output=fix_labels_with_order(output_excel_path)
+                    output_excel_path.unlink(missing_ok=True)
+
+                    return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
+                            "total_cases": len(updated_json["test_cases"])}
+
+
+    return f"combinazione non gestita: {tipi}"
 
 if __name__ == "__main__":
-    sample_word = os.path.join(os.path.dirname(__file__), "..", "input", "RU_Sportsbook_Platform_Fantacalcio_Prob. Form_v0.2 (1).docx")
-    asyncio.run(run_pipeline(sample_word))
+    #sample_word = os.path.join(os.path.dirname(__file__), "..", "input", "RU_Sportsbook_Platform_Fantacalcio_Prob. Form_v0.2 (1).docx")
+    sample_word= r"c:\Users\x.hita\Downloads\PRJ0015694_AI Angel Numera_Analisi Funzionale_DDA_v02.docx"
+    #sample_pdf= f"C:\Users\x.hita\Downloads\image (3).pdf"
+    sample_image= r"C:\Users\x.hita\Downloads\image (5).png"
+    dzionario={sample_word: "testo", sample_image: "image"}
+    asyncio.run(run_pipeline(dzionario))
 
 
 

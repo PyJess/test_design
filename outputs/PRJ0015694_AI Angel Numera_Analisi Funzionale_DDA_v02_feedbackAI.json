@@ -1,0 +1,283 @@
+{
+  "test_cases": [
+    {
+      "Title": "Definitions_and_Abbreviations_001_App_TEST_Mobile",
+      "ID": "TC-001",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and navigate to the Definitions and Abbreviations section.",
+          "Expected Result": "The Definitions and Abbreviations section is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the abbreviations SE, RU, RF, US, FE/BE, APP SEG, APP SEVV are listed.",
+          "Expected Result": "All specified abbreviations are present in the section."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User has the application installed and is on the Definitions and Abbreviations page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Definitions and Abbreviations Display",
+      "Test Type": "functional",
+      "No Regression Test": false,
+      "Automation": true,
+      "Dataset": "No specific data required.",
+      "Expected Result": "The list of definitions and abbreviations is displayed as specified.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Definizioni e abbreviazioni",
+      "Partial Coverage Description": "Covers only display of definitions and abbreviations; no interaction functionality tested."
+    },
+    {
+      "Title": "Definitions_and_Abbreviations_Navigation_002_App_TEST_Mobile",
+      "ID": "TC-002",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate through the application to access the Definitions and Abbreviations section.",
+          "Expected Result": "User is successfully taken to the Definitions and Abbreviations section."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the navigation UI elements such as back button and section header.",
+          "Expected Result": "The back button and the section header are displayed and usable."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Mobile Application",
+      "Preconditions": "User is logged into the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Navigation to Definitions and Abbreviations",
+      "Test Type": "ux_ui",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "No specific data required.",
+      "Expected Result": "Navigation is seamless and all UI elements function as expected.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Definizioni e abbreviazioni",
+      "Partial Coverage Description": "Covers basic navigation; does not include validation of input functionality."
+    },
+    {
+      "Title": "Abbreviations_Description_003_App_TEST_Web",
+      "ID": "TC-003",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the web application and find the Definitions and Abbreviations section.",
+          "Expected Result": "The Definitions and Abbreviations section is correctly displayed on the web page."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if clicking on each abbreviation reveals a pop-up description.",
+          "Expected Result": "A pop-up description is displayed for each abbreviation when clicked."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 11, Web Application",
+      "Preconditions": "User is on the Definitions and Abbreviations page of the web application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Abbreviation Descriptions",
+      "Test Type": "ux_ui",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "No specific data required.",
+      "Expected Result": "All abbreviations are clickable, and their descriptions are displayed correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Definizioni e abbreviazioni",
+      "Partial Coverage Description": "Covers clicking descriptions; user input is not verified."
+    },
+    {
+      "Title": "CheckIn_Functionality_001_Mobile_TEST_Smartphone",
+      "ID": "TC-004",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the mobile application.",
+          "Expected Result": "The application opens to the home screen."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Check-In' section.",
+          "Expected Result": "The Check-In screen is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Select a date and time for check-in.",
+          "Expected Result": "The selected date and time are displayed correctly."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Confirm the check-in by clicking on the 'Confirm' button.",
+          "Expected Result": "A confirmation message is shown, indicating successful check-in."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is logged into the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Check-In",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Valid date and time for check-in.",
+      "Expected Result": "User successfully checks in, and confirmation is displayed.",
+      "Country": "USA",
+      "Type": "Test Case",
+      "_polarion": "Descrizione generale",
+      "Partial Coverage Description": "Only checks for basic check-in functionality; does not validate additional options."
+    },
+    {
+      "Title": "CheckIn_ErrorHandling_002_Mobile_TEST_Smartphone",
+      "ID": "TC-005",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the mobile application and navigate to 'Check-In'.",
+          "Expected Result": "The Check-In screen is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select an invalid date (past date).",
+          "Expected Result": "An error message is displayed, indicating invalid date selection."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Try to confirm check-in with invalid date.",
+          "Expected Result": "The confirmation button is disabled, preventing check-in."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is logged into the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Check-In Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Invalid date input.",
+      "Expected Result": "Error handling for invalid check-in date is successfully validated.",
+      "Country": "USA",
+      "Type": "Test Case",
+      "_polarion": "Descrizione generale",
+      "Partial Coverage Description": "Focuses on error handling but does not cover valid check-in scenarios."
+    },
+    {
+      "Title": "AI_Angel_Numera_Functionality_001_Web_TEST_Desktop",
+      "ID": "TC-006",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN Game Client application.",
+          "Expected Result": "The main interface of the GNTN Game Client is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'AI Angel Numera' functionality section.",
+          "Expected Result": "The 'AI Angel Numera' option is visible and selectable."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Select the 'AI Angel Numera' option and click on it.",
+          "Expected Result": "The AI Angel Numera interface is displayed, allowing the creation of a combination."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Input parameters to generate the lottery combination.",
+          "Expected Result": "Inputs are accepted without any errors."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Click the 'Generate' button.",
+          "Expected Result": "The generated combination is displayed as per input parameters."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be logged into the GNTN Game Client.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Angel Numera",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Various player selection parameters for lottery generation.",
+      "Expected Result": "AI Angel Numera successfully generates a lottery combination.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Scopo ed ambito di applicazione",
+      "Partial Coverage Description": "Only covers the combination generation functionality; user experience not evaluated."
+    },
+    {
+      "Title": "AI_Angel_Numera_ErrorHandling_002_Web_TEST_Desktop",
+      "ID": "TC-007",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN Game Client application.",
+          "Expected Result": "The main interface of the GNTN Game Client is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'AI Angel Numera' functionality section.",
+          "Expected Result": "The 'AI Angel Numera' option is visible and selectable."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Select the 'AI Angel Numera' option and click on it.",
+          "Expected Result": "The AI Angel Numera interface is displayed, allowing the creation of a combination."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Input invalid parameters to generate the lottery combination.",
+          "Expected Result": "An error message appears indicating the parameters are invalid."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be logged into the GNTN Game Client.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Angel Numera",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Invalid input parameters.",
+      "Expected Result": "AI Angel Numera displays an appropriate error message for invalid input parameters.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Scopo ed ambito di applicazione",
+      "Partial Coverage Description": "Only covers the error handling aspect; flow leading to combination generation not tested."
+    }
+  ],
+  "total_count": 7
+}
