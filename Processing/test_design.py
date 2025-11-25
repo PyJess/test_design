@@ -444,12 +444,13 @@ async def run_pipeline(dizionario: dict):
                 file_path = os.path.join("image", file)
                 if os.path.isfile(file_path):
                     os.remove(file_path)
-
+            i=0
             for key, value in dizionario.items():
+                i+=1
                 input_image_path=key
-                filename = os.path.basename(input_image_path)
+                filename = f"_{i}" + os.path.basename(input_image_path) 
                 dest_path = os.path.join("image", filename)
-                shutil.copy(input_image_path, "image")
+                shutil.copy(input_image_path, dest_path)
                 print(f"Salvata immagine: {dest_path}")
             
             for root, dirs, files in os.walk("image"):  
@@ -499,7 +500,7 @@ async def run_pipeline(dizionario: dict):
             #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
 
             output=fix_labels_with_order(output_excel_path)
-            output_excel_path.unlink(missing_ok=True)
+            Path(output_excel_path).unlink(missing_ok=True)
 
             return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
                     "total_cases": len(tc["test_cases"])}
@@ -511,6 +512,7 @@ async def run_pipeline(dizionario: dict):
     if tipi == {"testo", "image"}:
         print("text and image")
 
+        i=0
         for key, value in dizionario.items():
                 if value== "image":
                     print(value)
@@ -523,9 +525,11 @@ async def run_pipeline(dizionario: dict):
                             os.remove(file_path)
 
                     input_image_path=key
-                    filename = os.path.basename(input_image_path)
+                    i+=1
+                    filename = f"_{i}" + os.path.basename(input_image_path) 
+                    #filename = os.path.basename(input_image_path)
                     dest_path = os.path.join("image", filename)
-                    shutil.copy(input_image_path, "image")
+                    shutil.copy(input_image_path, dest_path)
                     print(f"Salvata immagine: {dest_path}")
 
                     for root, dirs, files in os.walk("image"):  
@@ -601,7 +605,7 @@ async def run_pipeline(dizionario: dict):
                     #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
 
                     output=fix_labels_with_order(output_excel_path)
-                    output_excel_path.unlink(missing_ok=True)
+                    Path(output_excel_path).unlink(missing_ok=True)
 
                     return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
                             "total_cases": len(updated_json["test_cases"])}
@@ -611,10 +615,21 @@ async def run_pipeline(dizionario: dict):
 
 if __name__ == "__main__":
     #sample_word = os.path.join(os.path.dirname(__file__), "..", "input", "RU_Sportsbook_Platform_Fantacalcio_Prob. Form_v0.2 (1).docx")
-    sample_word= r"c:\Users\x.hita\Downloads\PRJ0015694_AI Angel Numera_Analisi Funzionale_DDA_v02.docx"
-    #sample_pdf= f"C:\Users\x.hita\Downloads\image (3).pdf"
-    sample_image= r"C:\Users\x.hita\Downloads\image (5).png"
-    dzionario={sample_word: "testo", sample_image: "image"}
+    #sample_word= r"c:\Users\x.hita\Downloads\PRJ0015694_AI Angel Numera_Analisi Funzionale_DDA_v02.docx"
+    sample_pdf= r"C:\Users\x.hita\Downloads\Screenshot 2025-11-25 151542.png"
+    # img1=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT.png"
+    # img2=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-1.png"
+    # img3=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-2.png"
+    # img4=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-3.png"
+    # img5=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-4.png"
+    # img6=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-5.png" 
+    # img7= r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Schedina\SVT.png"
+    # img8=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Schedina\SVT-1.png"
+    # img9=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Schedina\SVT-2.png"
+    # img10= r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Schedina\SVT-3.png"
+    #sample_image= r"C:\Users\x.hita\Downloads\Doc2.docx"
+    #dzionario={ img1: "image", img2: "image", img3: "image", img4: "image", img5: "image", img6: "image", img7: "image", img8: "image", img9: "image", img10: "image"}
+    dzionario={ sample_pdf: "image"}
     asyncio.run(run_pipeline(dzionario))
 
 

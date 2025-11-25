@@ -1,0 +1,150 @@
+{
+  "test_cases": [
+    {
+      "Title": "random_numbers_selection_001_Screen1_Screen2_TEST_Mobile_initiating the random number selection process",
+      "ID": "TC-001",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and navigate to the 'Inserisci 12 numeri' screen.",
+          "Expected Result": "The 'Inserisci 12 numeri' screen is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Tap the 'Numeri casuali' button.",
+          "Expected Result": "Navigates to the 'Scelgo 12 numeri' screen."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "Mobile App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "The application is installed and the user is on the main screen.",
+      "Execution Mode": "Manual",
+      "Functionality": "Random Number Selection",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "User is navigating to the number selection screen.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Image from Figma",
+      "Partial Coverage Description": "Covers only the initiation of random number selection."
+    },
+    {
+      "Title": "confirm_selection_002_Screen2_Screen3_TEST_Mobile_confirming the selection of random numbers",
+      "ID": "TC-002",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "On the 'Scelgo 12 numeri' screen, tap the 'Casuali' button to confirm the selection.",
+          "Expected Result": "User is taken to the 'Hai scelto 12 di 12 numeri' screen."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check the message displayed on the screen.",
+          "Expected Result": "The message 'Hai scelto 12 di 12 numeri' is correctly displayed."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "Mobile App",
+      "Device": "Smartphone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is on the 'Scelgo 12 numeri' screen after initiating the random selection.",
+      "Execution Mode": "Manual",
+      "Functionality": "Confirm Selection",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "N/A",
+      "Expected Result": "Selection is confirmed and the appropriate message is displayed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Image from Figma",
+      "Partial Coverage Description": "Covers the confirmation of random number selection only."
+    },
+    {
+      "Title": "manual_and_random_selection_003_Screen4_Screen5_TEST_Mobile_selecting 5 manual and additional random numbers",
+      "ID": "TC-003",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application and navigate to the 'Inserisci 12 numeri' screen.",
+          "Expected Result": "The 'Inserisci 12 numeri' screen is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter 5 manual numbers in the input fields.",
+          "Expected Result": "The entered numbers are accepted and displayed correctly."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Tap the 'Numeri casuali' button.",
+          "Expected Result": "Navigates to the 'Scelgo 12 numeri' screen with the first 5 numbers displayed."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Tap the 'Casuali' button to select additional random numbers.",
+          "Expected Result": "User is taken to the 'Hai scelto 12 di 12 numeri' screen."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "Mobile App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is on the 'Inserisci 12 numeri' screen.",
+      "Execution Mode": "Manual",
+      "Functionality": "Manual and Random Number Selection",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "First 5 numbers input by user",
+      "Expected Result": "User successfully enters 5 manual numbers and confirms random selection.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Image from Figma",
+      "Partial Coverage Description": "Covers manual input and subsequent random selections."
+    },
+    {
+      "Title": "confirm_final_selection_004_Screen6_Screen4_TEST_Mobile_confirm the final number selection",
+      "ID": "TC-004",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "On the 'Hai scelto 12 di 12 numeri' screen, tap 'Conferma'.",
+          "Expected Result": "User is navigated back to the 'Inserisci 12 numeri' screen."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the numbers are displayed in the input field.",
+          "Expected Result": "The selected numbers are correctly displayed for user verification."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "Mobile App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User has previously confirmed the selection of numbers.",
+      "Execution Mode": "Manual",
+      "Functionality": "Final Confirmation of Numbers",
+      "Test Type": "functional",
+      "No Regression Test": true,
+      "Automation": false,
+      "Dataset": "Previously selected numbers",
+      "Expected Result": "Final selection is confirmed and displayed correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Image from Figma",
+      "Partial Coverage Description": "Covers only the confirmation of the final number selection."
+    }
+  ]
+}

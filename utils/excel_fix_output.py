@@ -85,7 +85,7 @@ from pathlib import Path
 def fix_labels_with_order(file_input):
 
     file_input = Path(file_input)
-    output = file_input.with_name(file_input.stem + "_excel_fixed_tracciabilita.xlsx")
+    output = file_input.with_name(file_input.stem + "_excel_fixed_test_design.xlsx")
 
     # Mapping (vecchia colonna -> nuova colonna)
     mapping = { 
