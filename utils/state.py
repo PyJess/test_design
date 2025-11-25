@@ -15,6 +15,7 @@ class TestDesignState(BaseModel):
     output_excel_path: Optional[str] = None
     docx_input_path: Optional[str] = None
     total_test_cases: Optional[int] = None
+    input_dictionary: Optional[Dict] = None
 
 
     class Config:

@@ -74,7 +74,9 @@ class LLMClient:
         }
         self.openai_api_base = os.getenv("OPENAI_BASE_URL")
         self.temperature = temperature
+        
         try:
+            # Client LangChain (per le operazioni esistenti)
             self._client = ChatOpenAI(
                 model=self.model_name,
                 default_headers=self.headers,
@@ -83,8 +85,22 @@ class LLMClient:
                 api_key="useless",
             )
         except Exception as e:
-            print(f"[LLMClient] initialization error: {e}")
+            print(f"[LLMClient] LangChain initialization error: {e}")
             self._client = None
+        
+        try:
+            # Client OpenAI nativo (per process_images_from_folder)
+            from openai import OpenAI
+            self._openai_client = OpenAI(
+                api_key=token,
+                base_url=self.openai_api_base,
+                default_headers={
+                    "Ocp-Apim-Subscription-Key": os.getenv("OCP_APIM_SUBSCRIPTION_KEY")
+                }
+            )
+        except Exception as e:
+            print(f"[LLMClient] OpenAI client initialization error: {e}")
+            self._openai_client = None
     
     async def a_invoke_model(self, msgs, schema):
         """Invoke the LLM model with structured output"""
@@ -114,7 +130,7 @@ class LLMClient:
         return result
     
 
-    def process_images_from_folder(self, system_prompt: str, folder_path: str):
+    async def process_images_from_folder(self, system_prompt: str, folder_path: str, user_prompt: str = ""):
         """Process all PNG and JPEG images from a folder"""
         if self._openai_client is None:
             raise ValueError("OpenAI Client non inizializzato correttamente")
@@ -154,7 +170,8 @@ class LLMClient:
                 print(f"  - {os.path.basename(img)}")
             
             # Prepare content
-            content = [{"type": "text", "text": system_prompt}]
+            content = [{"type": "text", "text": system_prompt},
+                       {"type": "text", "text": user_prompt}]
             
             for i, image_path in enumerate(image_files):
                 print(f"\nProcessing image {i+1}/{len(image_files)}: {os.path.basename(image_path)}")
@@ -212,9 +229,9 @@ class LLMClient:
             # Print token usage
             if response.usage:
                 print(f"\n Token Usage:")
-                print(f"  Input tokens:  {response.usage.prompt_tokens}")
-                print(f"  Output tokens: {response.usage.completion_tokens}")
-                print(f"  Total tokens:  {response.usage.total_tokens}")
+                # print(f"  Input tokens:  {response.usage.prompt_tokens}")
+                # print(f"  Output tokens: {response.usage.completion_tokens}")
+                # print(f"  Total tokens:  {response.usage.total_tokens}")
             
             return response.choices[0].message.content
             
