@@ -3,6 +3,7 @@ Given a set of images that show the front-end screens of a web or mobile applica
 
 Identify:
 
+What the images are about.
 The navigation flow between screens. Identify the order of the images (if more images are given).
 The buttons, links, or interactive elements that lead from one page to another.
 Any visual cues (arrows, highlights, or labels) that indicate transitions or user interactions.
