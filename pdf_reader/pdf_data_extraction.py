@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 from langchain.prompts import PromptTemplate
 import os
-import json # <--- ADD THIS LINE
+import json 
 import asyncio
 
 load_dotenv()
@@ -97,10 +97,8 @@ async def agent_data_extraction(file_path:str, output_json_path:str):
 
 BASE_DIR = Path(r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader")
 
-# Definisci il nome del file di output desiderato
-OUTPUT_FILENAME = "regolamento_strutturato.json" # o un nome a tua scelta
+OUTPUT_FILENAME = "regolamento_strutturato.json" 
 
-# Combina i due per ottenere il percorso completo del file di output
 output_json_path = BASE_DIR / OUTPUT_FILENAME
 
 pdf_test = r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader\20210930_REGOLAMENTO_SVT_2021.pdf"

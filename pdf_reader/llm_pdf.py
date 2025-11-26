@@ -25,11 +25,7 @@ load_dotenv()
 #         return result
 #         #return await gpt.ainvoke(msgs)
 
-from langchain_openai import ChatOpenAI
-import os
-from dotenv import load_dotenv
- 
-load_dotenv()
+
  
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET')
@@ -63,7 +59,8 @@ class LLMClient:
             "Authorization": f"Bearer {token}",
             "Ocp-Apim-Subscription-Key": os.getenv("OCP_APIM_SUBSCRIPTION_KEY")
         }
-        self.openai_api_base = os.getenv("OPENAI_BASE_URL")
+        self.openai_api_base = os.getenv("OPENAI_BASE_URL_LLM")
+        
         self.temperature = temperature
         try:
             self._client = ChatOpenAI(
