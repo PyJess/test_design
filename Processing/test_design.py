@@ -358,28 +358,32 @@ async def main():
 
 async def run_pipeline(dizionario: dict):
     tipi=set()
-    for key in dizionario:
-        value = dizionario[key]
-        if value== "testo":
+    for key in list(dizionario.keys()):
+        #value = dizionario[key]
+        if key== "testo" or key== "text" or key== "TEXT":
             tipi.add("testo")
-        if value=="image":
+        if key=="image":
             tipi.add("image")
-        if value=="excel":
+        if key=="excel":
             tipi.add("excel")
         
     if tipi =={"testo"}:
             print("only text")
             for key, value in dizionario.items():
-                input_word_path=key
+                docx_file=value
+                
+                word_path = os.path.join("/tmp", docx_file.filename)
+                with open(word_path, "wb") as f:
+                    f.write(await docx_file.read())
 
-                word_path = Path(input_word_path)
+                word_path = Path(word_path)
                 if not word_path.exists():
                     raise FileNotFoundError(f"Word non trovato: {word_path}")
                 
-                if word_path.endswith("pdf"):
+                if word_path.suffix == ".pdf":
                     print("ciao")
 
-                if word_path.endswith("docx"):
+                if word_path.suffix == ".docx":
 
                     # Elaborazione Word
                     paragraphs, headers = process_docx(word_path, word_path.parent)
@@ -445,13 +449,18 @@ async def run_pipeline(dizionario: dict):
                 if os.path.isfile(file_path):
                     os.remove(file_path)
             i=0
-            for key, value in dizionario.items():
-                i+=1
-                input_image_path=key
-                filename = f"_{i}" + os.path.basename(input_image_path) 
-                dest_path = os.path.join("image", filename)
-                shutil.copy(input_image_path, dest_path)
-                print(f"Salvata immagine: {dest_path}")
+            for key, value_list in dizionario.items():
+                for i, image_file in enumerate(value_list, start=1):
+                    word_path = os.path.join("/tmp", image_file.filename)
+                    with open(word_path, "wb") as f:
+                        f.write(await image_file.read())
+                    input_image_path = Path(word_path)
+                    i+=1
+
+                    filename = f"_{i}" + os.path.basename(input_image_path) 
+                    dest_path = os.path.join("image", filename)
+                    shutil.copy(input_image_path, dest_path)
+                    print(f"Salvata immagine: {dest_path}")
             
             for root, dirs, files in os.walk("image"):  
                 for file in files:
@@ -507,30 +516,34 @@ async def run_pipeline(dizionario: dict):
 
 
     if tipi == {"testo", "excel"}:
-        print("ciao")
+        print("need to be implemented")
 
     if tipi == {"testo", "image"}:
         print("text and image")
 
         i=0
-        for key, value in dizionario.items():
-                if value== "image":
-                    print(value)
-                    #salvo tutte le immagini nella specifica folder per poter pocessare llm con immagine
+        for key, value_list in dizionario.items():
+                if key== "image":
                     os.makedirs("image", exist_ok=True)
-
                     for file in os.listdir("image"):
                         file_path = os.path.join("image", file)
                         if os.path.isfile(file_path):
                             os.remove(file_path)
+                
+                    for i, image_file in enumerate(value_list, start=1):
+                        word_path = os.path.join("/tmp", image_file.filename)
+                        with open(word_path, "wb") as f:
+                            f.write(await image_file.read())
+                        input_image_path = Path(word_path)
+                        i+=1
 
-                    input_image_path=key
-                    i+=1
-                    filename = f"_{i}" + os.path.basename(input_image_path) 
-                    #filename = os.path.basename(input_image_path)
-                    dest_path = os.path.join("image", filename)
-                    shutil.copy(input_image_path, dest_path)
-                    print(f"Salvata immagine: {dest_path}")
+                        filename = f"_{i}" + os.path.basename(input_image_path) 
+                        dest_path = os.path.join("image", filename)
+                        shutil.copy(input_image_path, dest_path)
+                        print(f"Salvata immagine: {dest_path}")
+                    #print(value)
+                    #salvo tutte le immagini nella specifica folder per poter pocessare llm con immagine
+
 
                     for root, dirs, files in os.walk("image"):  
                         for file in files:
@@ -542,16 +555,20 @@ async def run_pipeline(dizionario: dict):
 
         #una volta salvate le immagini processo il testo
         for key, value in dizionario.items():
-            if value== "testo":
-                print(value)
-                input_word_path=key
+            if key== "testo" or key== "text" or key== "TEXT":
+                docx_file=value
+                    
+                word_path = os.path.join("/tmp", docx_file.filename)
+                with open(word_path, "wb") as f:
+                    f.write(await docx_file.read())
 
-                word_path = Path(input_word_path)
+                word_path = Path(word_path)
                 if not word_path.exists():
                     raise FileNotFoundError(f"Word non trovato: {word_path}")
-                
+                    
+                #print(value)
                 if word_path.suffix.lower() == ".pdf":
-                    print("ciao")
+                    print("still to be implemented for pdf")
 
                 elif word_path.suffix.lower() == ".docx":
 
@@ -617,6 +634,7 @@ if __name__ == "__main__":
     #sample_word = os.path.join(os.path.dirname(__file__), "..", "input", "RU_Sportsbook_Platform_Fantacalcio_Prob. Form_v0.2 (1).docx")
     #sample_word= r"c:\Users\x.hita\Downloads\PRJ0015694_AI Angel Numera_Analisi Funzionale_DDA_v02.docx"
     sample_pdf= r"C:\Users\x.hita\Downloads\Screenshot 2025-11-25 151542.png"
+    sample=r"C:\Users\x.hita\Downloads\Anagrafica Spagna\Anagrafica Spagna\PRJ0014382 SF - SEU Spagna Anagrafica v1.3.docx"
     # img1=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT.png"
     # img2=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-1.png"
     # img3=r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Tabellone\SVT-2.png"
@@ -629,7 +647,7 @@ if __name__ == "__main__":
     # img10= r"C:\Users\x.hita\Downloads\UX_UI App SEVV - Agile II (14)\✅ Tabellone\Schedina\SVT-3.png"
     #sample_image= r"C:\Users\x.hita\Downloads\Doc2.docx"
     #dzionario={ img1: "image", img2: "image", img3: "image", img4: "image", img5: "image", img6: "image", img7: "image", img8: "image", img9: "image", img10: "image"}
-    dzionario={ sample_pdf: "image"}
+    dzionario={ sample: "testo"}
     asyncio.run(run_pipeline(dzionario))
 
 

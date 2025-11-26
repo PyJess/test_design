@@ -353,10 +353,13 @@ def make_serializable(obj, top_level=True):
 class RunTestDesignNode:
     async def __call__(self, state: TestDesignState):
         """Esegue la pipeline copertura requisiti su Excel e Word"""
-        dictionary = state.input_dictionary 
+        dictionary = state.dictionary 
         result = await run_pipeline(dictionary)
-        return state.model_copy(update={"excel_path": result["excel_path"]})
-
+        print(f"[NODO] Pipeline completata")
+        print(f"[NODO] Excel path ricevuto: {result.get('excel_path')}")
+        state.excel_path = result["excel_path"]
+        #return state.model_copy(update={"excel_path": result["excel_path"]})
+        return state
 
 @app.post("/run")
 async def run_test_design(
@@ -367,7 +370,9 @@ async def run_test_design(
 
     # Part 2: The optional files
     #docx_file: Optional[UploadFile] = File(None),
-    dictionary: Optional[UploadFile] = File(None)
+    image: Optional[list[UploadFile]] = None,
+    text: Optional[UploadFile] = None,
+    excel: Optional[UploadFile] = None
 ):
     """
     Esegue la pipeline di copertura tracciabilità
@@ -381,8 +386,16 @@ async def run_test_design(
     #         f.write(await excel_file.read())
         # Add the *path* to the state so the pipeline can find it
         # initial_state["excel_input_path"] = excel_path
+    dictionary= {}
+    if excel:
+        dictionary["excel"] = excel
+    if text:
+        dictionary["text"] = text
+    if image:
+        dictionary["image"] = image
+
     if dictionary:
-        initial_state["dictionary"] = dictionary
+        initial_state = TestDesignState(dictionary=dictionary)
 
     # if docx_file:
     #     word_path = os.path.join("/tmp", docx_file.filename)
@@ -400,9 +413,19 @@ async def run_test_design(
     
     compiled = graph.compile()
     result = await compiled.ainvoke(initial_state)
-    print(result)
-    file_excel_path = result["excel_path"]
-   
+    print(f"Tipo di result: {type(result)}")
+    print(f"Contenuto di result: {result}")
+    if isinstance(result, dict):
+        file_excel_path = result.get("excel_path")
+    else:
+        # Se è un oggetto Pydantic
+        file_excel_path = getattr(result, "excel_path", None)
+    if not file_excel_path:
+        raise ValueError("excel_path non trovato nel risultato della pipeline")
+    
+    print(f"Excel path: {file_excel_path}")
+    if not os.path.exists(file_excel_path):
+        raise FileNotFoundError(f"File Excel non trovato: {file_excel_path}")
 
     with open(file_excel_path,"rb") as f:
         a = f.read()

@@ -129,11 +129,13 @@ JSON Schema Reference:
               "description": "Main category of the test case."
             },
             "No Regression Test": {
-              "type": "boolean",
+              "type": "string",
+              "enum": ["Yes", "No"]
               "description": "Indicates whether this test should be included in regression test suites."
             },
             "Automation": {
-              "type": "boolean",
+              "type": "string",
+              "enum": ["Yes", "No"]
               "description": "Indicates whether this test should be considered for automation."
             },
             "Dataset": {
@@ -230,8 +232,8 @@ Example:
       "Execution Mode": "Manual",
       "Functionality": "Login",
       "Test Type": "functional",
-      "No Regression Test": true,
-      "Automation": false,
+      "No Regression Test": "Yes",
+      "Automation": "No",
       "Dataset": "Valid user credentials",
       "Expected Result": "User successfully logs in and Home Page is displayed.",
       "Country": "Italy",
@@ -264,8 +266,8 @@ Example:
       "Execution Mode": "Manual",
       "Functionality": "Password Reset",
       "Test Type": "functional",
-      "No Regression Test": true,
-      "Automation": false,
+      "No Regression Test": "Yes",
+      "Automation": "No",
       "Dataset": "Registered user email",
       "Expected Result": "Password reset process is successfully triggered.",
       "Country": "Italy",

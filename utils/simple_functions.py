@@ -80,7 +80,7 @@ def process_docx(docx_path, output_base):
     """
     Process a DOCX file using Pandoc and split it into sections based on Markdown headers (#, ##, etc.).
     """
-   
+    print("processing pandoc")
     txt_output_path = os.path.join(output_base, Path(docx_path).stem + ".txt")
    
     docx_path = os.path.normpath(docx_path)
