@@ -2,12 +2,18 @@ import asyncio
 import json
 from pathlib import Path
 from typing import List, Dict, Any
-
+import os
 from pdf_data_extraction import agent_data_extraction 
 from embedding import add_embeddings_to_json, LLMClient  
 from pdf_vector_search import semantic_search, display_results
 from dotenv import load_dotenv
 
+
+
+def load_json(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+    
 load_dotenv() 
 
 llm_client =LLMClient()
@@ -23,7 +29,8 @@ async def run_extraction_and_search_pipeline(
     user_query: str, 
     force_reprocess: bool = False,
     top_k: int = 5,
-    similarity_threshold: float = 0.3
+    similarity_threshold: float = 0.3,
+    cleanup_json_files: bool = True
 ) -> List[Dict[str, Any]]:
     """
     Pipeline completa: Estrazione PDF, Embedding del Documento, e Vector Search della Query.
@@ -41,7 +48,7 @@ async def run_extraction_and_search_pipeline(
     
     output_json_path = BASE_DIR / OUTPUT_JSON_FILENAME
     embedded_json_path = BASE_DIR / EMBEDDED_JSON_FILENAME
-
+    parsed_data = None
     print(f"--- 1. INIZIO PIPELINE ---")
     print(f"PDF: {pdf_path.name} | Query: '{user_query}'")
     print("-------------------------")
@@ -104,7 +111,24 @@ async def run_extraction_and_search_pipeline(
     else:
         print("Nessun risultato di ricerca trovato con i parametri specificati.")
         
+    if cleanup_json_files: # <-- NUOVO CONTROLLO
+            print('🗑️ Pulizia file JSON generati dal disco...')
+            # LOGICA DI CANCELLAZIONE DEI FILE:
+            try:
+                os.remove(output_json_path)
+                print(f"Rimosso: {output_json_path.name}")
+            except:
+                pass
+            
+            try:
+                os.remove(embedded_json_path)
+                print(f"Rimosso: {embedded_json_path.name}")
+            except:
+                pass
+        # --- FINE BLOCCO DI PULIZIA ---
+
     return results
+        
 
 
 def load_json(path):
@@ -117,30 +141,29 @@ def load_json(path):
 
 
 # --- ESECUZIONE DI TEST (Come richiesto) ---
-# if __name__ == "__main__":
+if __name__ == "__main__":
     
-#     PDF_INPUT_PATH = BASE_DIR / "20210930_REGOLAMENTO_SVT_2021.pdf" 
-#     pdf_test = BASE_DIR / "20210930_REGOLAMENTO_SVT_2021.pdf" # Esempio
-#     if not PDF_INPUT_PATH.exists():
-#         print(f"\nERRORE: File PDF non trovato: {PDF_INPUT_PATH}")
-#         print("Modifica PDF_INPUT_PATH con il percorso corretto del tuo file PDF.")
-#     else:
-#         # Queries di esempio (potranno essere prese dall'excel nel Main)
-#         test_queries = [
-#             " posta di gioco.",
-#             "Termini condizione",
-#         ]
+    PDF_INPUT_PATH = BASE_DIR / "20210930_REGOLAMENTO_SVT_2021.pdf" 
+    if not PDF_INPUT_PATH.exists():
+        print(f"\nERRORE: File PDF non trovato: {PDF_INPUT_PATH}")
+        print("Modifica PDF_INPUT_PATH con il percorso corretto del tuo file PDF.")
+    else:
+        # Queries di esempio (potranno essere prese dall'excel nel Main)
+        test_queries = [
+            " posta di gioco.",
+            "Termini condizione",
+        ]
         
-#         # Esegui la pipeline per tutte le query
-#         for i, query in enumerate(test_queries, 1):
-#             print(f"\n\n{'='*100}")
-#             print(f"CICLO DI TEST {i}: Esecuzione RAG per la query: {query}")
-#             print(f"{'='*100}")
+        # Esegui la pipeline per tutte le query
+        for i, query in enumerate(test_queries, 1):
+            print(f"\n\n{'='*100}")
+            print(f"CICLO DI TEST {i}: Esecuzione RAG per la query: {query}")
+            print(f"{'='*100}")
             
-#             # Esegui la pipeline (uso asyncio.run poiché agent_data_extraction è asincrona)
-#             asyncio.run(run_extraction_and_search_pipeline(
-#                 pdf_path=pdf_test,
-#                 user_query=query,
-#                 force_reprocess=False, # Imposta a True se devi rifare l'estrazione e embedding
-#                 top_k=1
-#             ))
+            # Esegui la pipeline (uso asyncio.run poiché agent_data_extraction è asincrona)
+            asyncio.run(run_extraction_and_search_pipeline(
+                pdf_path=PDF_INPUT_PATH,
+                user_query=query,
+                force_reprocess=False, # Imposta a True se devi rifare l'estrazione e embedding
+                top_k=1
+            ))

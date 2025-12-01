@@ -49,7 +49,7 @@ format_instructions = output_parser.get_format_instructions()
 async def agent_data_extraction(file_path:str, output_json_path:str):
     print(f"[INFO] Lettura file: {file_path}")
     text = read_document(file_path)
-    text = text[:18000]
+    # text = text[:18000]
 
     prompt = PromptTemplate(
     template=(
@@ -95,13 +95,13 @@ async def agent_data_extraction(file_path:str, output_json_path:str):
 
     return parsed_data
 
-BASE_DIR = Path(r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader")
+# BASE_DIR = Path(r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader")
 
-OUTPUT_FILENAME = "regolamento_strutturato.json" 
+# OUTPUT_FILENAME = "regolamento_strutturato.json" 
 
-output_json_path = BASE_DIR / OUTPUT_FILENAME
+# output_json_path = BASE_DIR / OUTPUT_FILENAME
 
-pdf_test = r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader\20210930_REGOLAMENTO_SVT_2021.pdf"
+# pdf_test = r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader\20210930_REGOLAMENTO_SVT_2021.pdf"
 
 
-asyncio.run(agent_data_extraction(str(pdf_test), str(output_json_path)))
+# asyncio.run(agent_data_extraction(str(pdf_test), str(output_json_path)))

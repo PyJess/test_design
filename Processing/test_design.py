@@ -19,6 +19,7 @@ from utils.excel_fix_output import *
 from llm.llm import *
 import base64
 #from Processing.controllo_sintattico import fill_excel_file
+from pdf_reader.pdf_pipeline_tc import run_extraction_and_retrieval_pipeline
 
 llm_client = LLMClient()
 
@@ -377,8 +378,16 @@ async def run_pipeline(dizionario: dict):
                     raise FileNotFoundError(f"Word non trovato: {word_path}")
                 
                 if word_path.endswith("pdf"):
-                    print("ciao")
-
+                    titles,contents_of_title = await run_extraction_and_retrieval_pipeline(word_path)
+                    for title, content in zip(titles, contents_of_title):
+                        if not head:
+                            continue
+                        head_clean = head.strip().lower()
+                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
+                            continue
+                            
+                        new_tc =gen_TC(title,content,mapping)
+                    
                 if word_path.endswith("docx"):
 
                     # Elaborazione Word

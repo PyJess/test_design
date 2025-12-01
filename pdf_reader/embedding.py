@@ -8,6 +8,11 @@ import json
 
 load_dotenv()
 
+
+def load_json(path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 
@@ -157,29 +162,26 @@ def add_embeddings_to_json(parsed_data: dict, output_json_path: str, embed_field
     
     return parsed_data
 
-from pathlib import Path
-input_test = r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader\regolamento_strutturato.json"
+# from pathlib import Path
+# input_test = r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader\regolamento_strutturato.json"
 
 
-BASE_DIR = Path(r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader")
+# BASE_DIR = Path(r"C:\Users\BencichWilliam\Desktop\test_design_xhesina\test_design\pdf_reader")
 
-OUTPUT_FILENAME = "embedding_regolamento_strutturato.json" 
+# OUTPUT_FILENAME = "embedding_regolamento_strutturato.json" 
 
-output_json_path = BASE_DIR / OUTPUT_FILENAME
+# output_json_path = BASE_DIR / OUTPUT_FILENAME
 
 
-def load_json(path):
-    with open(path, encoding="utf-8") as f:
-        return json.load(f)
     
-parsed_data = load_json(input_test)
+# parsed_data = load_json(input_test)
             
-            # 3. Esegui la funzione con gli argomenti corretti
-            # Nota: la funzione utilizza l'istanza globale 'llm_client'
-embedded_data = add_embeddings_to_json(
-parsed_data=parsed_data,
-output_json_path=str(output_json_path),
-embed_field="titolo_e_contenuto" 
-)
+#             # 3. Esegui la funzione con gli argomenti corretti
+#             # Nota: la funzione utilizza l'istanza globale 'llm_client'
+# embedded_data = add_embeddings_to_json(
+# parsed_data=parsed_data,
+# output_json_path=str(output_json_path),
+# embed_field="titolo_e_contenuto" 
+# )
 
-print(f"Esempio embedding (primi 5 valori): {embedded_data['sezioni'][0]['embedding'][:5]}")
+# print(f"Esempio embedding (primi 5 valori): {embedded_data['sezioni'][0]['embedding'][:5]}")
