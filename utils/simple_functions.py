@@ -14,6 +14,7 @@ from openpyxl import load_workbook
 from openpyxl.cell.rich_text import TextBlock, CellRichText
 from openpyxl.cell.text import InlineFont
 from docx import Document
+import base64
 from docx.oxml import parse_xml
 
 def load_file(filepath:str):
@@ -97,7 +98,10 @@ def process_docx(docx_path, output_base):
     ]
    
     try:
-        subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30)
+        subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=100)
+    except subprocess.TimeoutExpired:
+        print(f"[ERROR] Pandoc conversion timed out after 120 seconds")
+        return [], []
     except Exception as e:
         print(f"[ERROR] Pandoc conversion failed: {e}")
         return [], [] 
@@ -138,6 +142,123 @@ def process_docx(docx_path, output_base):
         print(f" paragrafo {i+1} {header_cleaned}")
     
     return chunks, head
+
+
+def process_docx_with_image(docx_path, output_base):
+    """
+    Process a DOCX file using Pandoc and split it into sections based on Markdown headers.
+    Also extracts embedded images and maps them to their respective sections.
+    """
+    print("processing pandoc")
+    
+    images_folder = os.path.join(output_base, "Images", Path(docx_path).stem)
+    os.makedirs(images_folder, exist_ok=True)
+    txt_output_path = os.path.join(output_base, Path(docx_path).stem + ".md")
+   
+    docx_path = os.path.normpath(docx_path)
+    txt_output_path = os.path.normpath(txt_output_path)
+    images_folder = os.path.normpath(images_folder)
+    os.makedirs(output_base, exist_ok=True)
+   
+    # Convert to markdown with image extraction
+    command = [
+        PANDOC_EXE,
+        "-s", docx_path,
+        "--columns=120",
+        "-t", "markdown",
+        "-o", txt_output_path,
+        f"--extract-media={images_folder}"  # Aggiunto per estrarre le immagini
+    ]
+   
+    try:
+        subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30)
+    except Exception as e:
+        print(f"[ERROR] Pandoc conversion failed: {e}")
+        return [], [], {}, []
+    
+    with open(txt_output_path, "r", encoding="utf-8") as f:
+        text_lines = f.read().splitlines()
+   
+    headers = []
+    heading_list = []
+   
+    for index, line in enumerate(text_lines):
+        if line.startswith("#"):
+            level = line.count("#")
+            clean_name = line.replace("#", "").strip()
+            headers.append([clean_name, index, level])
+            heading_list.append([clean_name, level])
+    
+    headers.insert(0, ["== first line ==", 0, 0])
+    headers.append(["== last line ==", len(text_lines), 0])
+    heading_list.insert(0, ["== first line ==", 0])
+    heading_list.append(["== last line ==", 0])
+    
+    head = []
+    chunks = []
+    for i in range(len(headers) - 1):
+        start_idx = headers[i][1]
+        end_idx = headers[i + 1][1]
+        section_lines = text_lines[start_idx:end_idx]
+        chunk_text = "\n".join(section_lines).strip()
+       
+        header_cleaned = re.sub(r"\s*\{.*?\}", "", headers[i][0])
+        header_cleaned = header_cleaned.replace("--", "–").strip(" *[]\n")
+        chunk_text = header_cleaned + "\n" + chunk_text
+        head.append(header_cleaned)
+        chunks.append(chunk_text)
+        print(f" paragrafo {i+1} {header_cleaned}")
+    
+    # Gestione immagini
+    images_dict = {}
+    images_per_chunk = [[] for _ in chunks]
+    available_images = {}
+    
+    # Pandoc crea una cartella "media" dentro images_folder
+    media_folder = os.path.join(images_folder, "media")
+    if os.path.exists(media_folder):
+        images_folder = media_folder
+        print(f"[Info] Using media folder: {images_folder}")
+    
+    # Cataloga le immagini disponibili
+    if os.path.exists(images_folder):
+        print(f"\n[DEBUG] Available images in {images_folder}:")
+        for file in os.listdir(images_folder):
+            print(f"  - {file}")
+            if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp', '.svg')):
+                available_images[file.lower()] = file
+    
+    # Pattern per trovare riferimenti alle immagini nel markdown
+    image_pattern = re.compile(
+        r'!\[[^\]]*\]\([^)]*((?:img|image)\d+\.(?:png|jpg|jpeg|gif|bmp|webp|svg))[^)]*\)',
+        re.IGNORECASE
+    )
+    
+    # Mappa immagini ai chunk
+    for i, chunk in enumerate(chunks):
+        found = set()
+        for match in image_pattern.finditer(chunk):
+            img_filename = match.group(1).lower()
+            if img_filename in found or img_filename not in available_images:
+                continue
+            
+            actual_name = available_images[img_filename]
+            img_path = os.path.join(images_folder, actual_name)
+            
+            # Encode immagine in base64
+            try:
+                with open(img_path, 'rb') as img_file:
+                    encoded = base64.b64encode(img_file.read()).decode('utf-8')
+                    images_dict[actual_name] = encoded
+                    images_per_chunk[i].append(actual_name)
+                    found.add(img_filename)
+                    print(f"[Info] Chunk {i} → added image {actual_name}")
+            except Exception as e:
+                print(f"[Error] Failed to encode image {actual_name}: {e}")
+    
+    print(f"[Summary] Processed {len(chunks)} sections, found {len(images_dict)} unique images.")
+    
+    return chunks, head, images_dict, images_per_chunk
 
 
 def apply_red_text(cell):

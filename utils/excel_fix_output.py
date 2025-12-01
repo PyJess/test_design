@@ -89,7 +89,8 @@ def fix_labels_with_order(file_input):
 
     # Mapping (vecchia colonna -> nuova colonna)
     mapping = { 
-        "Title":"Title",    
+        "Title":"Title",  
+        "ID":"ID",  
         "#":"#",    
         "Step":"Step",
         "Step Description":"Step Description",
@@ -114,6 +115,7 @@ def fix_labels_with_order(file_input):
     # Nuovo ordine colonne
     col_order = [
         "Title",
+        "ID",
         "#",
         "Step",
         "Step Description",

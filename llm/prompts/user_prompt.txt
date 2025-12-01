@@ -9,3 +9,9 @@ Use the following field mapping as the ground truth for your generation if neede
 Here you find some additional informations that you can use to generate more accurate and dettailed test cases:
 
 {context}
+
+
+**Important**
+Generate the output as valid JSON, without extra parentheses or trailing commas, ready to be parsed with json.loads.
+Ensure the output is in English.
+

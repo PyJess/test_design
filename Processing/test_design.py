@@ -132,7 +132,7 @@ async def gen_TC(paragraph, context, mapping):
         response = await llm_client.a_invoke_model(messages, schema)
         print("Test Case generato con successo!")
         print("Risposta dall'LLM:")
-        print(response)
+        #print(response)
         return response
 
 
@@ -181,6 +181,15 @@ def merge_TC(new_TC):
         "total_count": len(all_test_cases)
     }
 
+def fix_json(json_str):
+        """Prova a riparare errori comuni nel JSON generato dall'LLM."""
+        # Rimuove virgole finali prima di chiusura di oggetti o array
+        json_str = re.sub(r',(\s*[\]}])', r'\1', json_str)
+        # Aggiunge eventuali virgole mancanti tra proprietà (semplificato)
+        json_str = re.sub(r'(".*?")\s*("\w+"\s*:)', r'\1,\2', json_str)
+        return json_str
+
+
 async def process_paragraphs(paragraphs, headers, vectorstore, mapping):
     """Process all paragraphs asynchronously to generate test cases."""
     
@@ -194,16 +203,28 @@ async def process_paragraphs(paragraphs, headers, vectorstore, mapping):
         #print(f"Context retrieved: {context}")
         print("Preparazione chiamata LLM")
 
+        max_attempts = 8
+        attempts = 0
         context = ""
-        while True:
-            tc = await gen_TC(par, context, mapping)
-
+        while attempts < max_attempts:
+            attempts += 1
+            try:
+                print(f"Generazione nuovo TC, tentativo {attempts}")
+                tc = await gen_TC(par, context, mapping)
+            except Exception as e:
+                print(f"Errore durante la chiamata LLM al tentativo {attempts}: {e}")
+                tc = None
             if isinstance(tc, dict) and "test_cases" in tc:
                 for test_case in tc["test_cases"]:
                     test_case["_polarion"] = headers[i - 1] 
 
+
+                tc_str = json.dumps(tc)  # converte dict in stringa
+                tc_fixed_str = fix_json(tc_str)  # rimuove virgole finali
+                #tc = json.loads(tc_str)
+                tc = json.loads(tc_fixed_str)
                 print("Output LLM ricevuto:")
-                print(tc)
+                #print(tc)
                 return tc
 
     # Crea tutte le tasks e le esegue in parallelo
@@ -387,10 +408,12 @@ async def run_pipeline(dizionario: dict):
 
                     # Elaborazione Word
                     paragraphs, headers = process_docx(word_path, word_path.parent)
-
+                    #paragraphs, headers, images_dict, images_per_chunk = process_docx_with_image(word_path, word_path.parent)
                     # Filtraggio intestazioni
                     filtered_paragraphs = []
                     filtered_headers = []
+                    #filtered_images = []
+                    #for idx, (par, head) in enumerate(zip(paragraphs, headers)):
                     for par, head in zip(paragraphs, headers):
                         if not head:
                             continue
@@ -399,7 +422,8 @@ async def run_pipeline(dizionario: dict):
                             continue
                         filtered_paragraphs.append(par)
                         filtered_headers.append(head)
-
+                        #filtered_images.append(images_per_chunk[idx] if idx < len(images_per_chunk) else [])
+                    
                     # Preparazione RAG / chunks
                     chunks, _ = process_docx(word_path, word_path.parent)
                     vectorstore = None  # eventualmente implementa embeddings/FAISS
@@ -408,6 +432,7 @@ async def run_pipeline(dizionario: dict):
                     mapping = extract_field_mapping()
 
                     # Generazione nuovi test case
+                    #new_TC = await process_paragraphs(filtered_paragraphs, filtered_headers, vectorstore, mapping, images_dict, filtred_images)
                     new_TC = await process_paragraphs(filtered_paragraphs, filtered_headers, vectorstore, mapping)
                     updated_json = merge_TC(new_TC)
                     print("Generazione test case completata tramite LLM")

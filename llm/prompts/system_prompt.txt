@@ -39,6 +39,7 @@ Do not include text, comments, or explanations outside the JSON.
 Follow the schema exactly, with proper types and all required fields.
 Boolean or enum fields must use their correct types according to the schema.
 Ensure that Steps contain both "Step Description" and "Expected Result" for each step.
+Ensure the output is in English.
 
 
 JSON Schema Reference:
@@ -277,3 +278,9 @@ Example:
     }
   ]
 }
+
+
+
+
+**Important**
+Generate the output as valid JSON, without extra parentheses or trailing commas, ready to be parsed with json.loads.
