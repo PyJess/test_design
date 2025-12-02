@@ -1,0 +1,3286 @@
+[
+    {
+        "Titolo": "Verify SGP Generator Full Responsiveness on Desktop",
+        "contenuto": [
+            {
+                "ID": "TC-001",
+                "#": 1.0,
+                "Step": 1.0,
+                "Step Description": "Open the SGP Generator application in a desktop web browser (e.g., Chrome, Firefox, Edge).",
+                "Expected Result": "The application loads successfully without layout issues.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web",
+                "Precondizioni": "SGP Generator application is deployed and accessible via a supported desktop browser.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Responsiveness",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "SGP Generator displays and functions correctly at all common desktop resolutions."
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Resize the browser window to various widths (e.g., 1920px, 1366px, 1024px, 800px, 600px).",
+                "Expected Result": "The layout and content adapt fluidly to each width, maintaining usability and readability."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Interact with all primary features (e.g., navigation, form inputs, buttons) at each width.",
+                "Expected Result": "All features remain accessible and functional at all tested widths."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify SGP Generator Full Responsiveness on Mobile Devices (iOS and Android)",
+        "contenuto": [
+            {
+                "ID": "TC-002",
+                "#": 2.0,
+                "Step": 1.0,
+                "Step Description": "Open the SGP Generator application in a mobile browser (Safari for iOS, Chrome for Android).",
+                "Expected Result": "The application loads successfully without layout issues.",
+                "Test Group": "Mobile",
+                "Canale": "Web",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS 17, Android 13, Web",
+                "Precondizioni": "SGP Generator application is deployed and accessible via a supported mobile browser.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Responsiveness",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "SGP Generator displays and functions correctly on both iOS and Android devices in all orientations."
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Rotate the device between portrait and landscape orientations.",
+                "Expected Result": "The layout and content adapt fluidly to both orientations, maintaining usability and readability."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Interact with all primary features (e.g., navigation, form inputs, buttons) in both orientations.",
+                "Expected Result": "All features remain accessible and functional in both orientations."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify SGP Generator Responsiveness on Tablet Devices",
+        "contenuto": [
+            {
+                "ID": "TC-003",
+                "#": 3.0,
+                "Step": 1.0,
+                "Step Description": "Open the SGP Generator application in a tablet browser (e.g., Safari on iPad, Chrome on Android tablet).",
+                "Expected Result": "The application loads successfully without layout issues.",
+                "Test Group": "Tablet",
+                "Canale": "Web",
+                "Dispositivo": "Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iPadOS 17, Android 13, Web",
+                "Precondizioni": "SGP Generator application is deployed and accessible via a supported tablet browser.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Responsiveness",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "SGP Generator displays and functions correctly on tablet devices in all orientations."
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Rotate the tablet between portrait and landscape orientations.",
+                "Expected Result": "The layout and content adapt fluidly to both orientations, maintaining usability and readability."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Interact with all primary features (e.g., navigation, form inputs, buttons) in both orientations.",
+                "Expected Result": "All features remain accessible and functional in both orientations."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify SGP Generator Layout and Functionality on Edge Case Screen Sizes",
+        "contenuto": [
+            {
+                "ID": "TC-004",
+                "#": 4.0,
+                "Step": 1.0,
+                "Step Description": "Open the SGP Generator application in a browser or emulator set to uncommon screen sizes (e.g., 320x480, 375x667, 2560x1440).",
+                "Expected Result": "The application loads successfully without layout issues.",
+                "Test Group": "Desktop/Mobile",
+                "Canale": "Web",
+                "Dispositivo": "Computer/Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, iOS 17, Android 13, Web",
+                "Precondizioni": "SGP Generator application is deployed and accessible. Browser or emulator supports custom screen sizes.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Responsiveness",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "SGP Generator displays and functions correctly at edge case screen sizes."
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Interact with all primary features at each screen size.",
+                "Expected Result": "All features remain accessible and functional at all tested screen sizes."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify No Horizontal Scrollbar Appears at Any Supported Resolution",
+        "contenuto": [
+            {
+                "ID": "TC-005",
+                "#": 5.0,
+                "Step": 1.0,
+                "Step Description": "Open the SGP Generator application in a browser at various supported resolutions (desktop, tablet, mobile).",
+                "Expected Result": "The application loads successfully.",
+                "Test Group": "Desktop/Mobile/Tablet",
+                "Canale": "Web",
+                "Dispositivo": "Computer/Smartphone/Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, iOS 17, Android 13, Web",
+                "Precondizioni": "SGP Generator application is deployed and accessible via supported browsers/devices.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Responsiveness",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "No horizontal scrollbar appears at any supported resolution; content is fully visible."
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check for the presence of a horizontal scrollbar at each resolution.",
+                "Expected Result": "No horizontal scrollbar is present; all content fits within the viewport horizontally."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carousel Visibility on Home Page under Standard Conditions",
+        "contenuto": [
+            {
+                "ID": "TC-006",
+                "#": 6.0,
+                "Step": 1.0,
+                "Step Description": "Open the application and navigate to the Home Page.",
+                "Expected Result": "Home Page loads successfully.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Android, App Android",
+                "Precondizioni": "User is logged in and has access to the Home Page. Network connection is stable.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Home Page Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; standard network conditions.",
+                "Risultato Atteso": "Carousel is visible on the Home Page under standard conditions.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the area designated for the carousel component.",
+                "Expected Result": "Carousel is visible and displayed according to the design specifications."
+            }
+        ]
+    },
+    {
+        "Titolo": "Validate Structure of a Single Precompiled Card in Home Page Carousel",
+        "contenuto": [
+            {
+                "ID": "TC-007",
+                "#": 7.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page where the carousel is displayed.",
+                "Expected Result": "Carousel is visible with at least one card.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App IOS",
+                "Precondizioni": "User is logged in; carousel contains at least one precompiled card.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carousel Card Structure",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; carousel with precompiled cards.",
+                "Risultato Atteso": "Each precompiled card in the carousel matches the specified structure and content.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Inspect the structure of a single precompiled card within the carousel.",
+                "Expected Result": "Card displays all required fields (e.g., title, image, description, CTA button) as per design."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Caching of Precompiled Cards on Home Page Carousel",
+        "contenuto": [
+            {
+                "ID": "TC-008",
+                "#": 8.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page and allow the carousel to load with precompiled cards.",
+                "Expected Result": "Carousel and cards are loaded and displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "User is logged in; cache is empty before first load.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carousel Card Caching",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; empty cache at start.",
+                "Risultato Atteso": "Precompiled cards are cached and reloaded efficiently on subsequent accesses.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Refresh the Home Page or restart the application.",
+                "Expected Result": "Carousel reloads quickly, and previously loaded precompiled cards are retrieved from cache without additional network requests."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Skeleton Loader Displayed While Carousel Content Loads on Home Page",
+        "contenuto": [
+            {
+                "ID": "TC-009",
+                "#": 9.0,
+                "Step": 1.0,
+                "Step Description": "Simulate slow network conditions and navigate to the Home Page.",
+                "Expected Result": "Home Page begins to load, but carousel content is not yet available.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Android, App Android",
+                "Precondizioni": "User is logged in; network throttling is enabled to simulate slow connection.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Loader Display",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; network throttling enabled.",
+                "Risultato Atteso": "Skeleton loader is displayed in the carousel area until content is loaded.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the carousel area during content loading.",
+                "Expected Result": "Skeleton loader (placeholder UI) is displayed until carousel content is fully loaded."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carousel Visibility in Event Detail (Bet Builder Tab)",
+        "contenuto": [
+            {
+                "ID": "TC-010",
+                "#": 10.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Event Detail page and select the Bet Builder tab.",
+                "Expected Result": "Bet Builder tab loads successfully.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App IOS",
+                "Precondizioni": "User is logged in; event with Bet Builder tab is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; event with Bet Builder tab.",
+                "Risultato Atteso": "Carousel is visible in the Bet Builder tab of the Event Detail page.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the area designated for the carousel component within the Bet Builder tab.",
+                "Expected Result": "Carousel is visible and displayed according to the design specifications."
+            }
+        ]
+    },
+    {
+        "Titolo": "Validate Structure of Precompiled Card in Event Detail Carousel (Bet Builder Tab)",
+        "contenuto": [
+            {
+                "ID": "TC-011",
+                "#": 11.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Event Detail page and select the Bet Builder tab.",
+                "Expected Result": "Bet Builder tab with carousel is displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "User is logged in; event with Bet Builder tab and precompiled cards is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Carousel Card Structure",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; event with precompiled cards.",
+                "Risultato Atteso": "Each precompiled card in the Bet Builder carousel matches the specified structure and content.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Inspect the structure of a single precompiled card within the carousel.",
+                "Expected Result": "Card displays all required fields (e.g., event info, odds, CTA button) as per design."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Caching of Precompiled Cards in Event Detail Carousel (Bet Builder Tab)",
+        "contenuto": [
+            {
+                "ID": "TC-012",
+                "#": 12.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Event Detail page and select the Bet Builder tab to load the carousel with precompiled cards.",
+                "Expected Result": "Carousel and cards are loaded and displayed.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Android, App Android",
+                "Precondizioni": "User is logged in; cache is empty before first load; event with Bet Builder tab is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Carousel Card Caching",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Valid user credentials; empty cache at start; event with Bet Builder tab.",
+                "Risultato Atteso": "Precompiled cards in the Bet Builder carousel are cached and reloaded efficiently on subsequent accesses.",
+                "Linked Work Items": "Sommario"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Refresh the Event Detail page or navigate away and return.",
+                "Expected Result": "Carousel reloads quickly, and previously loaded precompiled cards are retrieved from cache without additional network requests."
+            }
+        ]
+    },
+    {
+        "Titolo": "Display of Randomly Generated Same Game Parlay (SGP) Precompiled Bets on Full Responsive Frontend (Italy)",
+        "contenuto": [
+            {
+                "ID": "TC-013",
+                "#": 13.0,
+                "Step": 1.0,
+                "Step Description": "Access the Betting Full Responsive frontend (Italy version) via desktop browser.",
+                "Expected Result": "The homepage loads successfully, displaying betting options.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Betting Full Responsive Web (Italy)",
+                "Precondizioni": "User is not logged in. SGP Generator is active and integrated. Sports event with SGP support is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "SGP Precompiled Bets Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "N/A (random generation by system)",
+                "Risultato Atteso": "Randomly generated SGP precompiled bets are displayed in the appropriate section on the event page and change on each refresh.",
+                "Linked Work Items": "Introduzione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to a sports event that supports Same Game Parlay (SGP) bets.",
+                "Expected Result": "The event page loads, showing available betting markets."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Locate the section for precompiled SGP bets generated by the SGP Generator.",
+                "Expected Result": "A section labeled for SGP precompiled bets is visible on the event page."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Verify that the displayed SGP precompiled bets are generated randomly and differ on page refresh.",
+                "Expected Result": "Each page refresh displays a new set of randomly generated SGP precompiled bets."
+            }
+        ]
+    },
+    {
+        "Titolo": "Display of Randomly Generated Same Game Parlay (SGP) Precompiled Bets on Full Responsive Frontend (Morocco)",
+        "contenuto": [
+            {
+                "ID": "TC-014",
+                "#": 14.0,
+                "Step": 1.0,
+                "Step Description": "Access the Betting Full Responsive frontend (Morocco version) via mobile browser.",
+                "Expected Result": "The homepage loads successfully, displaying betting options.",
+                "Test Group": "Mobile",
+                "Canale": "Web",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Android 12, Betting Full Responsive Web (Morocco)",
+                "Precondizioni": "User is not logged in. SGP Generator is active and integrated. Sports event with SGP support is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "SGP Precompiled Bets Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "N/A (random generation by system)",
+                "Risultato Atteso": "Randomly generated SGP precompiled bets are displayed in the appropriate section on the event page and change on each refresh.",
+                "Linked Work Items": "Introduzione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to a sports event that supports Same Game Parlay (SGP) bets.",
+                "Expected Result": "The event page loads, showing available betting markets."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Locate the section for precompiled SGP bets generated by the SGP Generator.",
+                "Expected Result": "A section labeled for SGP precompiled bets is visible on the event page."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Verify that the displayed SGP precompiled bets are generated randomly and differ on page refresh.",
+                "Expected Result": "Each page refresh displays a new set of randomly generated SGP precompiled bets."
+            }
+        ]
+    },
+    {
+        "Titolo": "Responsive Layout Verification for SGP Precompiled Bets Section (Desktop, Tablet, Mobile)",
+        "contenuto": [
+            {
+                "ID": "TC-015",
+                "#": 15.0,
+                "Step": 1.0,
+                "Step Description": "Access the Betting Full Responsive frontend (Italy version) via desktop browser.",
+                "Expected Result": "The homepage loads successfully.",
+                "Test Group": "Desktop, Tablet, Mobile",
+                "Canale": "Web",
+                "Dispositivo": "Computer, Tablet, Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, iOS 16, Android 12, Betting Full Responsive Web (Italy)",
+                "Precondizioni": "SGP precompiled bets are available for the selected event. Devices and browsers support responsive design.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Responsive Layout",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "The SGP precompiled bets section is displayed correctly and remains usable across desktop, tablet, and mobile devices.",
+                "Linked Work Items": "Introduzione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to a sports event with SGP precompiled bets.",
+                "Expected Result": "The event page loads with SGP precompiled bets section visible."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Resize the browser window to simulate tablet and mobile screen sizes.",
+                "Expected Result": "The layout adapts responsively, and the SGP precompiled bets section remains visible and usable."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Repeat the test on an actual tablet and mobile device.",
+                "Expected Result": "The SGP precompiled bets section is displayed correctly and is fully functional on all devices."
+            }
+        ]
+    },
+    {
+        "Titolo": "SGP Precompiled Bets Display in Retail Terminal (Italy)",
+        "contenuto": [
+            {
+                "ID": "TC-016",
+                "#": 16.0,
+                "Step": 1.0,
+                "Step Description": "Access the Betting Full Responsive frontend (Italy version) via a retail terminal.",
+                "Expected Result": "The homepage loads successfully on the terminal device.",
+                "Test Group": "Terminale",
+                "Canale": "Web",
+                "Dispositivo": "Terminale",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Retail Terminal OS, Betting Full Responsive Web (Italy)",
+                "Precondizioni": "Retail terminal is connected and has access to the Betting Full Responsive frontend. SGP Generator is active.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "SGP Precompiled Bets Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Dataset": "N/A (random generation by system)",
+                "Risultato Atteso": "SGP precompiled bets are displayed and change on each refresh or session on the retail terminal.",
+                "Linked Work Items": "Introduzione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to a sports event with SGP precompiled bets.",
+                "Expected Result": "The event page loads, and the SGP precompiled bets section is visible."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify that the SGP precompiled bets are displayed and are randomly generated by the SGP Generator.",
+                "Expected Result": "SGP precompiled bets are visible and change on each refresh or new session."
+            }
+        ]
+    },
+    {
+        "Titolo": "Error Handling: SGP Generator Unavailable",
+        "contenuto": [
+            {
+                "ID": "TC-017",
+                "#": 17.0,
+                "Step": 1.0,
+                "Step Description": "Simulate SGP Generator service being unavailable (e.g., by disabling the service or disconnecting it).",
+                "Expected Result": "SGP Generator is not accessible by the frontend.",
+                "Test Group": "Desktop, Mobile",
+                "Canale": "Web",
+                "Dispositivo": "Computer, Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Android 12, Betting Full Responsive Web",
+                "Precondizioni": "SGP Generator service is intentionally made unavailable.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Error Handling",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "A clear, user-friendly message is shown when SGP Generator is unavailable, and the rest of the page remains functional.",
+                "Linked Work Items": "Introduzione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Betting Full Responsive frontend and navigate to a sports event with SGP precompiled bets.",
+                "Expected Result": "The event page loads, but SGP precompiled bets cannot be retrieved."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the SGP precompiled bets section.",
+                "Expected Result": "A user-friendly error message or placeholder is displayed, indicating that SGP precompiled bets are temporarily unavailable."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Requirements Section is Present and Accessible",
+        "contenuto": [
+            {
+                "ID": "TC-018",
+                "#": 18.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the application main page or documentation portal.",
+                "Expected Result": "The main page or documentation portal loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "User has access to the application or documentation portal.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Requirements Documentation",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "The 'Requisiti' or '# Requisiti' section is present and accessible from the main page or documentation portal.",
+                "Linked Work Items": "Requisiti"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Locate the section labeled 'Requisiti' or '# Requisiti'.",
+                "Expected Result": "The 'Requisiti' or '# Requisiti' section is visible and accessible to the user."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Requirements Section is Not Empty",
+        "contenuto": [
+            {
+                "ID": "TC-019",
+                "#": 19.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the 'Requisiti' or '# Requisiti' section of the application or documentation portal.",
+                "Expected Result": "The 'Requisiti' or '# Requisiti' section is displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "User is on the 'Requisiti' or '# Requisiti' section.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Requirements Documentation",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "The 'Requisiti' or '# Requisiti' section contains at least one requirement or content item.",
+                "Linked Work Items": "Requisiti"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check that the section contains at least one requirement or content item.",
+                "Expected Result": "At least one requirement or content item is present in the section."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Requirements Section Handles Empty State Gracefully",
+        "contenuto": [
+            {
+                "ID": "TC-020",
+                "#": 20.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the 'Requisiti' or '# Requisiti' section when no requirements have been added.",
+                "Expected Result": "The section is displayed even if no requirements are present.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Low",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "The requirements section is empty (no requirements have been added).",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Requirements Documentation",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "A clear, user-friendly message or placeholder is displayed when the requirements section is empty.",
+                "Linked Work Items": "Requisiti"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the message or UI displayed in the empty state.",
+                "Expected Result": "A user-friendly message or placeholder is shown indicating that no requirements are currently available."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Display and Title on Home Page (Full Responsive Online)",
+        "contenuto": [
+            {
+                "ID": "TC-021",
+                "#": 21.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page on the Full Responsive Online channel.",
+                "Expected Result": "The Home Page loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Online)",
+                "Precondizioni": "User is not logged in or is logged in; Home Page is accessible; SGP cards are available from BE engine.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Home Page Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "The carousel with the correct title and both items ('Calcio / Football' and 'Basket') are displayed on the Home Page.",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the top section of the Home Page.",
+                "Expected Result": "A carousel titled 'Bet Builder in evidenza / Bet Builder en vedette' is visible at the top of the page."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Check below the carousel for available items.",
+                "Expected Result": "Two items labeled 'Calcio / Football' and 'Basket' are displayed below the carousel."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Card Content for 'Calcio / Football' Selection",
+        "contenuto": [
+            {
+                "ID": "TC-022",
+                "#": 22.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page on the Full Responsive Online channel.",
+                "Expected Result": "The Home Page loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Online)",
+                "Precondizioni": "SGP cards for Calcio are available from BE engine; Home Page is accessible.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Card Filtering",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "SGP Calcio cards generated by BE engine.",
+                "Risultato Atteso": "When 'Calcio / Football' is selected, only Calcio SGP cards are shown in the carousel.",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Click on the 'Calcio / Football' item below the carousel.",
+                "Expected Result": "The 'Calcio / Football' item is selected (highlighted or marked as active)."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the cards displayed within the carousel.",
+                "Expected Result": "The carousel displays only SGP cards related to Calcio (Football) bets, generated by the BE engine."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Card Content for 'Basket' Selection",
+        "contenuto": [
+            {
+                "ID": "TC-023",
+                "#": 23.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page on the Full Responsive Online channel.",
+                "Expected Result": "The Home Page loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Online)",
+                "Precondizioni": "SGP cards for Basket are available from BE engine; Home Page is accessible.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Card Filtering",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "SGP Basket cards generated by BE engine.",
+                "Risultato Atteso": "When 'Basket' is selected, only Basket SGP cards are shown in the carousel.",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Click on the 'Basket' item below the carousel.",
+                "Expected Result": "The 'Basket' item is selected (highlighted or marked as active)."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the cards displayed within the carousel.",
+                "Expected Result": "The carousel displays only SGP cards related to Basket bets, generated by the BE engine."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Display and Title on Home Page (Full Responsive Retail)",
+        "contenuto": [
+            {
+                "ID": "TC-024",
+                "#": 24.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page on the Full Responsive Retail channel.",
+                "Expected Result": "The Home Page loads successfully.",
+                "Test Group": "Terminale",
+                "Canale": "Web",
+                "Dispositivo": "Terminale",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Retail)",
+                "Precondizioni": "User is not logged in or is logged in; Home Page is accessible; SGP cards are available from BE engine.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Home Page Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "The carousel with the correct title and both items ('Calcio / Football' and 'Basket') are displayed on the Home Page (Retail).",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the top section of the Home Page.",
+                "Expected Result": "A carousel titled 'Bet Builder in evidenza / Bet Builder en vedette' is visible at the top of the page."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Check below the carousel for available items.",
+                "Expected Result": "Two items labeled 'Calcio / Football' and 'Basket' are displayed below the carousel."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Activation/Deactivation on Full Responsive Retail (Hot Configuration)",
+        "contenuto": [
+            {
+                "ID": "TC-025",
+                "#": 25.0,
+                "Step": 1.0,
+                "Step Description": "Access the configuration panel for Full Responsive Retail.",
+                "Expected Result": "Configuration panel is accessible without system release or downtime.",
+                "Test Group": "Terminale",
+                "Canale": "Web",
+                "Dispositivo": "Terminale",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Retail)",
+                "Precondizioni": "User has access to configuration panel; Home Page is accessible; SGP cards are available from BE engine.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Activation/Deactivation",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "The carousel can be activated or deactivated in real time from the configuration panel without system release, and the change is reflected immediately on the Home Page.",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Locate the option to activate or deactivate the Home Page carousel.",
+                "Expected Result": "An option to enable or disable the carousel is present."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Deactivate the carousel and save the configuration.",
+                "Expected Result": "Configuration is saved successfully."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Refresh or revisit the Home Page on Full Responsive Retail.",
+                "Expected Result": "The carousel is no longer visible on the Home Page."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Reactivate the carousel and save the configuration.",
+                "Expected Result": "Configuration is saved successfully."
+            },
+            {
+                "Step": 6.0,
+                "Step Description": "Refresh or revisit the Home Page on Full Responsive Retail.",
+                "Expected Result": "The carousel is visible again on the Home Page."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Not Displayed When Deactivated (Full Responsive Retail)",
+        "contenuto": [
+            {
+                "ID": "TC-026",
+                "#": 26.0,
+                "Step": 1.0,
+                "Step Description": "Ensure the carousel is deactivated via the configuration panel for Full Responsive Retail.",
+                "Expected Result": "Carousel is set to 'deactivated' in the configuration.",
+                "Test Group": "Terminale",
+                "Canale": "Web",
+                "Dispositivo": "Terminale",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Retail)",
+                "Precondizioni": "Carousel is deactivated in configuration; Home Page is accessible.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Activation/Deactivation",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "When the carousel is deactivated, it is not visible on the Home Page (Retail).",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the Home Page on Full Responsive Retail.",
+                "Expected Result": "The Home Page loads successfully."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the top section of the Home Page.",
+                "Expected Result": "The carousel is not displayed on the Home Page."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Display on Different Devices (Responsiveness Check)",
+        "contenuto": [
+            {
+                "ID": "TC-027",
+                "#": 27.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page on Full Responsive Online using a desktop browser.",
+                "Expected Result": "Carousel is displayed correctly at the top of the Home Page.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer, Smartphone, Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Online)",
+                "Precondizioni": "Home Page is accessible; SGP cards are available from BE engine.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Responsiveness",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Risultato Atteso": "Carousel is displayed and adapts correctly to desktop, mobile, and tablet devices.",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the Home Page on Full Responsive Online using a mobile browser.",
+                "Expected Result": "Carousel is displayed correctly at the top of the Home Page, adapted to mobile layout."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Navigate to the Home Page on Full Responsive Online using a tablet browser.",
+                "Expected Result": "Carousel is displayed correctly at the top of the Home Page, adapted to tablet layout."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Error Handling When No SGP Cards Are Available",
+        "contenuto": [
+            {
+                "ID": "TC-028",
+                "#": 28.0,
+                "Step": 1.0,
+                "Step Description": "Simulate a scenario where the BE engine does not return any SGP cards for Calcio or Basket.",
+                "Expected Result": "No SGP cards are available for display.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive Online)",
+                "Precondizioni": "BE engine is configured to return no SGP cards; Home Page is accessible.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello Error Handling",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "No SGP cards available from BE engine.",
+                "Risultato Atteso": "If no SGP cards are available, the carousel displays a user-friendly message or placeholder for both Calcio and Basket selections.",
+                "Linked Work Items": "Carosello Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the Home Page and select 'Calcio / Football'.",
+                "Expected Result": "The carousel attempts to display Calcio SGP cards."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the carousel area.",
+                "Expected Result": "A user-friendly message or placeholder is displayed indicating no SGP cards are available for Calcio."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Select 'Basket'.",
+                "Expected Result": "The carousel attempts to display Basket SGP cards."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Observe the carousel area.",
+                "Expected Result": "A user-friendly message or placeholder is displayed indicating no SGP cards are available for Basket."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display of Team Names in Separate Strings on Precompiled Card",
+        "contenuto": [
+            {
+                "ID": "TC-033",
+                "#": 33.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page (HP) where the SGP Generator precompiled card is displayed.",
+                "Expected Result": "The precompiled card is visible on the HP.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App",
+                "Precondizioni": "At least one precompiled card generated by SGP Generator is available on the HP.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled card with Team 1: 'Juventus', Team 2: 'Inter'",
+                "Risultato Atteso": "Team 1 and Team 2 names are displayed as two distinct strings on the card.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Identify the section displaying the event name.",
+                "Expected Result": "The event name is split into two separate strings: one for Team 1 and one for Team 2."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display of Team Icons from Redax Configuration",
+        "contenuto": [
+            {
+                "ID": "TC-034",
+                "#": 34.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card present.",
+                "Expected Result": "The precompiled card is visible.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Android, App",
+                "Precondizioni": "Redax Squadre section has icons configured for both teams. Precompiled card is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Team 1: 'Juventus' (icon A), Team 2: 'Inter' (icon B)",
+                "Risultato Atteso": "Team icons displayed on the card are exactly those set in Redax.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the icons displayed for Team 1 and Team 2.",
+                "Expected Result": "Icons for Team 1 and Team 2 match those configured in the Redax Squadre section."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Event Date and Time Display on Precompiled Card",
+        "contenuto": [
+            {
+                "ID": "TC-035",
+                "#": 35.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card present.",
+                "Expected Result": "The precompiled card is visible.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "Precompiled card with valid event date and time is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event date: '2024-07-01', Event time: '20:45'",
+                "Risultato Atteso": "Event date and time are displayed accurately on the card.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the section displaying the event date and time.",
+                "Expected Result": "The correct date and time of the event are displayed as provided by the backend."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display of Discipline Icon on Precompiled Card",
+        "contenuto": [
+            {
+                "ID": "TC-036",
+                "#": 36.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card present.",
+                "Expected Result": "The precompiled card is visible.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "Precompiled card with discipline icon data is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Discipline: 'Football', Icon: 'football.svg'",
+                "Risultato Atteso": "The correct discipline icon is displayed on the card.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the icon representing the discipline of the event.",
+                "Expected Result": "The discipline icon is displayed as provided by the backend."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display of Event Name (Manifestazione) on Precompiled Card",
+        "contenuto": [
+            {
+                "ID": "TC-037",
+                "#": 37.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card present.",
+                "Expected Result": "The precompiled card is visible.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "Precompiled card with manifestazione data is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Manifestazione: 'Serie A TIM'",
+                "Risultato Atteso": "The manifestazione is displayed correctly on the card.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the section displaying the event name (manifestazione).",
+                "Expected Result": "The event name (manifestazione) is displayed as provided by the backend."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Pronostici Description Mapping and Language Based on Country",
+        "contenuto": [
+            {
+                "ID": "TC-038",
+                "#": 38.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card present.",
+                "Expected Result": "The precompiled card is visible.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "Precompiled card with pronostici data and language mapping is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Pronostico: String 1 (e.g., 'Vittoria Juventus'), String 2 (e.g., 'Risultato finale')",
+                "Risultato Atteso": "Pronostici are displayed with correct mapping and language based on country setting.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the pronostici section for each prediction.",
+                "Expected Result": "Each pronostico is displayed with two strings: the first in bold on top, the second in grey below."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Set the system to Full Responsive Italy and observe the pronostici descriptions.",
+                "Expected Result": "Pronostici descriptions are displayed in Italian."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Set the system to Full Responsive Morocco and observe the pronostici descriptions.",
+                "Expected Result": "Pronostici descriptions are displayed in French."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display and Calculation of Quota Button Value",
+        "contenuto": [
+            {
+                "ID": "TC-039",
+                "#": 39.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card present.",
+                "Expected Result": "The precompiled card is visible.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App",
+                "Precondizioni": "Precompiled card with valid odds and bonus data is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Odds: 1.5, 2.0; Bonus: 1.1; Expected Quota: 1.5 * 2.0 * 1.1 = 3.3",
+                "Risultato Atteso": "Quota button displays the correct total odds value.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the Quota button on the card.",
+                "Expected Result": "The Quota button is displayed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify the value displayed on the Quota button matches the product of the individual outcome odds, including any applicable bonus.",
+                "Expected Result": "Quota value is correct as per backend calculation."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display of Number of Additional Markets (+n) on SGP Generator Cards (App Only)",
+        "contenuto": [
+            {
+                "ID": "TC-040",
+                "#": 40.0,
+                "Step": 1.0,
+                "Step Description": "Open the app and navigate to the HP with a precompiled SGP Generator card present.",
+                "Expected Result": "The SGP Generator card is visible.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Android, App",
+                "Precondizioni": "SGP Generator card with additional markets data is available in the app.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - SGP Generator Card Additional Info",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Additional markets: 5 (displayed as '+5')",
+                "Risultato Atteso": "The card displays '+n' for the number of additional markets not shown.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check for the display of the number of additional markets (+n) not shown on the card.",
+                "Expected Result": "The number of additional markets (+n) is displayed as provided by the backend."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Display of Live Streaming Indicator on SGP Generator Cards (App Only)",
+        "contenuto": [
+            {
+                "ID": "TC-041",
+                "#": 41.0,
+                "Step": 1.0,
+                "Step Description": "Open the app and navigate to the HP with a precompiled SGP Generator card for a live event.",
+                "Expected Result": "The SGP Generator card is visible.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App",
+                "Precondizioni": "SGP Generator card for a live event with streaming info is available in the app.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - SGP Generator Card Additional Info",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Live event with streaming: true",
+                "Risultato Atteso": "Live streaming indicator is shown on the card when applicable.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check for the presence of the live streaming indicator on the card.",
+                "Expected Result": "If the event is live and streaming is available, the live streaming indicator is displayed."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Handling of Missing or Invalid Data in Precompiled Card",
+        "contenuto": [
+            {
+                "ID": "TC-042",
+                "#": 42.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the HP with a precompiled card containing missing or invalid data (e.g., missing team icon, empty event name, invalid quota value).",
+                "Expected Result": "The precompiled card is visible with missing or invalid data.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows, Web",
+                "Precondizioni": "Precompiled card with intentionally missing or invalid data is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carosello HP - Precompiled Card Structure",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Missing team icon, empty event name, quota value: null",
+                "Risultato Atteso": "The card displays appropriate placeholders or error messages for missing/invalid data and maintains UI integrity.",
+                "Linked Work Items": "Carosello HP - Struttura singola card/precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the card's behavior and UI rendering.",
+                "Expected Result": "The card gracefully handles missing or invalid data (e.g., shows placeholder icons, displays 'N/A' for missing values, does not crash or break layout)."
+            }
+        ]
+    },
+    {
+        "Titolo": "Add all precompiled outcomes to cart via Quota Button (empty cart)",
+        "contenuto": [
+            {
+                "ID": "TC-043",
+                "#": 43.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 4 outcomes.",
+                "Expected Result": "Precompiled bet card with 4 outcomes is displayed.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App",
+                "Precondizioni": "User is logged in; cart is empty; precompiled bet card with 4 outcomes is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Add Outcomes",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 4 outcomes; empty cart.",
+                "Risultato Atteso": "All outcomes from the precompiled bet card are added to the cart and the Quota Button is graphically selected.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Ensure the cart is empty.",
+                "Expected Result": "Cart is confirmed to be empty."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Tap the Quota Button on the precompiled bet card.",
+                "Expected Result": "Quota Button is graphically selected; all 4 outcomes are added to the cart."
+            }
+        ]
+    },
+    {
+        "Titolo": "Add precompiled outcomes to cart when cart already contains outcomes",
+        "contenuto": [
+            {
+                "ID": "TC-044",
+                "#": 44.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 4 outcomes.",
+                "Expected Result": "Precompiled bet card with 4 outcomes is displayed.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Android, App",
+                "Precondizioni": "User is logged in; cart contains 2 outcomes not present in the precompiled card; precompiled bet card with 4 outcomes is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Add Outcomes with Existing Cart",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 4 outcomes; cart with 2 different outcomes.",
+                "Risultato Atteso": "All outcomes from the precompiled bet card are added to the cart, regardless of existing outcomes.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Add 2 different outcomes to the cart from the event list (not from the precompiled card).",
+                "Expected Result": "Cart contains 2 outcomes not present in the precompiled card."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Tap the Quota Button on the precompiled bet card.",
+                "Expected Result": "Quota Button is graphically selected; all 4 outcomes from the precompiled card are added to the cart (cart now contains 6 outcomes)."
+            }
+        ]
+    },
+    {
+        "Titolo": "Quota Button is graphically selected if all precompiled outcomes are already in cart",
+        "contenuto": [
+            {
+                "ID": "TC-045",
+                "#": 45.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 4 outcomes.",
+                "Expected Result": "Precompiled bet card with 4 outcomes is displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Desktop",
+                "Precondizioni": "User is logged in; cart contains all outcomes from the precompiled card; precompiled bet card with 4 outcomes is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Visual State",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 4 outcomes; cart with same 4 outcomes.",
+                "Risultato Atteso": "Quota Button is graphically selected if all precompiled outcomes are present in the cart.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Add all 4 outcomes from the precompiled card to the cart individually from the event list.",
+                "Expected Result": "Cart contains all 4 outcomes from the precompiled card."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the Quota Button on the precompiled card.",
+                "Expected Result": "Quota Button is graphically selected, indicating all outcomes are already in the cart."
+            }
+        ]
+    },
+    {
+        "Titolo": "Quota Button is disabled if only some precompiled outcomes are in cart",
+        "contenuto": [
+            {
+                "ID": "TC-046",
+                "#": 46.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 4 outcomes.",
+                "Expected Result": "Precompiled bet card with 4 outcomes is displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Desktop",
+                "Precondizioni": "User is logged in; cart contains 3 out of 4 outcomes from the precompiled card; precompiled bet card with 4 outcomes is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Disabled State",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 4 outcomes; cart with 3 of those outcomes.",
+                "Risultato Atteso": "Quota Button is disabled if only some precompiled outcomes are present in the cart.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Add 3 out of 4 outcomes from the precompiled card to the cart individually from the event list.",
+                "Expected Result": "Cart contains 3 out of 4 outcomes from the precompiled card."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the Quota Button on the precompiled card.",
+                "Expected Result": "Quota Button is disabled (cannot be tapped/clicked)."
+            }
+        ]
+    },
+    {
+        "Titolo": "Remove precompiled outcomes from cart by deselecting Quota Button",
+        "contenuto": [
+            {
+                "ID": "TC-047",
+                "#": 47.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 4 outcomes.",
+                "Expected Result": "Precompiled bet card with 4 outcomes is displayed.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App",
+                "Precondizioni": "User is logged in; precompiled bet card with 4 outcomes is available; cart is empty.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Remove Outcomes",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 4 outcomes; empty cart.",
+                "Risultato Atteso": "All outcomes from the precompiled bet card are removed from the cart and the Quota Button is deselected.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Tap the Quota Button to add all outcomes to the cart.",
+                "Expected Result": "Quota Button is graphically selected; all 4 outcomes are added to the cart."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Tap the Quota Button again (now graphically selected).",
+                "Expected Result": "Quota Button is deselected; all 4 outcomes from the precompiled card are removed from the cart."
+            }
+        ]
+    },
+    {
+        "Titolo": "Error when adding precompiled outcomes exceeds leg max constraint",
+        "contenuto": [
+            {
+                "ID": "TC-048",
+                "#": 48.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 5 outcomes.",
+                "Expected Result": "Precompiled bet card with 5 outcomes is displayed.",
+                "Test Group": "Mobile Android",
+                "Canale": "App Android",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Android, App",
+                "Precondizioni": "User is logged in; cart contains 3 outcomes (one with leg max=5); precompiled bet card with 5 outcomes is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Error Handling (Leg Max)",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 5 outcomes; cart with 3 outcomes (one with leg max=5).",
+                "Risultato Atteso": "No outcomes are added to the cart and an error message is displayed if leg max constraint is violated.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Add 3 outcomes to the cart, including one with leg max=5.",
+                "Expected Result": "Cart contains 3 outcomes, one of which has leg max=5."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Tap the Quota Button on the precompiled card.",
+                "Expected Result": "No outcomes from the precompiled card are added to the cart; error message is displayed indicating leg max constraint violation."
+            }
+        ]
+    },
+    {
+        "Titolo": "Error when adding precompiled outcomes exceeds max events in cart",
+        "contenuto": [
+            {
+                "ID": "TC-049",
+                "#": 49.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the precompiled bet card containing 5 outcomes.",
+                "Expected Result": "Precompiled bet card with 5 outcomes is displayed.",
+                "Test Group": "Mobile IOS",
+                "Canale": "App IOS",
+                "Dispositivo": "Smartphone",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, App",
+                "Precondizioni": "User is logged in; cart contains 28 events in multipla mode; precompiled bet card with 5 outcomes is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button - Error Handling (Max Events)",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled bet card with 5 outcomes; cart with 28 events in multipla mode.",
+                "Risultato Atteso": "No outcomes are added to the cart and an error message is displayed if maximum number of events/outcomes is reached.",
+                "Linked Work Items": "Pulsante quota"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Add 28 events to the cart in multipla mode.",
+                "Expected Result": "Cart contains 28 events in multipla mode."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Tap the Quota Button on the precompiled card.",
+                "Expected Result": "No outcomes from the precompiled card are added to the cart; error message is displayed indicating maximum number of events/outcomes reached."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify precompiled cards are cached and persist on homepage revisit within cache duration",
+        "contenuto": [
+            {
+                "ID": "TC-050",
+                "#": 50.0,
+                "Step": 1.0,
+                "Step Description": "Open the website and land on the homepage (HP) at time T0.",
+                "Expected Result": "Precompiled cards are displayed on the homepage.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Windows 10, Web",
+                "Precondizioni": "Cache duration X is configured; user is not in private/incognito mode; browser cache is enabled.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Homepage Precompiled Cards Caching",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "N/A (uses default homepage precompiled cards)",
+                "Risultato Atteso": "Upon returning to the homepage within X minutes, the user sees the exact same precompiled cards as initially displayed at T0.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Note the content and order of the precompiled cards displayed.",
+                "Expected Result": "Content and order of precompiled cards are recorded for comparison."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Navigate away from the homepage to another section of the website.",
+                "Expected Result": "User is successfully navigated to a different section; homepage is no longer visible."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Return to the homepage within X minutes (where X is the configured cache duration).",
+                "Expected Result": "Homepage is displayed again."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Observe the precompiled cards displayed on the homepage upon return.",
+                "Expected Result": "The same precompiled cards (content and order) as seen at T0 are displayed."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify precompiled cards are refreshed after cache expiration",
+        "contenuto": [
+            {
+                "ID": "TC-051",
+                "#": 51.0,
+                "Step": 1.0,
+                "Step Description": "Open the website and land on the homepage (HP) at time T0.",
+                "Expected Result": "Precompiled cards are displayed on the homepage.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Windows 10, Web",
+                "Precondizioni": "Cache duration X is configured; user is not in private/incognito mode; browser cache is enabled.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Homepage Precompiled Cards Caching",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "N/A (uses default homepage precompiled cards)",
+                "Risultato Atteso": "After cache expiration, the precompiled cards on the homepage are refreshed and may differ from those initially displayed at T0.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Note the content and order of the precompiled cards displayed.",
+                "Expected Result": "Content and order of precompiled cards are recorded for comparison."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Navigate away from the homepage to another section of the website.",
+                "Expected Result": "User is successfully navigated to a different section; homepage is no longer visible."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Wait for more than X minutes (where X is the configured cache duration).",
+                "Expected Result": "Elapsed time exceeds the cache duration."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Return to the homepage after cache expiration.",
+                "Expected Result": "Homepage is displayed again."
+            },
+            {
+                "Step": 6.0,
+                "Step Description": "Observe the precompiled cards displayed on the homepage upon return.",
+                "Expected Result": "Precompiled cards may differ from those seen at T0, indicating cache refresh."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify cache duration X is configurable only via release and not runtime",
+        "contenuto": [
+            {
+                "ID": "TC-052",
+                "#": 52.0,
+                "Step": 1.0,
+                "Step Description": "Attempt to change the cache duration X via runtime configuration (e.g., admin panel, API, or environment variable) without a release.",
+                "Expected Result": "System does not allow cache duration X to be changed at runtime.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Windows 10, Web",
+                "Precondizioni": "Access to deployment/release process and configuration files; admin access if needed.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Homepage Precompiled Cards Caching Configuration",
+                "Tipologia Test": "functional",
+                "Test di no regression": 0.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "Cache duration X can only be changed via a new release, not at runtime.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Deploy a new release with a different value for cache duration X.",
+                "Expected Result": "System accepts the new cache duration X only after the release."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify the new cache duration X is in effect by repeating cache persistence and expiration tests.",
+                "Expected Result": "Cache behavior reflects the new duration X as configured in the release."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify precompiled cards caching works across different browsers and devices",
+        "contenuto": [
+            {
+                "ID": "TC-053",
+                "#": 53.0,
+                "Step": 1.0,
+                "Step Description": "Open the website homepage at T0 on Browser A (e.g., Chrome) and note the precompiled cards displayed.",
+                "Expected Result": "Precompiled cards are displayed and noted on Browser A.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer, Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Windows 10, Web; Android, Web",
+                "Precondizioni": "Cache duration X is configured; multiple browsers and devices available; browser cache enabled.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Homepage Precompiled Cards Caching",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "Precompiled cards caching works consistently across supported browsers and devices within the cache duration.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate away and return to the homepage within X minutes on Browser A.",
+                "Expected Result": "Same precompiled cards are displayed as at T0 on Browser A."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Repeat steps 1 and 2 on Browser B (e.g., Firefox) and Device B (e.g., mobile device).",
+                "Expected Result": "Same caching behavior is observed on Browser B and Device B."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify precompiled cards caching is user-session independent (public homepage)",
+        "contenuto": [
+            {
+                "ID": "TC-054",
+                "#": 54.0,
+                "Step": 1.0,
+                "Step Description": "Open the website homepage at T0 in Browser A (User 1) and note the precompiled cards displayed.",
+                "Expected Result": "Precompiled cards are displayed and noted for User 1.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Low",
+                "Test Stage": "TEST",
+                "Sistema Integrale di riferimento": "Windows 10, Web",
+                "Precondizioni": "Cache duration X is configured; two browsers or incognito sessions available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Homepage Precompiled Cards Caching",
+                "Tipologia Test": "functional",
+                "Test di no regression": 0.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "Caching of precompiled cards is independent per user session/browser as expected.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Open the website homepage at T0 in Browser B (User 2) and note the precompiled cards displayed.",
+                "Expected Result": "Precompiled cards are displayed and noted for User 2."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Compare the precompiled cards for User 1 and User 2.",
+                "Expected Result": "Precompiled cards may differ if personalized, but caching behavior is consistent per session/browser."
+            }
+        ]
+    },
+    {
+        "Titolo": "Display Only Non-Expired Events in Carousel Cards",
+        "contenuto": [
+            {
+                "ID": "TC-055",
+                "#": 55.0,
+                "Step": 1.0,
+                "Step Description": "Log in to the application and navigate to the Home Page (HP).",
+                "Expected Result": "User is on the Home Page and carousel cards are displayed.",
+                "Test Group": "Mobile IOS, Mobile Android, Desktop",
+                "Canale": "App IOS, App Android, Desktop",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is authenticated. At least one event in the carousel is scheduled to expire soon. Cache is valid (not expired).",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Carousel Filtering",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "User credentials; events with varying start times (some expiring soon, some in the future).",
+                "Risultato Atteso": "Upon returning to HP before cache expiry, only non-expired events are shown in the carousel; expired events are not displayed.",
+                "Linked Work Items": "Eventi da visualizzare nelle card"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Verify the list of events displayed in the carousel cards. Note the start date and time of each event.",
+                "Expected Result": "All displayed events have a start date and time in the future (not yet passed)."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Wait until the start date and time of one or more events passes while remaining on a different page (not HP).",
+                "Expected Result": "Some events become 'expired' (start date/time has passed) during navigation."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Return to the Home Page before the cache expiry time (X minutes).",
+                "Expected Result": "Only events with a start date and time in the future are displayed in the carousel cards; expired events are no longer shown."
+            }
+        ]
+    },
+    {
+        "Titolo": "Trigger Backend Refresh When All Events Are Expired Before Cache Expiry",
+        "contenuto": [
+            {
+                "ID": "TC-056",
+                "#": 56.0,
+                "Step": 1.0,
+                "Step Description": "Log in to the application and navigate to the Home Page (HP).",
+                "Expected Result": "User is on the Home Page and carousel cards are displayed.",
+                "Test Group": "Mobile IOS, Mobile Android, Desktop",
+                "Canale": "App IOS, App Android, Desktop",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is authenticated. All events in the carousel are scheduled to expire before cache expiry. Cache is valid (not expired).",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Carousel Backend Refresh",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "User credentials; events all expiring before cache expiry.",
+                "Risultato Atteso": "If all cached events are expired upon returning to HP, the frontend fetches new events from the backend and resets the cache timer.",
+                "Linked Work Items": "Eventi da visualizzare nelle card"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Verify that all events in the carousel have a start date and time that will expire soon.",
+                "Expected Result": "All events are scheduled to expire before the cache expiry (X minutes)."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Navigate away from the HP and wait until all events' start date and time have passed (all events are expired), but before cache expiry (X minutes).",
+                "Expected Result": "All events become expired while the cache is still valid."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Return to the Home Page before cache expiry.",
+                "Expected Result": "Frontend detects that all cached events are expired and triggers a new backend call to fetch fresh events. The carousel is updated with new, non-expired events, and the cache timer is reset."
+            }
+        ]
+    },
+    {
+        "Titolo": "Do Not Refresh Backend If At Least One Event Is Not Expired Before Cache Expiry",
+        "contenuto": [
+            {
+                "ID": "TC-057",
+                "#": 57.0,
+                "Step": 1.0,
+                "Step Description": "Log in to the application and navigate to the Home Page (HP).",
+                "Expected Result": "User is on the Home Page and carousel cards are displayed.",
+                "Test Group": "Mobile IOS, Mobile Android, Desktop",
+                "Canale": "App IOS, App Android, Desktop",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is authenticated. At least one event in the carousel will remain valid after others expire. Cache is valid (not expired).",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Carousel Filtering and Cache Management",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "User credentials; events with staggered start times.",
+                "Risultato Atteso": "If at least one event is still valid, the frontend does not refresh from backend; only non-expired events are shown.",
+                "Linked Work Items": "Eventi da visualizzare nelle card"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Verify that at least one event in the carousel has a start date and time in the future, and others are about to expire.",
+                "Expected Result": "At least one event is scheduled to start after the current time; others may expire soon."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Navigate away from HP and wait until some (but not all) events have expired, but before cache expiry (X minutes).",
+                "Expected Result": "Some events are expired, at least one is still valid."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Return to the Home Page before cache expiry.",
+                "Expected Result": "Frontend does not trigger a backend refresh. Only non-expired events are displayed in the carousel; expired events are removed."
+            }
+        ]
+    },
+    {
+        "Titolo": "Expired Events Are Not Displayed After Cache Expiry and Backend Refresh",
+        "contenuto": [
+            {
+                "ID": "TC-058",
+                "#": 58.0,
+                "Step": 1.0,
+                "Step Description": "Log in to the application and navigate to the Home Page (HP).",
+                "Expected Result": "User is on the Home Page and carousel cards are displayed.",
+                "Test Group": "Mobile IOS, Mobile Android, Desktop",
+                "Canale": "App IOS, App Android, Desktop",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is authenticated. At least one event in the carousel is scheduled to expire before cache expiry. Cache is valid at login.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Carousel Cache Expiry Handling",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "User credentials; events with varying start times.",
+                "Risultato Atteso": "After cache expiry, only non-expired events are shown in the carousel following a backend refresh.",
+                "Linked Work Items": "Eventi da visualizzare nelle card"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Wait until the cache expiry time (X minutes) passes while remaining on a different page.",
+                "Expected Result": "Cache expires."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Return to the Home Page after cache expiry.",
+                "Expected Result": "Frontend triggers a backend call to fetch new events. Only non-expired events are displayed in the carousel cards."
+            }
+        ]
+    },
+    {
+        "Titolo": "Edge Case: No Events Available After Backend Refresh",
+        "contenuto": [
+            {
+                "ID": "TC-059",
+                "#": 59.0,
+                "Step": 1.0,
+                "Step Description": "Log in to the application and navigate to the Home Page (HP).",
+                "Expected Result": "User is on the Home Page and carousel cards are displayed.",
+                "Test Group": "Mobile IOS, Mobile Android, Desktop",
+                "Canale": "App IOS, App Android, Desktop",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "Low",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is authenticated. All events are expired and cache is expired. Backend has no new events to provide.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Carousel Empty State Handling",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "User credentials; no available events after backend refresh.",
+                "Risultato Atteso": "If backend returns no events, the carousel displays an appropriate empty state message to the user.",
+                "Linked Work Items": "Eventi da visualizzare nelle card"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Wait until all events are expired and cache expires.",
+                "Expected Result": "No valid events remain and cache is expired."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Return to the Home Page, triggering a backend refresh.",
+                "Expected Result": "Backend returns no new events. The carousel displays a message indicating no events are available."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Skeleton Home Page displays the new carousel when enabled in configuration",
+        "contenuto": [
+            {
+                "ID": "TC-060",
+                "#": 60.0,
+                "Step": 1.0,
+                "Step Description": "Ensure the carousel feature is enabled in the Home Page configuration (hot configuration, no deployment required).",
+                "Expected Result": "Carousel feature is set to enabled in configuration.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "Carousel feature is enabled in configuration. User is not logged in (to see generic skeleton).",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Home Page - Carousel Presence",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Carousel feature enabled in configuration; Home Page FR accessible.",
+                "Risultato Atteso": "The skeleton on Home Page FR displays the carousel placeholder when the feature is enabled.",
+                "Linked Work Items": "Skeleton Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Home Page FR via supported browser or app.",
+                "Expected Result": "Home Page FR loads successfully."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the skeleton layout during page loading.",
+                "Expected Result": "The skeleton includes a placeholder for the new carousel."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Skeleton Home Page does NOT display the carousel when disabled in configuration",
+        "contenuto": [
+            {
+                "ID": "TC-061",
+                "#": 61.0,
+                "Step": 1.0,
+                "Step Description": "Ensure the carousel feature is disabled in the Home Page configuration (hot configuration, no deployment required).",
+                "Expected Result": "Carousel feature is set to disabled in configuration.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "Carousel feature is disabled in configuration. User is not logged in (to see generic skeleton).",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Home Page - Carousel Absence",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Carousel feature disabled in configuration; Home Page FR accessible.",
+                "Risultato Atteso": "The skeleton on Home Page FR does not display the carousel placeholder when the feature is disabled.",
+                "Linked Work Items": "Skeleton Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Home Page FR via supported browser or app.",
+                "Expected Result": "Home Page FR loads successfully."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the skeleton layout during page loading.",
+                "Expected Result": "The skeleton does NOT include a placeholder for the carousel."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify hot configuration change for carousel presence is reflected without deployment",
+        "contenuto": [
+            {
+                "ID": "TC-062",
+                "#": 62.0,
+                "Step": 1.0,
+                "Step Description": "Set the carousel feature to disabled in the Home Page configuration.",
+                "Expected Result": "Carousel feature is disabled in configuration.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "Access to configuration management tool for Home Page FR. User is not logged in.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Home Page - Hot Configuration",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Ability to toggle carousel feature in configuration; Home Page FR accessible.",
+                "Risultato Atteso": "Changes to the carousel configuration are reflected immediately in the skeleton without requiring a deployment.",
+                "Linked Work Items": "Skeleton Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Home Page FR and observe the skeleton layout.",
+                "Expected Result": "The skeleton does NOT include a placeholder for the carousel."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Change the carousel feature to enabled in the configuration (hot, no deployment).",
+                "Expected Result": "Carousel feature is enabled in configuration."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Refresh the Home Page FR or access it in a new session.",
+                "Expected Result": "The skeleton now includes a placeholder for the carousel."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify skeleton layout integrity when carousel is absent (summer/off-season scenario)",
+        "contenuto": [
+            {
+                "ID": "TC-063",
+                "#": 63.0,
+                "Step": 1.0,
+                "Step Description": "Ensure the carousel feature is disabled in configuration (simulating off-season).",
+                "Expected Result": "Carousel feature is disabled in configuration.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "Carousel feature is disabled in configuration. User is not logged in.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Home Page - Layout Integrity",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Dataset": "Carousel feature disabled in configuration; Home Page FR accessible.",
+                "Risultato Atteso": "The skeleton layout is visually correct and consistent when the carousel is absent.",
+                "Linked Work Items": "Skeleton Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Home Page FR.",
+                "Expected Result": "Home Page FR loads successfully."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the skeleton layout for any visual or structural issues.",
+                "Expected Result": "The skeleton layout remains consistent and visually correct without the carousel placeholder."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify skeleton layout integrity when carousel is present (active competition scenario)",
+        "contenuto": [
+            {
+                "ID": "TC-064",
+                "#": 64.0,
+                "Step": 1.0,
+                "Step Description": "Ensure the carousel feature is enabled in configuration (simulating active competition period).",
+                "Expected Result": "Carousel feature is enabled in configuration.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Windows 10+",
+                "Precondizioni": "Carousel feature is enabled in configuration. User is not logged in.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Home Page - Layout Integrity",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Dataset": "Carousel feature enabled in configuration; Home Page FR accessible.",
+                "Risultato Atteso": "The skeleton layout is visually correct and consistent when the carousel is present.",
+                "Linked Work Items": "Skeleton Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Home Page FR.",
+                "Expected Result": "Home Page FR loads successfully."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the skeleton layout for any visual or structural issues.",
+                "Expected Result": "The skeleton layout remains consistent and visually correct with the carousel placeholder present."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify skeleton carousel configuration is effective across multiple devices and browsers",
+        "contenuto": [
+            {
+                "ID": "TC-065",
+                "#": 65.0,
+                "Step": 1.0,
+                "Step Description": "Enable the carousel feature in configuration.",
+                "Expected Result": "Carousel feature is enabled in configuration.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer, Smartphone, Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web, Windows 10+, iOS, Android",
+                "Precondizioni": "Carousel feature is enabled in configuration. Devices and browsers available for testing.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Skeleton Home Page - Cross-Device Consistency",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Dataset": "Carousel feature enabled in configuration; Home Page FR accessible from multiple devices.",
+                "Risultato Atteso": "The skeleton carousel configuration is respected and displayed correctly across all tested devices and browsers.",
+                "Linked Work Items": "Skeleton Home Page"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Access the Home Page FR from a desktop browser (e.g., Chrome).",
+                "Expected Result": "Skeleton displays carousel placeholder."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Access the Home Page FR from a mobile browser (e.g., Safari on iOS).",
+                "Expected Result": "Skeleton displays carousel placeholder."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Access the Home Page FR from a tablet browser (e.g., Android tablet).",
+                "Expected Result": "Skeleton displays carousel placeholder."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carosello Display in Bet Builder Tab for Italy and Morocco (Full Responsive Only)",
+        "contenuto": [
+            {
+                "ID": "TC-066",
+                "#": 66.0,
+                "Step": 1.0,
+                "Step Description": "Access the online Full Responsive version of the platform from a supported browser.",
+                "Expected Result": "The Full Responsive version loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive) - Windows/macOS/Linux",
+                "Precondizioni": "User is accessing the online Full Responsive version; Event with Bet Builder available; User is in Italy or Morocco.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Prematch event with Bet Builder enabled; User location set to Italy or Morocco.",
+                "Risultato Atteso": "The carousel with the correct localized title is displayed above the SGP Experience area in the Bet Builder tab for eligible events in Italy and Morocco (Full Responsive only).",
+                "Linked Work Items": "Carosello in Dettaglio Avvenimento (Tab Bet Builder)"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the 'Dettaglio Avvenimento' (Event Detail) page for a prematch event that supports Bet Builder.",
+                "Expected Result": "The Event Detail page for the selected prematch event is displayed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Select the 'Bet Builder' tab (if available for the event).",
+                "Expected Result": "The Bet Builder tab content is displayed."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check the area above the SGP Experience section within the Bet Builder tab.",
+                "Expected Result": "A carousel titled 'Bet Builder in evidenza' (Italy) or 'Bet Builder en vedette' (Morocco) is visible above the SGP Experience area."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify SGP Precompiled Bets Displayed in Carousel for Specific Event",
+        "contenuto": [
+            {
+                "ID": "TC-067",
+                "#": 67.0,
+                "Step": 1.0,
+                "Step Description": "Access the online Full Responsive version of the platform from a supported browser.",
+                "Expected Result": "The Full Responsive version loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive) - Windows/macOS/Linux",
+                "Precondizioni": "User is accessing the online Full Responsive version; Event with Bet Builder available; SGP Generator backend provides precompiled bets for the event.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "SGP Precompiled Bets Carousel Content",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Prematch event with Bet Builder enabled; SGP Generator backend data for the event.",
+                "Risultato Atteso": "The carousel displays SGP Precompiled bets specific to the event, as provided by the backend SGP Generator.",
+                "Linked Work Items": "Carosello in Dettaglio Avvenimento (Tab Bet Builder)"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the 'Dettaglio Avvenimento' (Event Detail) page for a prematch event that supports Bet Builder.",
+                "Expected Result": "The Event Detail page for the selected prematch event is displayed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Select the 'Bet Builder' tab (if available for the event).",
+                "Expected Result": "The Bet Builder tab content is displayed."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Locate the carousel titled 'Bet Builder in evidenza' or 'Bet Builder en vedette' above the SGP Experience area.",
+                "Expected Result": "The carousel is visible with the correct title."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Review the content of the carousel and verify that it displays SGP Precompiled bets dedicated to the specific event, as provided by the backend SGP Generator.",
+                "Expected Result": "The carousel contains SGP Precompiled bets relevant to the selected event, matching the data from the backend SGP Generator."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carousel Not Displayed on Retail Versions (Prenotatore and Self)",
+        "contenuto": [
+            {
+                "ID": "TC-068",
+                "#": 68.0,
+                "Step": 1.0,
+                "Step Description": "Access the platform using the retail version (Prenotatore or Self) from a supported device.",
+                "Expected Result": "The retail version of the platform loads successfully.",
+                "Test Group": "Terminale",
+                "Canale": "Terminale",
+                "Dispositivo": "Terminale",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Retail (Prenotatore/Self) - Terminale",
+                "Precondizioni": "User is accessing the retail version (Prenotatore or Self); Event with Bet Builder available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Display Restriction",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Prematch event with Bet Builder enabled; Retail device access.",
+                "Risultato Atteso": "The carousel is not displayed in the Bet Builder tab on retail versions (Prenotatore and Self).",
+                "Linked Work Items": "Carosello in Dettaglio Avvenimento (Tab Bet Builder)"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the 'Dettaglio Avvenimento' (Event Detail) page for a prematch event that supports Bet Builder.",
+                "Expected Result": "The Event Detail page for the selected prematch event is displayed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Select the 'Bet Builder' tab (if available for the event).",
+                "Expected Result": "The Bet Builder tab content is displayed."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check the area above the SGP Experience section within the Bet Builder tab.",
+                "Expected Result": "No carousel titled 'Bet Builder in evidenza' or 'Bet Builder en vedette' is displayed above the SGP Experience area."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carousel Not Displayed When Bet Builder Tab is Absent",
+        "contenuto": [
+            {
+                "ID": "TC-069",
+                "#": 69.0,
+                "Step": 1.0,
+                "Step Description": "Access the online Full Responsive version of the platform from a supported browser.",
+                "Expected Result": "The Full Responsive version loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive) - Windows/macOS/Linux",
+                "Precondizioni": "User is accessing the online Full Responsive version; Event without Bet Builder available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Conditional Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Prematch event without Bet Builder enabled.",
+                "Risultato Atteso": "The carousel is not displayed when the Bet Builder tab is absent for an event.",
+                "Linked Work Items": "Carosello in Dettaglio Avvenimento (Tab Bet Builder)"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the 'Dettaglio Avvenimento' (Event Detail) page for a prematch event that does NOT support Bet Builder.",
+                "Expected Result": "The Event Detail page for the selected prematch event is displayed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify that the 'Bet Builder' tab is not present for this event.",
+                "Expected Result": "The Bet Builder tab is not visible for the event."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check the area where the carousel would normally appear (above the SGP Experience area).",
+                "Expected Result": "No carousel titled 'Bet Builder in evidenza' or 'Bet Builder en vedette' is displayed."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Carousel Title Localization Based on Country (Italy vs Morocco)",
+        "contenuto": [
+            {
+                "ID": "TC-070",
+                "#": 70.0,
+                "Step": 1.0,
+                "Step Description": "Access the online Full Responsive version of the platform from a supported browser, with user location set to Italy.",
+                "Expected Result": "The Full Responsive version loads successfully with Italian localization.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Web (Full Responsive) - Windows/macOS/Linux",
+                "Precondizioni": "User is accessing the online Full Responsive version; Event with Bet Builder available; Ability to simulate user location for Italy and Morocco.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Localization",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Prematch event with Bet Builder enabled; User location set to Italy or Morocco.",
+                "Risultato Atteso": "The carousel title is correctly localized: 'Bet Builder in evidenza' for Italy and 'Bet Builder en vedette' for Morocco.",
+                "Linked Work Items": "Carosello in Dettaglio Avvenimento (Tab Bet Builder)"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate to the 'Dettaglio Avvenimento' (Event Detail) page for a prematch event that supports Bet Builder.",
+                "Expected Result": "The Event Detail page for the selected prematch event is displayed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Select the 'Bet Builder' tab (if available for the event).",
+                "Expected Result": "The Bet Builder tab content is displayed."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check the carousel title above the SGP Experience area.",
+                "Expected Result": "The carousel title is 'Bet Builder in evidenza'."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Repeat steps 1-4 with user location set to Morocco.",
+                "Expected Result": "The carousel title is 'Bet Builder en vedette'."
+            }
+        ]
+    },
+    {
+        "Titolo": "Display of Bet Builder Carousel for Events with Precompiled SGP Enabled and Available",
+        "contenuto": [
+            {
+                "ID": "TC-071",
+                "#": 71.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of an event that is part of a competition for which SGP precompiled bets are enabled in Redax (SGP Generator section).",
+                "Expected Result": "The event detail page loads successfully.",
+                "Test Group": "Mobile IOS, Mobile Android, App IOS, App Android, Desktop",
+                "Canale": "Web, App",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is logged in and has access to the event detail page. SGP precompiled bets are enabled for the event in Redax. Backend provides precompiled SGP bets for the event.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event with SGP precompiled enabled and available precompiled bets.",
+                "Risultato Atteso": "The Bet Builder carousel is visible above the SGP Experience area only when both SGP precompiled bets are enabled and available for the event.",
+                "Linked Work Items": "Carosello Dett Avv – Condizioni di visualizzazione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Ensure that, for this event, the backend engine provides precompiled SGP bets to the frontend (markets are available and quoted).",
+                "Expected Result": "Precompiled SGP bets are received by the frontend for this event."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the area above the SGP Experience section on the event detail page.",
+                "Expected Result": "The Bet Builder carousel is displayed above the SGP Experience area."
+            }
+        ]
+    },
+    {
+        "Titolo": "Absence of Bet Builder Carousel When SGP Precompiled Not Enabled in Redax",
+        "contenuto": [
+            {
+                "ID": "TC-072",
+                "#": 72.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of an event that is part of a competition for which SGP precompiled bets are NOT enabled in Redax (SGP Generator section).",
+                "Expected Result": "The event detail page loads successfully.",
+                "Test Group": "Mobile IOS, Mobile Android, App IOS, App Android, Desktop",
+                "Canale": "Web, App",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is logged in and has access to the event detail page. SGP precompiled bets are NOT enabled for the event in Redax.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event with SGP precompiled NOT enabled in Redax.",
+                "Risultato Atteso": "The Bet Builder carousel is not visible above the SGP Experience area when SGP precompiled bets are not enabled for the event.",
+                "Linked Work Items": "Carosello Dett Avv – Condizioni di visualizzazione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the area above the SGP Experience section on the event detail page.",
+                "Expected Result": "The Bet Builder carousel is NOT displayed above the SGP Experience area."
+            }
+        ]
+    },
+    {
+        "Titolo": "Absence of Bet Builder Carousel When Backend Does Not Provide Precompiled SGP Bets",
+        "contenuto": [
+            {
+                "ID": "TC-073",
+                "#": 73.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of an event that is part of a competition for which SGP precompiled bets are enabled in Redax (SGP Generator section).",
+                "Expected Result": "The event detail page loads successfully.",
+                "Test Group": "Mobile IOS, Mobile Android, App IOS, App Android, Desktop",
+                "Canale": "Web, App",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is logged in and has access to the event detail page. SGP precompiled bets are enabled for the event in Redax. Backend does NOT provide precompiled SGP bets for the event.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event with SGP precompiled enabled but no precompiled bets available from backend.",
+                "Risultato Atteso": "The Bet Builder carousel is not visible above the SGP Experience area when the backend does not provide precompiled SGP bets for the event.",
+                "Linked Work Items": "Carosello Dett Avv – Condizioni di visualizzazione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Ensure that, for this event, the backend engine does NOT provide precompiled SGP bets to the frontend (e.g., due to lack of quoted SGP markets).",
+                "Expected Result": "No precompiled SGP bets are received by the frontend for this event."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Observe the area above the SGP Experience section on the event detail page.",
+                "Expected Result": "The Bet Builder carousel is NOT displayed above the SGP Experience area."
+            }
+        ]
+    },
+    {
+        "Titolo": "Bet Builder Carousel Not Displayed on Non-Event Detail Pages",
+        "contenuto": [
+            {
+                "ID": "TC-074",
+                "#": 74.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to a page that is NOT an event detail page (e.g., homepage, competition overview, or other generic pages).",
+                "Expected Result": "The selected non-event detail page loads successfully.",
+                "Test Group": "Mobile IOS, Mobile Android, App IOS, App Android, Desktop",
+                "Canale": "Web, App",
+                "Dispositivo": "Smartphone, Computer, Tablet",
+                "Priority": "Low",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS, Android, Web",
+                "Precondizioni": "User is logged in and navigates to a non-event detail page.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Bet Builder Carousel Display",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Any non-event detail page.",
+                "Risultato Atteso": "The Bet Builder carousel is not visible on pages that are not event detail pages.",
+                "Linked Work Items": "Carosello Dett Avv – Condizioni di visualizzazione"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe the area where the Bet Builder carousel would normally appear above the SGP Experience section.",
+                "Expected Result": "The Bet Builder carousel is NOT displayed on non-event detail pages."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Pronostico Description Rendering in Italian (Full Responsive Italia)",
+        "contenuto": [
+            {
+                "ID": "TC-075",
+                "#": 75.0,
+                "Step": 1.0,
+                "Step Description": "Access the Carosello Dett Avv page on the Full Responsive Italia frontend.",
+                "Expected Result": "The page loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web (Full Responsive Italia)",
+                "Precondizioni": "SGP Generator has provided at least one precompilata with pronostici for the avvenimento. User is on the Full Responsive Italia frontend.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Pronostico Description Rendering",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompilata data with mapped Italian pronostici.",
+                "Risultato Atteso": "All pronostici are displayed with two strings (bold and grey), in Italian, as per business mapping.",
+                "Linked Work Items": "Carosello Dett Avv – Struttura Card Precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Identify a precompilata card for a specific avvenimento.",
+                "Expected Result": "A precompilata card is displayed with pronostici listed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "For each pronostico, verify that the description is displayed as two strings: Stringa 1 (top, bold) and Stringa 2 (below, grey).",
+                "Expected Result": "Each pronostico shows Stringa 1 in bold at the top and Stringa 2 in grey below Stringa 1."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check that the descriptions are in Italian, as per the business mapping.",
+                "Expected Result": "All pronostico descriptions are correctly displayed in Italian."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Pronostico Description Rendering in French (Full Responsive Marocco)",
+        "contenuto": [
+            {
+                "ID": "TC-076",
+                "#": 76.0,
+                "Step": 1.0,
+                "Step Description": "Access the Carosello Dett Avv page on the Full Responsive Marocco frontend.",
+                "Expected Result": "The page loads successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web (Full Responsive Marocco)",
+                "Precondizioni": "SGP Generator has provided at least one precompilata with pronostici for the avvenimento. User is on the Full Responsive Marocco frontend.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Pronostico Description Rendering",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompilata data with mapped French pronostici.",
+                "Risultato Atteso": "All pronostici are displayed with two strings (bold and grey), in French, as per business mapping.",
+                "Linked Work Items": "Carosello Dett Avv – Struttura Card Precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Identify a precompilata card for a specific avvenimento.",
+                "Expected Result": "A precompilata card is displayed with pronostici listed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "For each pronostico, verify that the description is displayed as two strings: Stringa 1 (top, bold) and Stringa 2 (below, grey).",
+                "Expected Result": "Each pronostico shows Stringa 1 in bold at the top and Stringa 2 in grey below Stringa 1."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check that the descriptions are in French, as per the business mapping.",
+                "Expected Result": "All pronostico descriptions are correctly displayed in French."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Quota Button Calculation and Display",
+        "contenuto": [
+            {
+                "ID": "TC-077",
+                "#": 77.0,
+                "Step": 1.0,
+                "Step Description": "Access the Carosello Dett Avv page with at least one precompilata card displayed.",
+                "Expected Result": "The page and precompilata card load successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web (Full Responsive Italia/Marocco)",
+                "Precondizioni": "SGP Generator has provided a precompilata with multiple pronostici and their odds. Bonus multipla rules are known.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button Calculation",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompilata data with odds and bonus multipla rules.",
+                "Risultato Atteso": "Quota button displays the correct total quota, including any bonus multipla.",
+                "Linked Work Items": "Carosello Dett Avv – Struttura Card Precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Identify the Quota button on the precompilata card.",
+                "Expected Result": "Quota button is visible on the card."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Obtain the individual odds (quote) for each pronostico in the precompilata.",
+                "Expected Result": "All individual odds are available for calculation."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Manually calculate the expected total quota (product of all individual odds, including any applicable bonus multipla).",
+                "Expected Result": "Manual calculation yields the expected quota value."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Compare the displayed quota on the button with the manually calculated value.",
+                "Expected Result": "Displayed quota matches the manually calculated value, including bonus if applicable."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Pronostico Description Rendering on Mobile Devices (iOS/Android)",
+        "contenuto": [
+            {
+                "ID": "TC-078",
+                "#": 78.0,
+                "Step": 1.0,
+                "Step Description": "Open the Carosello Dett Avv page on a mobile device (iOS or Android) using the Full Responsive Italia frontend.",
+                "Expected Result": "The page loads successfully on the mobile device.",
+                "Test Group": "Mobile IOS",
+                "Canale": "Web",
+                "Dispositivo": "Smartphone",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "iOS 16, Safari, Full Responsive Italia",
+                "Precondizioni": "SGP Generator has provided at least one precompilata with pronostici. User is on the Full Responsive Italia frontend via mobile.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Pronostico Description Rendering",
+                "Tipologia Test": "ux_ui",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompilata data with mapped Italian pronostici.",
+                "Risultato Atteso": "All pronostici are displayed with two strings (bold and grey), in Italian, as per business mapping, on mobile devices.",
+                "Linked Work Items": "Carosello Dett Avv – Struttura Card Precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Identify a precompilata card for a specific avvenimento.",
+                "Expected Result": "A precompilata card is displayed with pronostici listed."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "For each pronostico, verify that the description is displayed as two strings: Stringa 1 (top, bold) and Stringa 2 (below, grey).",
+                "Expected Result": "Each pronostico shows Stringa 1 in bold at the top and Stringa 2 in grey below Stringa 1."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Check that the descriptions are in Italian, as per the business mapping.",
+                "Expected Result": "All pronostico descriptions are correctly displayed in Italian."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Error Handling When Pronostico Mapping is Missing",
+        "contenuto": [
+            {
+                "ID": "TC-079",
+                "#": 79.0,
+                "Step": 1.0,
+                "Step Description": "Simulate a scenario where the SGP Generator provides a precompilata with a pronostico missing the mapped description strings.",
+                "Expected Result": "The precompilata card is displayed with incomplete pronostico data.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web (Full Responsive Italia/Marocco)",
+                "Precondizioni": "SGP Generator provides a precompilata with at least one pronostico missing mapped description.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Error Handling",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompilata data with missing pronostico mapping.",
+                "Risultato Atteso": "Frontend gracefully handles missing pronostico mapping by displaying a placeholder or default message.",
+                "Linked Work Items": "Carosello Dett Avv – Struttura Card Precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Observe how the frontend handles the missing mapping for the pronostico.",
+                "Expected Result": "The frontend displays a default message or placeholder indicating missing data, without breaking the card layout."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify Quota Button Interaction as per Norms (par 2.1.2.1)",
+        "contenuto": [
+            {
+                "ID": "TC-080",
+                "#": 80.0,
+                "Step": 1.0,
+                "Step Description": "Access the Carosello Dett Avv page with a precompilata card containing a Quota button.",
+                "Expected Result": "The page and precompilata card load successfully.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web (Full Responsive Italia/Marocco)",
+                "Precondizioni": "SGP Generator has provided a precompilata with a Quota button. Interaction rules from par 2.1.2.1 are available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Quota Button Interaction",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompilata data with Quota button.",
+                "Risultato Atteso": "Quota button interaction behaves as defined in par 2.1.2.1 without errors.",
+                "Linked Work Items": "Carosello Dett Avv – Struttura Card Precompilata"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Click on the Quota button.",
+                "Expected Result": "The interaction is handled as specified in par 2.1.2.1 (e.g., bet slip is populated, confirmation modal appears, etc.)."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify that the interaction does not cause any UI errors or unexpected behavior.",
+                "Expected Result": "UI remains stable and interaction follows the defined flow."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify caching of precompiled cards for an event within X minutes",
+        "contenuto": [
+            {
+                "ID": "TC-081",
+                "#": 81.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of a specific event (Event A) at time T0.",
+                "Expected Result": "Precompiled cards for Event A are displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "User is authenticated and has access to the event detail page. X (cache duration) is configured as per business requirements.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Cache",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event A with precompiled cards available; valid user credentials.",
+                "Risultato Atteso": "Upon returning to the event detail page within X minutes, the user sees the same precompiled cards as at the initial visit.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate su avvenimento"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate away from the event detail page to another section of the site.",
+                "Expected Result": "User is redirected to another section; no error occurs."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Return to the detail page of Event A within X minutes from T0.",
+                "Expected Result": "The same precompiled cards as initially displayed at T0 are shown, with no changes."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify cache expiration of precompiled cards after X minutes",
+        "contenuto": [
+            {
+                "ID": "TC-082",
+                "#": 82.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of a specific event (Event B) at time T0.",
+                "Expected Result": "Precompiled cards for Event B are displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "User is authenticated and has access to the event detail page. X (cache duration) is configured as per business requirements.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Cache",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event B with precompiled cards available; valid user credentials.",
+                "Risultato Atteso": "After X minutes, returning to the event detail page causes the precompiled cards to be reloaded (not served from cache).",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate su avvenimento"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate away from the event detail page to another section of the site.",
+                "Expected Result": "User is redirected to another section; no error occurs."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Wait for more than X minutes after T0.",
+                "Expected Result": "Elapsed time exceeds the configured cache duration."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Return to the detail page of Event B after X minutes have passed.",
+                "Expected Result": "Precompiled cards are reloaded (may differ from those seen at T0 if data has changed)."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify caching of precompiled cards is user-specific and does not leak between users",
+        "contenuto": [
+            {
+                "ID": "TC-083",
+                "#": 83.0,
+                "Step": 1.0,
+                "Step Description": "User 1 logs in and navigates to the detail page of Event C at time T0.",
+                "Expected Result": "User 1 sees precompiled cards for Event C.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "Two distinct user accounts exist. X (cache duration) is configured as per business requirements.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Cache",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Event C with precompiled cards available; credentials for User 1 and User 2.",
+                "Risultato Atteso": "Precompiled cards are cached per user session; no data leakage occurs between users.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate su avvenimento"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "User 1 navigates away from the event detail page.",
+                "Expected Result": "User 1 is redirected to another section; no error occurs."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "User 2 logs in (different account) and navigates to the detail page of Event C within X minutes from T0.",
+                "Expected Result": "User 2 sees precompiled cards for Event C, but these are generated for User 2 (not User 1's cached data)."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify that navigating to a different event does not serve cached cards from another event",
+        "contenuto": [
+            {
+                "ID": "TC-084",
+                "#": 84.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of Event D at time T0.",
+                "Expected Result": "Precompiled cards for Event D are displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "User is authenticated and has access to multiple event detail pages. X (cache duration) is configured as per business requirements.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Cache",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Events D and E with precompiled cards available; valid user credentials.",
+                "Risultato Atteso": "Each event detail page displays its own precompiled cards; no cross-event cache leakage occurs.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate su avvenimento"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate away from Event D to another section of the site.",
+                "Expected Result": "User is redirected to another section; no error occurs."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Navigate to the detail page of Event E within X minutes from T0.",
+                "Expected Result": "Precompiled cards for Event E are displayed, not those from Event D."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify cache refresh when precompiled cards are updated during cache period",
+        "contenuto": [
+            {
+                "ID": "TC-085",
+                "#": 85.0,
+                "Step": 1.0,
+                "Step Description": "Navigate to the detail page of Event F at time T0 and note the precompiled cards displayed.",
+                "Expected Result": "Precompiled cards for Event F are displayed and noted.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "User is authenticated and has access to the event detail page. Ability to update precompiled cards in backend. X (cache duration) is configured as per business requirements.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Event Detail Cache",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Dataset": "Event F with precompiled cards available; valid user credentials; backend access to update cards.",
+                "Risultato Atteso": "Cached precompiled cards are shown within X minutes even if backend data changes; after X minutes, updated cards are loaded.",
+                "Linked Work Items": "Memorizzazione in cache delle precompilate su avvenimento"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Navigate away from the event detail page to another section of the site.",
+                "Expected Result": "User is redirected to another section; no error occurs."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "While away, update the precompiled cards for Event F in the backend (simulate data change).",
+                "Expected Result": "Precompiled cards for Event F are updated in the backend."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Return to the detail page of Event F within X minutes from T0.",
+                "Expected Result": "The user still sees the original precompiled cards as at T0, not the updated ones (cache is respected)."
+            },
+            {
+                "Step": 5.0,
+                "Step Description": "Wait until X minutes have passed since T0, then refresh the event detail page.",
+                "Expected Result": "The updated precompiled cards are now displayed (cache expired and new data loaded)."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify DWH Tracking for Precompiled SGP Card Bets",
+        "contenuto": [
+            {
+                "ID": "TC-086",
+                "#": 86.0,
+                "Step": 1.0,
+                "Step Description": "Ensure the DWH system and SGP Card Generator integration is deployed and configured as per DWH_SGP Generator specifications.",
+                "Expected Result": "DWH system is operational and ready to receive bet data from precompiled SGP Cards.",
+                "Test Group": "Backend",
+                "Canale": "Backend",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Backend, DWH System",
+                "Precondizioni": "DWH system and SGP Card Generator integration must be deployed and configured. Test SGP Cards must be available. Access to DWH query tools is required.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "DWH Tracking of SGP Card Bets",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled SGP Card, valid user account, DWH access credentials.",
+                "Risultato Atteso": "Bets placed using precompiled SGP Cards are correctly tracked and stored in the DWH system according to the DWH_SGP Generator specification.",
+                "Linked Work Items": "DWH"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Initiate a bet using a precompiled SGP Card through the designated application channel (e.g., POS terminal, web interface).",
+                "Expected Result": "Bet is successfully placed and acknowledged by the application."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify that the bet transaction is logged and transmitted to the DWH system with all required fields (e.g., card ID, bet details, timestamp, user ID) as specified in DWH_SGP Generator.",
+                "Expected Result": "DWH receives and stores the bet data with all mandatory fields populated."
+            },
+            {
+                "Step": 4.0,
+                "Step Description": "Query the DWH system for the specific bet using unique identifiers (e.g., card ID, transaction ID).",
+                "Expected Result": "The bet record is retrievable and matches the original transaction details."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify DWH Tracking Failure for Invalid SGP Card Bets",
+        "contenuto": [
+            {
+                "ID": "TC-087",
+                "#": 87.0,
+                "Step": 1.0,
+                "Step Description": "Attempt to place a bet using an invalid or corrupted precompiled SGP Card through the application channel.",
+                "Expected Result": "The application rejects the bet and provides an error message.",
+                "Test Group": "Backend",
+                "Canale": "Backend",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Backend, DWH System",
+                "Precondizioni": "DWH system and SGP Card Generator integration must be deployed. Invalid SGP Card must be available for testing. Access to DWH query tools is required.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "DWH Tracking of SGP Card Bets",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Invalid or corrupted SGP Card, DWH access credentials.",
+                "Risultato Atteso": "Failed bet attempts with invalid SGP Cards are not tracked or stored in the DWH system.",
+                "Linked Work Items": "DWH"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Check the DWH system for any record of the failed bet attempt using the card ID or transaction ID.",
+                "Expected Result": "No record of the failed bet is present in the DWH system."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify DWH Tracking for Multiple Bets from the Same Precompiled SGP Card",
+        "contenuto": [
+            {
+                "ID": "TC-088",
+                "#": 88.0,
+                "Step": 1.0,
+                "Step Description": "Place multiple bets sequentially using the same precompiled SGP Card through the application channel.",
+                "Expected Result": "Each bet is successfully placed and acknowledged by the application.",
+                "Test Group": "Backend",
+                "Canale": "Backend",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Backend, DWH System",
+                "Precondizioni": "DWH system and SGP Card Generator integration must be deployed. A valid SGP Card must be available. Access to DWH query tools is required.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "DWH Tracking of SGP Card Bets",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled SGP Card, DWH access credentials.",
+                "Risultato Atteso": "Multiple bets from the same SGP Card are individually tracked and stored in the DWH system.",
+                "Linked Work Items": "DWH"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Query the DWH system for all bets associated with the specific SGP Card ID.",
+                "Expected Result": "All bets are individually tracked and stored in the DWH system with unique transaction records."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify DWH Tracking for Boundary Values in SGP Card Bets",
+        "contenuto": [
+            {
+                "ID": "TC-089",
+                "#": 89.0,
+                "Step": 1.0,
+                "Step Description": "Place a bet using a precompiled SGP Card with minimum allowed bet value through the application channel.",
+                "Expected Result": "Bet is successfully placed and acknowledged by the application.",
+                "Test Group": "Backend",
+                "Canale": "Backend",
+                "Dispositivo": "Computer",
+                "Priority": "Medium",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Backend, DWH System",
+                "Precondizioni": "DWH system and SGP Card Generator integration must be deployed. Precompiled SGP Cards with minimum and maximum bet values must be available. Access to DWH query tools is required.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "DWH Tracking of SGP Card Bets",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled SGP Cards with min/max bet values, DWH access credentials.",
+                "Risultato Atteso": "Bets with boundary values are correctly tracked and stored in the DWH system.",
+                "Linked Work Items": "DWH"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Place a bet using a precompiled SGP Card with maximum allowed bet value through the application channel.",
+                "Expected Result": "Bet is successfully placed and acknowledged by the application."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Query the DWH system for both bets using their transaction IDs or card ID.",
+                "Expected Result": "Both bets are tracked and stored in the DWH system with correct bet values."
+            }
+        ]
+    },
+    {
+        "Titolo": "Verify DWH Data Integrity for SGP Card Bets",
+        "contenuto": [
+            {
+                "ID": "TC-090",
+                "#": 90.0,
+                "Step": 1.0,
+                "Step Description": "Place a bet using a precompiled SGP Card through the application channel.",
+                "Expected Result": "Bet is successfully placed and acknowledged by the application.",
+                "Test Group": "Backend",
+                "Canale": "Backend",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Backend, DWH System",
+                "Precondizioni": "DWH system and SGP Card Generator integration must be deployed. Precompiled SGP Card must be available. Access to DWH query tools is required.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "DWH Tracking of SGP Card Bets",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 1.0,
+                "Dataset": "Precompiled SGP Card, DWH access credentials.",
+                "Risultato Atteso": "DWH records for SGP Card bets are complete, accurate, and consistent with the original transaction data.",
+                "Linked Work Items": "DWH"
+            },
+            {
+                "Step": 2.0,
+                "Step Description": "Query the DWH system for the bet record using the card ID or transaction ID.",
+                "Expected Result": "Bet record is present in the DWH system."
+            },
+            {
+                "Step": 3.0,
+                "Step Description": "Verify that all required fields (e.g., card ID, bet details, timestamp, user ID) are correctly populated and match the original transaction data.",
+                "Expected Result": "All fields in the DWH record are accurate and consistent with the source transaction."
+            }
+        ]
+    },
+    {
+        "Titolo": "Carousel_Display_001_Web_TEST_Desktop_AIproposal_requisiti",
+        "contenuto": [
+            {
+                "ID": "TC-001",
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page without any backend prefilled data.",
+                "Expected Result": "The carousel should not be displayed.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "No backend prefilled data is provided for the carousel.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carousel HP Display Conditions",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "The carousel is not displayed.",
+                "Linked Work Items": "carosello hp - condizioni di visualizzazione"
+            }
+        ]
+    },
+    {
+        "Titolo": "Carousel_Display_002_Web_TEST_Desktop_AIproposal_requisiti",
+        "contenuto": [
+            {
+                "ID": "TC-002",
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page with no backend prefilled Basket data.",
+                "Expected Result": "The carousel should display only the item Football.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "No Basket prefilled data is provided; only Football data is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carousel HP Display Conditions",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "The carousel displays only the item Football.",
+                "Linked Work Items": "carosello hp - condizioni di visualizzazione"
+            }
+        ]
+    },
+    {
+        "Titolo": "Carousel_Display_003_Web_TEST_Desktop_AIproposal_requisiti",
+        "contenuto": [
+            {
+                "ID": "TC-003",
+                "Step": 1.0,
+                "Step Description": "Navigate to the Home Page with no backend prefilled Football data.",
+                "Expected Result": "The carousel should display only the item Basket.",
+                "Test Group": "Desktop",
+                "Canale": "Web",
+                "Dispositivo": "Computer",
+                "Priority": "High",
+                "Test Stage": "UAT",
+                "Sistema Integrale di riferimento": "Windows 10, Web Application",
+                "Precondizioni": "No Football prefilled data is provided; only Basket data is available.",
+                "Modalità Operativa": "Manual",
+                "Funzionalità": "Carousel HP Display Conditions",
+                "Tipologia Test": "functional",
+                "Test di no regression": 1.0,
+                "Automation": 0.0,
+                "Risultato Atteso": "The carousel displays only the item Basket.",
+                "Linked Work Items": "carosello hp - condizioni di visualizzazione"
+            }
+        ]
+    }
+]
