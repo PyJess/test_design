@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any
 import os
-from pdf_data_extraction import agent_data_extraction 
+from .pdf_data_extraction import agent_data_extraction
 from dotenv import load_dotenv
 
 load_dotenv()

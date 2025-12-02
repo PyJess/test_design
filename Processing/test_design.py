@@ -129,7 +129,7 @@ async def gen_TC(paragraph, context, mapping):
         paragraph = paragraph.page_content if hasattr(paragraph, 'page_content') else str(paragraph)
         messages, schema = await prepare_prompt(paragraph, context, mapping)
         print("starting calling llm")
-        #print(f"{messages}")
+        # print(f"{messages}")
         response = await llm_client.a_invoke_model(messages, schema)
         print("Test Case generato con successo!")
         print("Risposta dall'LLM:")
@@ -395,6 +395,8 @@ async def run_pipeline(dizionario: dict):
                 docx_file=value
                 
                 word_path = os.path.join("/tmp", docx_file.filename)
+                # word_path = os.path.join("", docx_file.filename)
+                
                 with open(word_path, "wb") as f:
                     f.write(await docx_file.read())
 
@@ -402,17 +404,127 @@ async def run_pipeline(dizionario: dict):
                 if not word_path.exists():
                     raise FileNotFoundError(f"Word non trovato: {word_path}")
                 
-                if word_path.endswith("pdf"):
+                if word_path.suffix == ".pdf":
                     titles,contents_of_title = await run_extraction_and_retrieval_pipeline(word_path)
-                    for title, content in zip(titles, contents_of_title):
-                        if not head:
-                            continue
-                        head_clean = head.strip().lower()
-                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
-                            continue
-                            
-                        new_tc =gen_TC(title,content,mapping)
                     
+                    mapping = extract_field_mapping()
+                    context = ""
+                    
+                    # all_pdf_test_cases = []
+                    MAX_ATTEMPTS = 5
+                    
+                    async def process_single_section(title, content, context, mapping, max_attempts):
+                        """Esegue gen_TC con logica di retry per una singola sezione."""
+                        title_clean = title.strip().lower()
+                        
+                        attempts = 0
+                        while attempts < max_attempts:
+                            attempts += 1
+                            print(f"-> Tentativo {attempts}/{max_attempts} per la sezione: {title_clean[:50]}...")
+                            
+                            try:
+                                # 1. CHIAMATA ALL'LLM
+                                new_TC = await gen_TC(content, context, mapping)
+                                
+                                # 2. CONVERSIONE E PARSING
+                                if isinstance(new_TC, str):
+                                    new_TC = json.loads(new_TC)
+                                
+                                # 3. VERIFICA E SUCCESS
+                                if isinstance(new_TC, dict) and "test_cases" in new_TC:
+                                    # Ritorna i risultati e il titolo (necessario per l'accumulo)
+                                    return new_TC["test_cases"], title 
+                                else:
+                                    print(f"Output LLM valido, ma manca la chiave 'test_cases'. Riprovo.")
+
+                            except json.JSONDecodeError:
+                                print(f"Tentativo {attempts} fallito: Errore di parsing JSON. Riprovo.")
+                                
+                            except Exception as e:
+                                print(f"Tentativo {attempts} fallito: Errore generico: {e}. Riprovo.")
+                                
+                        # Fallimento permanente
+                        print(f"Fallimento permanente dopo {max_attempts} tentativi per la sezione: {title_clean}")
+                        return [], title 
+
+                    # 2. CREAZIONE DELLA LISTA DI TASK (COROUTINE)
+                    tasks = []
+                    
+                    for title, content in zip(titles, contents_of_title):
+                        # Filtro: escludi intestazioni/sommari, ecc.
+                        if not title:
+                            continue
+                        title_clean = title.strip().lower()
+                        if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean:
+                            continue
+                        
+                        # Aggiungi il task alla lista
+                        # Qui la funzione process_single_section viene CHIAMATA, e restituisce un oggetto coroutine.
+                        task = process_single_section(title, content, context, mapping, MAX_ATTEMPTS)
+                        tasks.append(task)
+                        
+                    # 3. ESECUZIONE PARALLELA
+                    all_results = await asyncio.gather(*tasks)
+                    
+                    # 4. ACCUMULO FINALE 
+                    all_pdf_test_cases = []
+                    
+                    for test_cases_list, source_title in all_results:
+                        # Aggiungi il campo _polarion e accumula
+                        for tc in test_cases_list:
+                            tc["_polarion"] = source_title
+                        all_pdf_test_cases.extend(test_cases_list)
+                        
+                    updated_json = {
+                        "test_cases": all_pdf_test_cases,
+                        "total_count": len(all_pdf_test_cases)
+                    }
+                    #     try:
+                    #         new_TC = await gen_TC(content, context, mapping)
+                            
+                    #         if isinstance(new_TC, str):
+                    #             new_TC = json.loads(new_TC) 
+                                
+                    #         if isinstance(new_TC, dict) and "test_cases" in new_TC:
+                    #             for tc in new_TC["test_cases"]:
+                    #                 tc["_polarion"] = title 
+                    #             all_pdf_test_cases.extend(new_TC["test_cases"])
+                                
+                    #     except Exception as e:
+                    #         print(f"Errore generazione TC per {title}: {e}")
+                        
+                    # updated_json = {
+                    #         "test_cases": all_pdf_test_cases,
+                    #         "total_count": len(all_pdf_test_cases)
+                    #     }
+              
+
+                    # Assegnazione ID
+                    start_number = 1
+                    prefix = "TC"
+                    padding = 3
+                    for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
+                        test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+
+                    print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
+
+                    # Salvataggio JSON e Excel
+                    #output_dir = word_path.parent.parent / "outputs"
+                    output_dir = Path(__file__).parent.parent / "outputs"
+                    output_dir.mkdir(exist_ok=True)
+                    output_json_path = output_dir / f"{word_path.stem}_feedbackAI.json"
+                    output_excel_path = output_dir / f"{word_path.stem}_feedbackAI.xlsx"
+
+                    save_updated_json(updated_json, output_json_path)
+                    convert_json_to_excel(updated_json, output_excel_path)
+
+                    #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+
+                    output=fix_labels_with_order(output_excel_path)
+                    output_excel_path.unlink() 
+
+                    return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
+                            "total_cases": len(updated_json["test_cases"])}
                 if word_path.suffix == ".docx":
 
                     # Elaborazione Word
@@ -520,7 +632,7 @@ async def run_pipeline(dizionario: dict):
                         test_case["_polarion"] = "Image from Figma"
 
                     print("Output LLM ricevuto:")
-                    print(tc)
+                    # print(tc)
                     break
 
             start_number = 1

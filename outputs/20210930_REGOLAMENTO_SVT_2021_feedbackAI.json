@@ -1,0 +1,2003 @@
+{
+  "test_cases": [
+    {
+      "Title": "User Login Functionality_Mobile IOS_UAT_TEST_iOS_Testing login for mobile applications",
+      "ID": "TC-001",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the mobile application on an iOS device.",
+          "Expected Result": "The application launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Login' screen.",
+          "Expected Result": "The 'Login' screen is displayed with fields for email and password."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enter valid login credentials.",
+          "Expected Result": "The input fields accept the credentials."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "The system processes the login and displays the user's dashboard."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 15, Mobile Application",
+      "Preconditions": "User has a valid account and the application is installed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "No",
+      "Automation": "No",
+      "Dataset": "Valid user credentials: email - user@example.com, password - Password123",
+      "Expected Result": "User successfully logs into the application and is redirected to their dashboard.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "OGGETTO, DEFINIZIONI E DISPOSIZIONI GENERALI",
+      "Partial Coverage Description": "Covers successful login only; does not verify session management."
+    },
+    {
+      "Title": "Password Reset Verification_Mobile Android_UAT_TEST_Android_Check process for resetting password",
+      "ID": "TC-002",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the mobile application on an Android device.",
+          "Expected Result": "The application launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Forgot Password' page from the login screen.",
+          "Expected Result": "The 'Forgot Password' page is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enter the registered email address and submit the password reset request.",
+          "Expected Result": "A message confirming that a password reset email has been sent is displayed."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App",
+      "Device": "Android Phone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android 12, Mobile Application",
+      "Preconditions": "User must have a registered account with an accessible email.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Registered email: user@example.com",
+      "Expected Result": "Password reset process is successfully triggered, confirming email sent.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "OGGETTO, DEFINIZIONI E DISPOSIZIONI GENERALI",
+      "Partial Coverage Description": "Covers sending reset email only; does not include subsequent password change verification."
+    },
+    {
+      "Title": "Login Functionality Validation_Backend_UAT_TEST_Backend_Validating login process for backend users",
+      "ID": "TC-003",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the backend login page.",
+          "Expected Result": "The backend login page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter valid administrative credentials and click 'Login'.",
+          "Expected Result": "The system processes the credentials."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the administrator dashboard is displayed.",
+          "Expected Result": "The user is logged in successfully to the administrator dashboard."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows Server 2019, Web Application",
+      "Preconditions": "User must have administrative access and credentials.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "No",
+      "Automation": "No",
+      "Dataset": "Valid admin credentials: username - admin, password - AdminPass123",
+      "Expected Result": "Admin user logs in successfully and is taken to the administrator dashboard.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "OGGETTO, DEFINIZIONI E DISPOSIZIONI GENERALI",
+      "Partial Coverage Description": "Covers login only; further functionality checks are outside this test."
+    },
+    {
+      "Title": "SiVinceTutto SuperEnalotto_001_REQUIREMENT_Organizzazione_TEST_Desktop_Verifying the organization and management of SiVinceTutto SuperEnalotto",
+      "ID": "TC-004",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the SiVinceTutto SuperEnalotto official page.",
+          "Expected Result": "The official SiVinceTutto SuperEnalotto page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Review the regulations regarding the organization and management.",
+          "Expected Result": "The regulations for the organization, exercise and management of the special extraction of SiVinceTutto SuperEnalotto are clearly presented."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is connected to the internet and has access to the official website.",
+      "Execution Mode": "Manual",
+      "Functionality": "Organization and Management",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Regulations related to the organization of SiVinceTutto SuperEnalotto are available and comprehensible.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 1",
+      "Partial Coverage Description": "Covers only the review of regulations; does not cover actual extraction processes."
+    },
+    {
+      "Title": "Winning Combination Generation_001_SiVinceTutto SuperEnalotto_TEST_Terminale_Check winning combination generation",
+      "ID": "TC-005",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the gaming system via the terminal.",
+          "Expected Result": "The gaming interface is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Request generation of a winning combination from the system.",
+          "Expected Result": "The system generates and displays a winning combination of six random numbers between 1 and 90."
+        }
+      ],
+      "Test Group": "Terminal",
+      "Channel": "Terminal",
+      "Device": "Gaming Terminal",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Gaming Terminal, SiVinceTutto SuperEnalotto system",
+      "Preconditions": "The terminal is operational and connected to the gaming system.",
+      "Execution Mode": "Manual",
+      "Functionality": "Winning Combination Generation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "A valid winning combination is successfully generated.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 2",
+      "Partial Coverage Description": "Covers only the generation of winning combinations without other game-related functionalities."
+    },
+    {
+      "Title": "Ticket Validation_002_SiVinceTutto SuperEnalotto_TEST_Backoffice_Validate gaming ticket receipt",
+      "ID": "TC-006",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the backoffice application.",
+          "Expected Result": "The backoffice dashboard is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Input the validation criteria from a physical ticket receipt.",
+          "Expected Result": "The system retrieves and displays the play details associated with the ticket receipt."
+        }
+      ],
+      "Test Group": "Backoffice",
+      "Channel": "Backoffice",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Backoffice application, Gaming system",
+      "Preconditions": "User has valid access to the backoffice application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Ticket Validation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Ticket receipt details",
+      "Expected Result": "Ticket receipt is validated correctly with associated play details displayed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 2",
+      "Partial Coverage Description": "Covers validation of physical ticket receipts without addressing all ticketing processes."
+    },
+    {
+      "Title": "Prize Information Display_003_SiVinceTutto SuperEnalotto_TEST_Web_Retrieve prize information for specific draw",
+      "ID": "TC-007",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the official website of the gaming system.",
+          "Expected Result": "The homepage of the gaming website is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select the option to view prize information for a specific draw.",
+          "Expected Result": "The prize information page for the selected draw is displayed."
+        }
+      ],
+      "Test Group": "Web",
+      "Channel": "Website",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Web Application, Gaming system",
+      "Preconditions": "User has access to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "Prize Information Display",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Draw selection criteria",
+      "Expected Result": "Correct prize information is displayed for the selected draw.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 2",
+      "Partial Coverage Description": "Covers retrieval of prize information for specific draws; does not include historical data retrieval."
+    },
+    {
+      "Title": "User Login Functionality_001_Web_TEST_Desktop",
+      "ID": "TC-008",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application login page.",
+          "Expected Result": "Login page is successfully displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter a valid username and password.",
+          "Expected Result": "Username and password fields are correctly populated."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "The user should be redirected to the dashboard."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have a valid account and be connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "User Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid account credentials",
+      "Expected Result": "User successfully logs in and is taken to the dashboard.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DISPOSIZIONI DEL SIVINCETUTTO SUPERENALOTTO",
+      "Partial Coverage Description": "Tests the login process; does not verify session management."
+    },
+    {
+      "Title": "Password Reset Functionality_002_Web_TEST_Desktop",
+      "ID": "TC-009",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to 'Forgot Password' link on the login page.",
+          "Expected Result": "The 'Forgot Password' page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter the registered email address and submit the form.",
+          "Expected Result": "A confirmation message indicates that an email has been sent."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have a registered email.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Registered email address",
+      "Expected Result": "Password reset email is sent successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DISPOSIZIONI DEL SIVINCETUTTO SUPERENALOTTO",
+      "Partial Coverage Description": "Tests the email sending functionality but does not verify the password change process."
+    },
+    {
+      "Title": "Search Functionality_003_Web_TEST_Desktop",
+      "ID": "TC-010",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Go to the application home page.",
+          "Expected Result": "Home page is successfully displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter a query in the search bar and click 'Search'.",
+          "Expected Result": "Search results relevant to the query are displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be on the home page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Search",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Search query",
+      "Expected Result": "Search results return relevant items based on the query.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DISPOSIZIONI DEL SIVINCETUTTO SUPERENALOTTO",
+      "Partial Coverage Description": "Validates search function but not the sorting of results."
+    },
+    {
+      "Title": "WinningNumbersExtraction_001_SiVinceTuttoSuperEnalotto_TEST_Web_extraction of winning numbers",
+      "ID": "TC-011",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the SiVinceTutto SuperEnalotto winning numbers extraction page.",
+          "Expected Result": "The winning numbers extraction page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Extract Winning Numbers' button.",
+          "Expected Result": "A new set of winning numbers is displayed to the user."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the displayed winning numbers are unique and range from 1 to 90.",
+          "Expected Result": "Winning numbers are unique and within the range of 1 to 90."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the internet and the extraction page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Winning Numbers Extraction",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "No specific dataset required.",
+      "Expected Result": "Winning numbers are extracted according to the rules, fulfilling the requirement.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 3",
+      "Partial Coverage Description": "Covers the extraction of winning numbers; does not cover the detailed probability calculations."
+    },
+    {
+      "Title": "WinningPrizesCategories_002_SiVinceTuttoSuperEnalotto_TEST_Web_verifying prize categories",
+      "ID": "TC-012",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the prize categories page for SiVinceTutto SuperEnalotto.",
+          "Expected Result": "The prize categories page is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Review the displayed prize categories and their corresponding points.",
+          "Expected Result": "Prize categories match the expected configuration of first to fifth categories with points."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Ensure that winning probabilities for each category are listed.",
+          "Expected Result": "The probabilities for winning categories are accurately displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the internet and the prize categories page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Prize Categories Verification",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "No specific dataset required.",
+      "Expected Result": "Prize categories and probabilities are displayed correctly according to the requirements.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 3",
+      "Partial Coverage Description": "Covers the display of categories; does not cover the actual calculation of winnings."
+    },
+    {
+      "Title": "PostponedDrawsProcedure_003_SiVinceTuttoSuperEnalotto_TEST_Web_handling postponed draws",
+      "ID": "TC-013",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the section that outlines procedures for postponed draws.",
+          "Expected Result": "The relevant information regarding postponed draws is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the information includes how players are informed and refunds are processed.",
+          "Expected Result": "The procedure for informing players and the refund process are clearly stated."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check for a time frame regarding refunds and cancellations.",
+          "Expected Result": "The time frame is explicitly defined (refunds within 90 days of cancellation)."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the internet and the page describing postponed draws.",
+      "Execution Mode": "Manual",
+      "Functionality": "Postponed Draws Procedure",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "No specific dataset required.",
+      "Expected Result": "All procedures for postponed draws including refunds are clearly stated as per requirements.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 3",
+      "Partial Coverage Description": "Covers the procedure announcement for postponed draws; does not test the actual implementation of refunds."
+    },
+    {
+      "Title": "Game Stake_001_GAME_Posta_TEST_Desktop_Verifying the game stake limit",
+      "ID": "TC-014",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game application.",
+          "Expected Result": "The game application is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check the value of the game stake.",
+          "Expected Result": "The game stake displays 5.00 euros."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the game application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Game Stake",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Game stake limit of 5.00 euros is correctly displayed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 4",
+      "Partial Coverage Description": "Only validates the display of the stake; does not test stake adjustments."
+    },
+    {
+      "Title": "Winning Distribution_002_GAME_WinningDistribution_TEST_Desktop_Verifying the winning distribution percentages",
+      "ID": "TC-015",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the winning distribution settings.",
+          "Expected Result": "Winning distribution settings are displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the percentage allocations for each winning category.",
+          "Expected Result": "The percentages of winning categories are as follows: First category - 32.20%, Second category - 3.40%, Third category - 8.20%, Fourth category - 31.00%, Fifth category - 25.20%."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be logged in as an administrator.",
+      "Execution Mode": "Manual",
+      "Functionality": "Winning Distribution",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Winning distribution percentages are displayed correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 4",
+      "Partial Coverage Description": "Coverage only for predefined winning categories; dynamic changes not included."
+    },
+    {
+      "Title": "Prize Redistribution_003_GAME_PrizeRedistribution_TEST_Desktop_Verifying redistribution when no winners exist",
+      "ID": "TC-016",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Run a lottery draw with no winners.",
+          "Expected Result": "The draw completes without any winners."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check the distribution of the prize pool.",
+          "Expected Result": "The entire prize pool is distributed among all participants based on the number of played combinations."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "Lottery draw environment is set up without any winning entries.",
+      "Execution Mode": "Manual",
+      "Functionality": "Prize Redistribution",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Prize pool distributed correctly among participants.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 4",
+      "Partial Coverage Description": "Only checks redistribution mechanics with no winners."
+    },
+    {
+      "Title": "Minimum Prize Check_004_GAME_MinimumPrize_TEST_Desktop_Verifying minimum prize conditions",
+      "ID": "TC-017",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access prize conditions for the fifth category.",
+          "Expected Result": "Fifth category prize conditions are displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify if the prize for the fifth category is less than 5.00 euros.",
+          "Expected Result": "If prize is less than 5.00 euros, checks if necessary funds are drawn from higher categories."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be logged in with access to prize settings.",
+      "Execution Mode": "Manual",
+      "Functionality": "Minimum Prize Check",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Minimum prize integration functionality is verified correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 4",
+      "Partial Coverage Description": "Focuses on checks for fifth category only."
+    },
+    {
+      "Title": "Functionality_001_Desktop_UAT_Test_Performance_Verification",
+      "ID": "TC-018",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application on a desktop environment.",
+          "Expected Result": "The application loads successfully without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the performance testing module.",
+          "Expected Result": "The performance testing module is displayed correctly."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Start a performance test using standard parameters.",
+          "Expected Result": "The performance test begins executing without any issues."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Monitor resource usage during the test.",
+          "Expected Result": "Resource usage metrics are displayed in real-time."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the application and necessary permissions.",
+      "Execution Mode": "Manual",
+      "Functionality": "Performance Testing",
+      "Test Type": "performance",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Standard performance test parameters",
+      "Expected Result": "Performance metrics are recorded accurately, and the application performs as expected under the load.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "REGOLAMENTO DI GIOCO",
+      "Partial Coverage Description": "Only tests basic performance metrics under standard load."
+    },
+    {
+      "Title": "Functionality_002_Web_UAT_Test_Content_Validation",
+      "ID": "TC-019",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the web application in a browser.",
+          "Expected Result": "The homepage of the application is displayed successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the specific content section to validate.",
+          "Expected Result": "The content section loads without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that all textual content is accurately displayed.",
+          "Expected Result": "All text content matches the predefined specifications."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Check for the presence of images and videos in the content section.",
+          "Expected Result": "All images and videos are displayed correctly and function as intended."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged into the system and has access to the content section.",
+      "Execution Mode": "Manual",
+      "Functionality": "Content Validation",
+      "Test Type": "content",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Content specifications document",
+      "Expected Result": "The content is accurate, complete, and depicted as specified in the content specifications document.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "REGOLAMENTO DI GIOCO",
+      "Partial Coverage Description": "Covers only textual and media content verification, excluding user interaction functionalities."
+    },
+    {
+      "Title": "Participation_Simulation_001_PhysicalPoints_TEST_Mobile_Evaluating participation process at physical sales points",
+      "ID": "TC-020",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Visit a physical sales point for the game.",
+          "Expected Result": "The sales point is accessible and open for customers."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Fill out a participation card or use a pre-filled or validated card.",
+          "Expected Result": "Participation card is processed without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Interact with the operator by providing verbal game instructions.",
+          "Expected Result": "The operator correctly records the game instructions."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App IOS",
+      "Device": "Mobile",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User is present at a physical sales point.",
+      "Execution Mode": "Manual",
+      "Functionality": "Game Participation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Participation card details, valid verbal instructions",
+      "Expected Result": "User successfully participates in the game at the sales point.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 5",
+      "Partial Coverage Description": "Covers only the participation process at points of sale."
+    },
+    {
+      "Title": "RemoteParticipation_002_DistanceGame_TEST_Desktop_Verifying the remote participation method",
+      "ID": "TC-021",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the online platform for the game.",
+          "Expected Result": "The game platform is correctly displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Login with valid user credentials.",
+          "Expected Result": "User successfully logs in and is taken to the main game interface."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Select participation options according to the provisions of article 24, comma 19, legge n. 88 del 2009.",
+          "Expected Result": "Participation options are successfully selected and confirmed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a registered online account.",
+      "Execution Mode": "Manual",
+      "Functionality": "Remote Participation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid user credentials",
+      "Expected Result": "User participates in the game remotely according to legal provisions.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 5",
+      "Partial Coverage Description": "Covers the remote participation method only; does not cover the legalities of the game."
+    },
+    {
+      "Title": "Subscription_Plans_003_Subscription_Test_terminal_Checking subscription participation option at terminal",
+      "ID": "TC-022",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Visit a gaming terminal that offers subscription options.",
+          "Expected Result": "The terminal is operational and provides access to subscription features."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select the subscription plan option from the terminal menu.",
+          "Expected Result": "Subscription plans are displayed correctly without glitches."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Choose a suitable subscription plan and confirm the selection.",
+          "Expected Result": "The subscription plan is successfully selected and confirmed."
+        }
+      ],
+      "Test Group": "Terminale",
+      "Channel": "Terminal",
+      "Device": "Terminal",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Gaming terminal system",
+      "Preconditions": "User is at a gaming terminal with subscription capabilities.",
+      "Execution Mode": "Manual",
+      "Functionality": "Subscription Participation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Available subscription plans",
+      "Expected Result": "User successfully subscribes to a selected plan at the terminal.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 5",
+      "Partial Coverage Description": "Covers only the user experience and selection process for subscriptions."
+    },
+    {
+      "Title": "Game Receipt Generation_001_GameParticipation_TEST_Terminale_Verifying receipt generation after a successful game transaction",
+      "ID": "TC-023",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the gaming terminal and input valid game participation details.",
+          "Expected Result": "The terminal processes the transaction and confirms registration."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Wait for the terminal to print the game receipt.",
+          "Expected Result": "A game receipt is printed with the appropriate details."
+        }
+      ],
+      "Test Group": "Terminal",
+      "Channel": "Terminal",
+      "Device": "Gaming Terminal",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Gaming Terminal, Company Server",
+      "Preconditions": "User has access to the gaming terminal and is a registered player.",
+      "Execution Mode": "Manual",
+      "Functionality": "Receipt Generation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid game participation data",
+      "Expected Result": "Game receipt is successfully printed and contains all necessary details.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 6",
+      "Partial Coverage Description": "Covers only the generation of receipts; does not test receipt content validation."
+    },
+    {
+      "Title": "Receipt Content Verification_002_GameParticipation_TEST_Terminale_Verifying receipt contents after game transaction",
+      "ID": "TC-024",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Obtain the printed game receipt after a successful game transaction.",
+          "Expected Result": "The printed receipt is obtained."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check that the receipt contains the correct game combinations, control codes, and date of extraction.",
+          "Expected Result": "All expected details match the provided transaction data."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Ensure the receipt displays the correct identification codes for the point of sale and terminal.",
+          "Expected Result": "Identification codes are correctly displayed on the receipt."
+        }
+      ],
+      "Test Group": "Terminal",
+      "Channel": "Terminal",
+      "Device": "Gaming Terminal",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Gaming Terminal, Company Server",
+      "Preconditions": "The game transaction has been successfully completed and receipt generated.",
+      "Execution Mode": "Manual",
+      "Functionality": "Receipt Verification",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Printed game receipt and transaction data",
+      "Expected Result": "The receipt displays all required data accurately.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 6",
+      "Partial Coverage Description": "This test only covers printed receipt contents and not the backend data integrity."
+    },
+    {
+      "Title": "Receipt Discrepancy Handling_003_GameParticipation_TEST_Terminale_Verifying player handling of receipt discrepancies",
+      "ID": "TC-025",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Obtain a game receipt and identify intentional discrepancies in the displayed data.",
+          "Expected Result": "Receipt is correctly acquired with known discrepancies."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Attempt to request an annulment of the receipt by providing it to the terminal operator.",
+          "Expected Result": "An annulment request is submitted successfully."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Confirm receipt annulment is processed by the terminal operator.",
+          "Expected Result": "The annulment is authorized and confirmation of cancellation is given to the player."
+        }
+      ],
+      "Test Group": "Terminal",
+      "Channel": "Terminal",
+      "Device": "Gaming Terminal",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Gaming Terminal, Company Server",
+      "Preconditions": "A receipt with known discrepancies has been printed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Receipt Discrepancy Management",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Receipt with discrepancies",
+      "Expected Result": "Receipt annulment process is initiated and managed correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 6",
+      "Partial Coverage Description": "Covers only the annulment process; does not evaluate the underlying system checks for discrepancies."
+    },
+    {
+      "Title": "SpecialGame_Taxonomy_001_Web_TEST_Desktop_Verifying the minimum cost of a ticket for special games",
+      "ID": "TC-026",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the special game ticket purchasing page.",
+          "Expected Result": "The special game ticket page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select the desired ticket quantity and observe the minimum price per ticket.",
+          "Expected Result": "The minimum price of €5.00 is displayed per ticket."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Attempt to proceed with purchase without selecting a ticket.",
+          "Expected Result": "An error message is displayed stating that at least one ticket must be selected."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Select one ticket and complete the checkout process.",
+          "Expected Result": "Purchase is successful and confirmation message is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is registered and logged into the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Ticket Purchase",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid user account",
+      "Expected Result": "User can successfully verify ticket pricing and purchase a ticket.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 7",
+      "Partial Coverage Description": "This test case covers the ticket pricing verification; refund and cancellation policies are not tested."
+    },
+    {
+      "Title": "WinnerDistribution_Taxonomy_002_Web_TEST_Desktop_Verifying distribution of unclaimed winnings for special game tickets",
+      "ID": "TC-027",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Initiate a draw for a special game.",
+          "Expected Result": "The draw process initiates without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if any winning tickets are unclaimed at the draw closure.",
+          "Expected Result": "Any unclaimed tickets are identified as winners."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the system's mechanism to redirect unclaimed winnings to charity.",
+          "Expected Result": "Confirmation message is displayed indicating that unclaimed winnings will be routed to designated charitable organizations."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The game has been drawn, and results are ready for review.",
+      "Execution Mode": "Manual",
+      "Functionality": "Winning Distribution",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Available game results data",
+      "Expected Result": "All unclaimed winnings are allocated to charity as per the system's regulations.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 7",
+      "Partial Coverage Description": "This test case focuses on unclaimed winnings; the process of winners claiming their prizes is not included."
+    },
+    {
+      "Title": "Commission Control Verification_001_CONTROL_Commisioni_TEST_Desktop_verifying the regularity of extraction operations",
+      "ID": "TC-028",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the control commission dashboard.",
+          "Expected Result": "The dashboard is displayed with the list of all operations related to extraction."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select an operation to verify from the list.",
+          "Expected Result": "The selected operation details are shown."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check for any irregularities in the selected operation.",
+          "Expected Result": "The system indicates whether the operation is regular or irregular."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have permission to access the control commission dashboard.",
+      "Execution Mode": "Manual",
+      "Functionality": "Commission Control",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "No specific dataset required; any extraction operation can be used.",
+      "Expected Result": "The system successfully verifies the regularity of extraction operations.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 8",
+      "Partial Coverage Description": "Validates the interface for control commission but does not cover reporting functionalities."
+    },
+    {
+      "Title": "Win Determination Control_002_CONTROL_Commisioni_TEST_Desktop_verifying the determination of winning operations",
+      "ID": "TC-029",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the winning determination section of the dashboard.",
+          "Expected Result": "The winning determination interface is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Select a transaction to check for winning determination.",
+          "Expected Result": "The transaction details and winning determination results are displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Review any irregularities in the determination process.",
+          "Expected Result": "The system indicates if the determination process was followed correctly."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have access to the winning determination section.",
+      "Execution Mode": "Manual",
+      "Functionality": "Winning Determination Control",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Transactions with known winning outcomes.",
+      "Expected Result": "The system accurately determines and reports winnings without errors.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 8",
+      "Partial Coverage Description": "Focuses on the winning determination process without verifying calculation accuracy."
+    },
+    {
+      "Title": "Commission Composition Verification_003_CONTROL_Commisioni_TEST_Desktop_verifying commission member presence",
+      "ID": "TC-030",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the commission members list.",
+          "Expected Result": "The list of commission members is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Confirm that at least two members are present in the commission.",
+          "Expected Result": "The system confirms that the commission is properly constituted."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the role of each member in the commission.",
+          "Expected Result": "The roles of each member (President, Secretary, and others) are correctly displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have access rights to view commission member lists.",
+      "Execution Mode": "Manual",
+      "Functionality": "Commission Composition",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "No specific dataset required; any commission can be utilized.",
+      "Expected Result": "The system accurately reflects the composition and roles of commission members.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 8",
+      "Partial Coverage Description": "Tests member presence but does not verify historical changes in commission makeup."
+    },
+    {
+      "Title": "Compliance with Annex Specifications_004_CONTROL_Commisioni_TEST_Desktop_verifying compliance with regulations",
+      "ID": "TC-031",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Review the annex guidelines related to commission operations.",
+          "Expected Result": "The guidelines document is accessible and displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check the operations conducted by the commission against the guidelines.",
+          "Expected Result": "The system indicates compliance or any deviations from the guidelines."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Generate a compliance report based on the findings.",
+          "Expected Result": "A report is generated that summarizes the commission's compliance."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have permission to access the guidelines and generate reports.",
+      "Execution Mode": "Manual",
+      "Functionality": "Regulatory Compliance",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "No specific dataset required; compliance checks can use any operational data.",
+      "Expected Result": "The system successfully verifies compliance and generates a report.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 8",
+      "Partial Coverage Description": "Covers only compliance verification and reporting functionalities."
+    },
+    {
+      "Title": "Official Bulletin Publication_001_EU_Official Bulletin_TEST_Web_Scenario of publishing the official bulletin on the website",
+      "ID": "TC-032",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the official website of the Concessionario.",
+          "Expected Result": "The homepage of the Concessionario is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Locate and navigate to the section for the official bulletin.",
+          "Expected Result": "The official bulletin section is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the official bulletin for the latest draw is published.",
+          "Expected Result": "The latest official bulletin is visible and accessible."
+        }
+      ],
+      "Test Group": "Web",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The official bulletin has been created and is available for publishing.",
+      "Execution Mode": "Manual",
+      "Functionality": "Official Bulletin Publication",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "The official bulletin for the latest draw is successfully published on the website.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 9",
+      "Partial Coverage Description": "Only verifies the visibility of the official bulletin; does not test the content details."
+    },
+    {
+      "Title": "Official Bulletin Content Verification_002_EU_Official Bulletin_TEST_Web_Verification of content in the official bulletin",
+      "ID": "TC-033",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the official website and navigate to the official bulletin.",
+          "Expected Result": "The official bulletin section is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check for the presence of the winning combination in the official bulletin.",
+          "Expected Result": "The winning combination is correctly listed in the bulletin."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the total prize amount mentioned in the bulletin.",
+          "Expected Result": "The total prize amount matches the expected value."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Confirm that the number of winning tickets and respective amounts are listed for each prize category.",
+          "Expected Result": "The bulletin accurately reflects the number of winning tickets and amounts for each category."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Check for the identification details of winning tickets.",
+          "Expected Result": "The identifiers for winning tickets are accurately listed in the bulletin."
+        },
+        {
+          "Step": 6,
+          "Step Description": "Ensure the date on which the bulletin was created is visible.",
+          "Expected Result": "The creation date of the official bulletin is correctly displayed."
+        }
+      ],
+      "Test Group": "Web",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The official bulletin has been published on the website.",
+      "Execution Mode": "Manual",
+      "Functionality": "Official Bulletin Content Verification",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Expected winning combination, prize amounts, ticket identifiers, bulletin date",
+      "Expected Result": "The contents of the official bulletin are accurately displayed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 9",
+      "Partial Coverage Description": "Only verifies the content; does not test the actual calculation of winnings."
+    },
+    {
+      "Title": "Physical Point Distribution_003_EU_Official Bulletin_TEST_Web_Distribution of the official bulletin to physical points",
+      "ID": "TC-034",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Simulate the publication of the official bulletin.",
+          "Expected Result": "The official bulletin is marked as published in the system."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify the distribution process to each physical point of sale.",
+          "Expected Result": "The system successfully records the distribution of the bulletin to all physical points."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check that the bulletin is displayed at each physical point of sale.",
+          "Expected Result": "The official bulletin is visibly posted at all points of sale."
+        }
+      ],
+      "Test Group": "Distribution",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Distribution Management System",
+      "Preconditions": "The official bulletin should be published and ready for distribution.",
+      "Execution Mode": "Manual",
+      "Functionality": "Physical Point Distribution",
+      "Test Type": "functional",
+      "No Regression Test": "No",
+      "Automation": "No",
+      "Dataset": "List of physical locations",
+      "Expected Result": "All physical points successfully display the published official bulletin.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 9",
+      "Partial Coverage Description": "This does not cover verification of bulletin content at physical points."
+    },
+    {
+      "Title": "User Registration_Mobile IOS_001_Application_TEST_iOS_verifying user registration functionality",
+      "ID": "TC-035",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application on an iOS device.",
+          "Expected Result": "The application opens successfully without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Sign Up' page from the home screen.",
+          "Expected Result": "The 'Sign Up' page is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Fill in the registration form with valid user information.",
+          "Expected Result": "All fields are filled without validation errors."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Submit the registration form.",
+          "Expected Result": "The user receives a confirmation message that registration was successful."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App IOS",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, iPhone Application",
+      "Preconditions": "The application is installed and the device is connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "User Registration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid user information: name, email, password.",
+      "Expected Result": "User is registered successfully and receives a confirmation message.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "PAGAMENTO DELLE VINCITE E RECLAMI",
+      "Partial Coverage Description": "Covers registration with valid data; error handling not included."
+    },
+    {
+      "Title": "Login Functionality_Mobile Android_002_Application_TEST_Android_testing the login process",
+      "ID": "TC-036",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the application on an Android device.",
+          "Expected Result": "The application opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the login screen.",
+          "Expected Result": "The login screen is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enter valid credentials and click the 'Login' button.",
+          "Expected Result": "User is logged in successfully and redirected to the dashboard."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Android Phone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android, Android Application",
+      "Preconditions": "User has a registered account and the application is installed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Registered user credentials.",
+      "Expected Result": "User successfully logs in and accesses the dashboard.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "PAGAMENTO DELLE VINCITE E RECLAMI",
+      "Partial Coverage Description": "Covers login functionality only; session management not verified."
+    },
+    {
+      "Title": "Password Recovery_Desktop_003_Web_TEST_Desktop_testing the password recovery process",
+      "ID": "TC-037",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web application on a desktop browser.",
+          "Expected Result": "The web application loads without issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Forgot Password?' link.",
+          "Expected Result": "User is redirected to the password recovery page."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enter the registered email address and submit.",
+          "Expected Result": "A confirmation message indicates that a recovery email has been sent."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the internet and a registered account.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Recovery",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Registered user email address.",
+      "Expected Result": "Password recovery process initiated successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "PAGAMENTO DELLE VINCITE E RECLAMI",
+      "Partial Coverage Description": "Covers email submission; email delivery verification not included."
+    },
+    {
+      "Title": "winnings_payment_001_Regulatory_PaymentProcedures_TEST_Desktop_Validating the payment procedures for winnings",
+      "ID": "TC-038",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Verify that the payment of winnings is listed as the sole responsibility of the Concessionaire.",
+          "Expected Result": "The statement indicating that the payment of winnings is solely the responsibility of the Concessionaire is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check the procedures for payment of winnings below and above €1,000,000.",
+          "Expected Result": "Payments of winnings below €1,000,000 are confirmed within 30 days, while amounts above are processed within 91 days."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The user has access to the payment policy document from the Concessionaire.",
+      "Execution Mode": "Manual",
+      "Functionality": "Winnings Payment Procedures",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Payment policy document",
+      "Expected Result": "Payment procedures are accurately reflecting the regulations.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 10",
+      "Partial Coverage Description": "Covers payment timelines only; other detailed procedures are not addressed."
+    },
+    {
+      "Title": "winnings_claim_submission_002_Regulatory_ReceiptVerification_TEST_Desktop_Verifying the receipt for winnings claims",
+      "ID": "TC-039",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the payment claim section and attempt to submit a claim with a physical receipt.",
+          "Expected Result": "The system accepts the claim submission with a physical receipt."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Attempt to submit a claim without a valid physical receipt.",
+          "Expected Result": "The system displays an error message indicating that a valid receipt is required."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a valid physical receipt for winnings.",
+      "Execution Mode": "Manual",
+      "Functionality": "Receipt Validation for Winnings",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid and invalid receipts",
+      "Expected Result": "Valid receipts are accepted; invalid ones trigger error messages.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 10",
+      "Partial Coverage Description": "Only the submission of physical receipts is covered; electronic receipt processing not included."
+    },
+    {
+      "Title": "winnings_expiry_time_003_Regulatory_ReceiptExpiry_TEST_Desktop_Checking the expiry time for winnings receipts",
+      "ID": "TC-040",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Submit a winning receipt for an amount below €20.",
+          "Expected Result": "The system indicates that the receipt is valid for 6 months."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Submit a winning receipt for an amount between €20.01 and €5,200.",
+          "Expected Result": "The system indicates that the receipt is valid for 1 year."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Submit a winning receipt for an amount above €5,200.",
+          "Expected Result": "The system indicates that the receipt is valid for 2 years."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has different winning receipts for testing.",
+      "Execution Mode": "Manual",
+      "Functionality": "Receipt Validity Period",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Winning receipts with varying amounts",
+      "Expected Result": "Expiry periods are correctly validated for different winning amounts.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 10",
+      "Partial Coverage Description": "Only covers receipts based on winning amounts; challenge cases not included."
+    },
+    {
+      "Title": "Complaint Submission_001_LEGAL_Complaint Handling_TEST_Web_Desktop_Submitting a complaint regarding winnings",
+      "ID": "TC-041",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the official complaints submission page on the website.",
+          "Expected Result": "The complaints submission page is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Fill in the required fields for complaint submission, including player's information and complaint details.",
+          "Expected Result": "All fields are filled successfully without validation errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Attach a copy of the game receipt or identification data from an online play.",
+          "Expected Result": "The file is successfully attached without any errors."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Click the 'Submit Complaint' button.",
+          "Expected Result": "A confirmation message is displayed indicating the complaint has been submitted."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has an account and is logged into the complaints submission system.",
+      "Execution Mode": "Manual",
+      "Functionality": "Complaint Submission",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Valid player information and game receipt copy",
+      "Expected Result": "User successfully submits a complaint, and confirmation is received.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 11",
+      "Partial Coverage Description": "Covers the submission process; response handling not included."
+    },
+    {
+      "Title": "Complaint Deadline_002_LEGAL_Complaint Handling_TEST_Web_Desktop_Verifying complaint submission within 60 days",
+      "ID": "TC-042",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the official complaints submission page on the website.",
+          "Expected Result": "The complaints submission page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Attempt to submit a complaint after the 60-day period from the publication of the official bulletin.",
+          "Expected Result": "An error message indicating that the complaint cannot be submitted after the time limit is shown."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the complaints submission system.",
+      "Execution Mode": "Manual",
+      "Functionality": "Complaint Deadline Enforcement",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Invalid submission timeframe (beyond 60 days)",
+      "Expected Result": "The system correctly prevents submission and displays an appropriate error message.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 11",
+      "Partial Coverage Description": "Tests time validation only; full complaint handling is not included."
+    },
+    {
+      "Title": "Foreign Collection_001_Requirement_Raccolta del gioco all’estero_TEST_Backend_verifying foreign collection assent from state",
+      "ID": "TC-043",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Log in to the backend application as an admin.",
+          "Expected Result": "The admin dashboard is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Foreign Collection Assents' section.",
+          "Expected Result": "The foreign collection assents page is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check if there is an option to request assent from a foreign state.",
+          "Expected Result": "The option to request assent is present and clickable."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Submit a request for assent to collect SiVinceTutto SuperEnalotto in a foreign state.",
+          "Expected Result": "A confirmation message appears indicating the request has been submitted."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Backend Application",
+      "Preconditions": "User is logged in as an admin with necessary permissions.",
+      "Execution Mode": "Manual",
+      "Functionality": "Foreign Collection Assent Request",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Information about the foreign state for assent request",
+      "Expected Result": "The request for assent is successfully submitted to the foreign state.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 12",
+      "Partial Coverage Description": "Validates the assent request process but does not include the actual response handling."
+    },
+    {
+      "Title": "Foreign Collection_Negative Test_002_Requirement_Raccolta del gioco all’estero_TEST_Backend_invalid assent request",
+      "ID": "TC-044",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Log in to the backend application as an admin.",
+          "Expected Result": "The admin dashboard is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the 'Foreign Collection Assents' section.",
+          "Expected Result": "The foreign collection assents page is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Attempt to submit a request without providing necessary information.",
+          "Expected Result": "An error message is displayed indicating missing required fields."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Backend Application",
+      "Preconditions": "User is logged in as an admin.",
+      "Execution Mode": "Manual",
+      "Functionality": "Foreign Collection Assent Request",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Invalid or incomplete data",
+      "Expected Result": "The system prevents submission and shows an error message.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 12",
+      "Partial Coverage Description": "Validates error handling for invalid assent requests."
+    },
+    {
+      "Title": "mobileIOS_testGroup_001_Functionality_APP_TEST_iPhone_Testing mobile app functionality on iOS",
+      "ID": "TC-045",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Install the mobile application from the App Store.",
+          "Expected Result": "The application is successfully installed on the device."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Open the mobile application.",
+          "Expected Result": "The application launches without crashing and displays the home screen."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Navigate through various sections of the app.",
+          "Expected Result": "All sections are accessible and display the correct information."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 15, Mobile Application",
+      "Preconditions": "User has an iPhone with iOS 15 and internet connectivity.",
+      "Execution Mode": "Manual",
+      "Functionality": "Mobile App Functionality",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Mobile application functions correctly without errors.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DISPOSIZIONI FINALI E TRANSITORIE",
+      "Partial Coverage Description": "Covers app navigation; not all features tested."
+    },
+    {
+      "Title": "mobileAndroid_testGroup_002_Functionality_APP_TEST_Android_Testing Android app functionality",
+      "ID": "TC-046",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Install the mobile application from Google Play Store.",
+          "Expected Result": "The application is successfully installed on the Android device."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Launch the mobile application.",
+          "Expected Result": "The application opens successfully and presents the home screen to the user."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Perform a login action and verify user credentials.",
+          "Expected Result": "User is logged in successfully and the dashboard is displayed."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Android Phone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, Mobile Application",
+      "Preconditions": "User has an Android device with version 11 and sufficient storage.",
+      "Execution Mode": "Manual",
+      "Functionality": "Android App Functionality",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "Android application behaves as expected without crashing.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DISPOSIZIONI FINALI E TRANSITORIE",
+      "Partial Coverage Description": "Focuses only on login function; other features not covered."
+    },
+    {
+      "Title": "appIOS_testGroup_003_Functionality_APP_TEST_iPad_Testing app functionality on iPad",
+      "ID": "TC-047",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Download the application from the App Store on the iPad.",
+          "Expected Result": "App is downloaded and installed successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Open the app and check for initial loading times.",
+          "Expected Result": "App loads within acceptable time limits (less than 3 seconds)."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Interact with various features of the app.",
+          "Expected Result": "All features respond correctly without any user interface glitches."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "iPad",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 15, Mobile Application",
+      "Preconditions": "User owns an iPad with a stable internet connection.",
+      "Execution Mode": "Manual",
+      "Functionality": "App Functionality",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "N/A",
+      "Expected Result": "App operates smoothly and flawlessly on the iPad.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DISPOSIZIONI FINALI E TRANSITORIE",
+      "Partial Coverage Description": "Verifies loading and feature accessibility only; backend operations not tested."
+    },
+    {
+      "Title": "Abrogation Application 001_Web_TEST_Desktop_Verifying the abrogation of previous regulations in application",
+      "ID": "TC-048",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the regulatory web application and navigate to the abrogation section.",
+          "Expected Result": "The abrogation section is displayed clearly with relevant regulations listed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Confirm the cessation of the previous decree n. 2011/39740/giochi/Ena.",
+          "Expected Result": "The application should indicate that regulations based on decree n. 2011/39740/giochi/Ena are no longer in effect."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The user is authorized and logged into the regulatory application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Regulatory Compliance",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "User account with access to regulation services",
+      "Expected Result": "The application properly indicates the cessation of the previous regulations.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 13",
+      "Partial Coverage Description": "Only tests the abrogation of specific previous regulations; does not cover all regulatory aspects."
+    },
+    {
+      "Title": "Publication Confirmation 002_Web_TEST_Desktop_Verifying that the decree publication is accessible",
+      "ID": "TC-049",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Go to the homepage of the regulatory application.",
+          "Expected Result": "The homepage loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Locate the section for newly published decrees.",
+          "Expected Result": "The section for newly published decrees is visible and accessible."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the link for the most recent decree published.",
+          "Expected Result": "The details of the newly published decree load correctly."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "Publishing and Access to Decrees",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Access to the regulatory portal",
+      "Expected Result": "User can successfully access the details of the newly published decree.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 13",
+      "Partial Coverage Description": "Covers only the visibility and accessibility of published decrees; does not cover the content verification."
+    },
+    {
+      "Title": "Effective Date Verification 003_Web_TEST_Desktop_Verifying effective date after publication",
+      "ID": "TC-050",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the published decree details page.",
+          "Expected Result": "The published decree details page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Identify the effective date of the decree noted at the top or specified section.",
+          "Expected Result": "The effective date is displayed correctly as the date of the first contest indicated."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "Decree has already been published and is accessible on the website.",
+      "Execution Mode": "Manual",
+      "Functionality": "Effective Date Validation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Published decree on the regulatory portal",
+      "Expected Result": "The effective date of the document is displayed accurately.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Articolo 13",
+      "Partial Coverage Description": "Covers effective date display only; does not include date validation logic."
+    },
+    {
+      "Title": "Document Review_XXX_VERIFICATION_Procedure_TEST_Desktop_Verifying document for legality and correctness",
+      "ID": "TC-051",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the document containing 'IL VICEDIRETTORE' signature.",
+          "Expected Result": "The document opens without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Locate the section with the signature of Alessandro Aronica.",
+          "Expected Result": "The signature section is displayed correctly."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the statement regarding the autographed signature replacement as per the law.",
+          "Expected Result": "The statement matches the provided requirements in the document."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, PDF Reader",
+      "Preconditions": "User has access to the document and a compatible PDF reader.",
+      "Execution Mode": "Manual",
+      "Functionality": "Document Verification",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Specific document with signature",
+      "Expected Result": "All sections of the document are correct and conform to the specified requirements.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Decreto del 17 Novembre 2015 Prot. N. 2015/109886/Giochi/Ena",
+      "Partial Coverage Description": "Covers only the verification of the signature section and legal statement."
+    },
+    {
+      "Title": "Signature Validation_XXX_CHECK_Auth_TEST_Desktop_Verifying validity of signature and compliance",
+      "ID": "TC-052",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Display the document for visual inspection.",
+          "Expected Result": "The document is presented clearly on the screen."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check for any visible signs of tampering in the signature area.",
+          "Expected Result": "No signs of tampering are found in the signature area."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Validate that the signature complies with standard digital signature verification procedures.",
+          "Expected Result": "The signature is verified as authentic and valid."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, PDF Reader",
+      "Preconditions": "User has access to the document and a digital signature verification tool.",
+      "Execution Mode": "Manual",
+      "Functionality": "Signature Validation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "Specific document with signature",
+      "Expected Result": "Signature is validated successfully without issues.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Decreto del 17 Novembre 2015 Prot. N. 2015/109886/Giochi/Ena",
+      "Partial Coverage Description": "Focuses only on the signature verification process; does not include document content review."
+    }
+  ],
+  "total_count": 52
+}

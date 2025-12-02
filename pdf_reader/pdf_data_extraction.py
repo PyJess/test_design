@@ -1,4 +1,5 @@
-from llm_pdf import LLMClient
+# from llm_pdf import LLMClient
+from .llm_pdf import LLMClient
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 import fitz  
 from docx import Document
@@ -43,8 +44,6 @@ response_schemas = [
 output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
 format_instructions = output_parser.get_format_instructions()
 
-# pdf_data_extraction.py (RIADATTATO)
-# ... (import, read_document, response_schemas, output_parser, format_instructions rimangono gli stessi)
 
 async def agent_data_extraction(file_path:str, output_json_path:str):
     print(f"[INFO] Lettura file: {file_path}")
@@ -54,7 +53,7 @@ async def agent_data_extraction(file_path:str, output_json_path:str):
     prompt = PromptTemplate(
     template=(
         "Analizza il seguente documento e suddividilo in sezioni logiche.\n"
-        "Identifica automaticamente tutti i titoli (es. 'Articolo 1', 'Paragrafo 2.1', 'Sezione III', 'Titolo I', 'Capitolo 5', ecc.) "
+        "Identifica automaticamente tutti i titoli o i nomi dei capitoli o dei paragrafi (es.'Compilazione tramite agente IA' 'Articolo 1', 'Paragrafo 2.1', 'Sezione III', 'Titolo I', 'Capitolo 5', ecc.) "
         "e associa a ciascuno il testo che gli appartiene.\n\n"
         "Restituisci un JSON di questa forma:\n"
         "[{{ 'titolo': 'Titolo o intestazione della sezione', 'contenuto': 'Testo completo associato' }}, ...]\n\n"
