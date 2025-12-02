@@ -761,7 +761,7 @@ async def run_pipeline(dizionario: dict):
                     
                     for title, content in zip(titles, contents_of_title):
                         # Filtro: escludi intestazioni/sommari, ecc.
-                        if not title:
+                        if not title or content:
                             continue
                         title_clean = title.strip().lower()
                         if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean:
