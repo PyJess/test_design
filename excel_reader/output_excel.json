@@ -1,0 +1,1868 @@
+[
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  - not logged in - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 1,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 1,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  -1 combination filled in - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 2,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 2,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 2,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  - more than 1 combinations filled in - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 3,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 3,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 3,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  - all combinations filled in - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 4,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 4,
+                "Step": 2,
+                "Step Description": "Insert all the combinations",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 4,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present or not",
+                "Expected Result": "CTA Numera is not displayed anymore after inserted the last combination"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  - login already done - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 5,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 5,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  -1 combination filled in - login already done - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 6,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 6,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 6,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  - more than 1 combinations filled in - login already done  - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 7,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 7,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 7,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Check CTA Numera appearance  - all combinations filled in - login already done - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 8,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 8,
+                "Step": 2,
+                "Step Description": "Insert all the combinations",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 8,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present or not",
+                "Expected Result": "CTA Numera is not displayed anymore after inserted the last combination"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Inserisci  - not logged in - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 9,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 9,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 9,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 9,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 9,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the 1st row"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Inserisci  -1 combination filled in - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 10,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 10,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 10,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 10,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 10,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 10,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the second row. The 1st row is still present (same numbers as inserted in the step 2)"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Inserisci  - more than 1 combinations filled in - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 11,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 11,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 11,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 11,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 11,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 11,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the \"n+1\" position where \"n\" is depending from the number of combinations previously inserted (if for example, 5 combinations were inserted, the new combination will be in the 6° position). The previous rows are still present (same numbers as inserted in the step 2)"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Inserisci  - login already done - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 12,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 12,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 12,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 12,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 12,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the 1st row"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Inserisci  -1 combination filled in - login already done - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 13,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 13,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 13,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 13,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 13,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 13,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the second row. The 1st row is still present (same numbers as inserted in the step 2)"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Inserisci  - more than 1 combinations filled in - login already done  - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 14,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 14,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 14,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 14,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 14,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 14,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the \"n+1\" position where \"n\" is depending from the number of combinations previously inserted (if for example, 5 combinations were inserted, the new combination will be in the 6° position). The previous rows are still present (same numbers as inserted in the step 2)"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - not logged in - 1 event - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 15,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 15,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 15,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 15,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 15,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the 1st row"
+            },
+            {
+                "#": 15,
+                "Step": 6,
+                "Step Description": "Complete the validation of the play by entering your credentials when required (1 event chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  -1 combination filled in - 1 event - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 16,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 16,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 16,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 16,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 16,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 16,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the second row. The 1st row is still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 16,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play by entering your credentials when required (1 event chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - more than 1 combinations filled in - 1 event - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 17,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 17,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 17,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 17,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 17,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 17,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the \"n+1\" position where \"n\" is depending from the number of combinations previously inserted (if for example, 5 combinations were inserted, the new combination will be in the 6° position). The previous rows are still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 17,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play by entering your credentials when required (1 event chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - login already done - 1 event - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 18,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 18,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 18,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 18,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 18,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the 1st row"
+            },
+            {
+                "#": 18,
+                "Step": 6,
+                "Step Description": "Complete the validation of the play (1 event chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  -1 combination filled in - 1 event - login already done - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 19,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 19,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 19,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 19,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 19,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 19,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the second row. The 1st row is still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 19,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play (1 event chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - more than 1 combinations filled in - 1 event - login already done  - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 20,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 20,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 20,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 20,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 20,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 20,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the \"n+1\" position where \"n\" is depending from the number of combinations previously inserted (if for example, 5 combinations were inserted, the new combination will be in the 6° position). The previous rows are still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 20,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play (1 event chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - not logged in - more than 1 event  - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 21,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 21,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 21,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 21,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 21,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the 1st row"
+            },
+            {
+                "#": 21,
+                "Step": 6,
+                "Step Description": "Complete the validation of the play by entering your credentials when required (1 subscription chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  -1 combination filled in - more than 1 event - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 22,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 22,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 22,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 22,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 22,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 22,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the second row. The 1st row is still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 22,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play by entering your credentials when required (1 subscription chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - more than 1 combinations filled in - more than 1 event - not logged in - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 23,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "AI Numera available",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 23,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 23,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 23,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 23,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 23,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the \"n+1\" position where \"n\" is depending from the number of combinations previously inserted (if for example, 5 combinations were inserted, the new combination will be in the 6° position). The previous rows are still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 23,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play by entering your credentials when required (1 subscription chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - login already done - more than 1 event - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 24,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 24,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 24,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 24,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 24,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the 1st row"
+            },
+            {
+                "#": 24,
+                "Step": 6,
+                "Step Description": "Complete the validation of the play (1 subscription chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  -1 combination filled in - more than 1 event - login already done - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 25,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 25,
+                "Step": 2,
+                "Step Description": "Insert 1 combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 25,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 25,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 25,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 25,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the second row. The 1st row is still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 25,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play (1 subscription chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Full Flow  - more than 1 combinations filled in - more than 1 event - login already done  - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 26,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 26,
+                "Step": 2,
+                "Step Description": "Insert more than 1 combinations (e.g. 5 combinations)",
+                "Expected Result": "Combinations properly inserted"
+            },
+            {
+                "#": 26,
+                "Step": 3,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\" is still present",
+                "Expected Result": "CTA still present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 26,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed with the information about the privacy (1st box)"
+            },
+            {
+                "#": 26,
+                "Step": 5,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 26,
+                "Step": 6,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "Combination previously suggested in the chat is correctly inserted in the \"n+1\" position where \"n\" is depending from the number of combinations previously inserted (if for example, 5 combinations were inserted, the new combination will be in the 6° position). The previous rows are still present (same numbers as inserted in the step 2)"
+            },
+            {
+                "#": 26,
+                "Step": 7,
+                "Step Description": "Complete the validation of the play (1 subscription chosen)",
+                "Expected Result": "Ticket correctly played in according with the combinations previously inserted"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Active Chat and Non ora - login already done - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 27,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 27,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 27,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 27,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 27,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Non ora\"",
+                "Expected Result": "Window chat is still open, NumberBoard is not displayed and it's possible to chat inserting other texts"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Nascondi significato - login already done - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 28,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 28,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 28,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 28,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 28,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Mostra significato\" then \"Nascondi significato\"",
+                "Expected Result": "Text with related explanation about any single number is displayed correctly and then it's closed properly showing only the combination previously suggested"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Mostra significato - login already done - empy state - DESKTOP_Chrome",
+        "contenuto": [
+            {
+                "#": 29,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 29,
+                "Step": 2,
+                "Step Description": "Check if CTA Numera \"Trova i numeri con i tuoi sogni is displayed\"",
+                "Expected Result": "CTA is present below the two CTAs \"Preferiti\" and \"Number combinationsi\""
+            },
+            {
+                "#": 29,
+                "Step": 3,
+                "Step Description": "Click on CTA \"Trova i numeri con i tuoi sogni\"",
+                "Expected Result": "Chat is properly displayed "
+            },
+            {
+                "#": 29,
+                "Step": 4,
+                "Step Description": "Insert a text ",
+                "Expected Result": "The combination is correctly suggested with the CTA Mostra significato and the two CTAs \"Non ora\" and \"Inserisci\""
+            },
+            {
+                "#": 29,
+                "Step": 5,
+                "Step Description": "Click on CTA \"Mostra significato\"",
+                "Expected Result": "Text with related explanation about any single number is displayed correctly"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it  - Close chat - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 30,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 30,
+                "Step": 2,
+                "Step Description": "Click on CTA AI Numera",
+                "Expected Result": "Chat is correctly displayed with 3 boxes \"Informativa privacy\", \"Welcome message\" and text inviting to insert the text related to the dream"
+            },
+            {
+                "#": 30,
+                "Step": 3,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 30,
+                "Step": 4,
+                "Step Description": "Close the chat pressing X button",
+                "Expected Result": "SuperEnalotto NumberBoard is displayed without combinations inserted (empty - if no combinations were inserted)"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it  - Standby chat - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 31,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 31,
+                "Step": 2,
+                "Step Description": "Click on CTA AI Numera",
+                "Expected Result": "Chat is correctly displayed with 3 boxes \"Informativa privacy\", \"Welcome message\" and text inviting to insert the text related to the dream"
+            },
+            {
+                "#": 31,
+                "Step": 3,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 31,
+                "Step": 4,
+                "Step Description": "Close on button on top to minimize the chat ",
+                "Expected Result": "SuperEnalotto NumberBoard is displayed without combinations inserted (empty) and the CTA \"Continua la conversazione\" active"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Restart chat and ticket filling - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 32,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 32,
+                "Step": 2,
+                "Step Description": "Click on CTA AI Numera",
+                "Expected Result": "Chat is correctly displayed with 3 boxes \"Informativa privacy\", \"Welcome message\" and text inviting to insert the text related to the dream"
+            },
+            {
+                "#": 32,
+                "Step": 3,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 32,
+                "Step": 4,
+                "Step Description": "Close on button on top to minimize the chat ",
+                "Expected Result": "SuperEnalotto NumberBoard is displayed without combinations inserted (empty) and the CTA \"Continua la conversazione\" active"
+            },
+            {
+                "#": 32,
+                "Step": 5,
+                "Step Description": "Click on CTA AI Numera \"Continua la conversazione\"",
+                "Expected Result": "Chat is correctly displayed with the texts previously inserted"
+            },
+            {
+                "#": 32,
+                "Step": 6,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 32,
+                "Step": 7,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "The combination previously suggested is reported in the NumberBoard"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it  - Restart chat after next step - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 33,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 33,
+                "Step": 2,
+                "Step Description": "Click on CTA AI Numera",
+                "Expected Result": "Chat is correctly displayed with 3 boxes \"Informativa privacy\", \"Welcome message\" and text inviting to insert the text related to the dream"
+            },
+            {
+                "#": 33,
+                "Step": 3,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 33,
+                "Step": 4,
+                "Step Description": "Close on button on top to minimize the chat ",
+                "Expected Result": "SuperEnalotto NumberBoard is displayed without combinations inserted (empty) and the CTA \"Continua la conversazione\" active"
+            },
+            {
+                "#": 33,
+                "Step": 5,
+                "Step Description": "Click on CTA AI Numera \"Continua la conversazione\"",
+                "Expected Result": "Chat is correctly displayed with the texts previously inserted"
+            },
+            {
+                "#": 33,
+                "Step": 6,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 33,
+                "Step": 7,
+                "Step Description": "Minimize the chat and insert a combination",
+                "Expected Result": "Combination properly inserted"
+            },
+            {
+                "#": 33,
+                "Step": 8,
+                "Step Description": "Press on \"Avanti\" then comes back to NumberBoard ",
+                "Expected Result": "NumberBoard is displayed with the combination previously inserted still present and the CTA \"Continua la conversazione\""
+            },
+            {
+                "#": 33,
+                "Step": 9,
+                "Step Description": "Click on CTA AI Numera \"Continua la conversazione\"",
+                "Expected Result": "Chat is correctly displayed with the texts previously inserted"
+            },
+            {
+                "#": 33,
+                "Step": 10,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 33,
+                "Step": 11,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "The combination previously suggested is reported in the NumberBoard in the second row;  "
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Restart chat after playing new game type - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 34,
+                "Step": 1,
+                "Step Description": "Go to Lotterie/SuperEnalotto after already logging in with username and password",
+                "Expected Result": "Client is properly displayed with no combinations inserted",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 34,
+                "Step": 2,
+                "Step Description": "Click on CTA AI Numera",
+                "Expected Result": "Chat is correctly displayed with 3 boxes \"Informativa privacy\", \"Welcome message\" and text inviting to insert the text related to the dream"
+            },
+            {
+                "#": 34,
+                "Step": 3,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 34,
+                "Step": 4,
+                "Step Description": "Close on button on top to minimize the chat ",
+                "Expected Result": "SuperEnalotto NumberBoard is displayed without combinations inserted (empty) and the CTA \"Continua la conversazione\" active"
+            },
+            {
+                "#": 34,
+                "Step": 5,
+                "Step Description": "Go to Sistema then comes back on Schedina",
+                "Expected Result": "NumberBoard is displayed without combinations inserted and with the CTA \"Continua la conversazione\""
+            },
+            {
+                "#": 34,
+                "Step": 6,
+                "Step Description": "Click on CTA AI Numera \"Continua la conversazione\"",
+                "Expected Result": "Chat is correctly displayed with the texts previously inserted"
+            },
+            {
+                "#": 34,
+                "Step": 7,
+                "Step Description": "Insert a text",
+                "Expected Result": "Automatic answer is correctly displayed inside the chat with the combination suggested and the two CTA \"Non ora\" and \"Inserisci\" appear"
+            },
+            {
+                "#": 34,
+                "Step": 8,
+                "Step Description": "Click on CTA \"Inserisci\"",
+                "Expected Result": "The combination previously suggested is reported in the NumberBoard ;  the two CTA Salva nei preferiti and Gioca in ricevitoria are now in active state and clickable"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Informative Modal - Prova subito - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 35,
+                "Step": 1,
+                "Step Description": "PRECONDITION : Users are introduced to the new Agent AI feature through an informational modal, shown during their first two visits to the game page in Schedina mode. From this modal, they can activate Agent AI by clicking or tapping the 'Prova subito' button.\n\nGo to Lotterie/SuperEnalotto after already logging in with username and password\n\n",
+                "Expected Result": "Informative modal is displayed with the two CTAs \"Non ora\" and \"Prova subito\"",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 35,
+                "Step": 2,
+                "Step Description": "Click on CTA \"Prova subito\"",
+                "Expected Result": "Chat is correctly displayed"
+            },
+            {
+                "#": 35,
+                "Step": 3,
+                "Step Description": "PRECONDITION : Users are introduced to the new Agent AI feature through an informational modal, shown during their first two visits to the game page in Schedina mode. From this modal, they can activate Agent AI by clicking or tapping the 'Prova subito' button.\n\nGo to Lotterie/SuperEnalotto after already logging in with username and password\n\n",
+                "Expected Result": "Informative modal is displayed with the two CTAs \"Non ora\" and \"Prova subito\""
+            },
+            {
+                "#": 35,
+                "Step": 4,
+                "Step Description": "Click on CTA \"Non ora\"",
+                "Expected Result": "NumberBoard is displayed"
+            }
+        ]
+    },
+    {
+        "Titolo": "AI Numera - Sisal.it - Informative Modal error - script loading error modal - Desktop_Chrome",
+        "contenuto": [
+            {
+                "#": 36,
+                "Step": 1,
+                "Step Description": "PRECONDITION : coordinate with the developers to perform the test\n\nGenerate a script loading error modal\n\n",
+                "Expected Result": "Informative modal is displayed with the CTA \"OK\" and the text \"Siamo spiacenti ma in questo momento la funzionalità non è disponibile. Riprova piu tardi\"",
+                "Test Group": "desktop",
+                "Canale": "desktop",
+                "Dispositivo": "computer",
+                "Priority": "medium",
+                "Test Stage": "test",
+                "Sistema di riferimento": "Desktop",
+                "Precondizioni": "Login already done",
+                "Modalità Operativa": "manuale",
+                "Funzionalità": "AI Numera - Desktop Chrome",
+                "Tipologia Test": "functional",
+                "Test di no regression": "no",
+                "Automation": "no",
+                "Dataset": "dataset",
+                "Risultato Atteso": "CTA Numera properly displayed",
+                "Linked Work Items": "LOTITA-52778"
+            },
+            {
+                "#": 36,
+                "Step": 2,
+                "Step Description": "Click on CTA \"OK\"",
+                "Expected Result": "Client is properly displayed with no combinations inserted"
+            }
+        ]
+    }
+]
