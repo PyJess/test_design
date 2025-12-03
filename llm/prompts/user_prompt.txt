@@ -14,4 +14,4 @@ Here you find some additional informations that you can use to generate more acc
 **Important**
 Generate the output as valid JSON, without extra parentheses or trailing commas, ready to be parsed with json.loads.
 Ensure the output is in English.
-
+The test cases **MUST** be indipendent between each others.

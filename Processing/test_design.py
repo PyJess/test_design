@@ -506,6 +506,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+                        test_case["Dataset"] = ""
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 
@@ -565,6 +566,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+                        test_case["Dataset"] = ""
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 
@@ -641,6 +643,7 @@ async def run_pipeline(dizionario: dict):
             padding = 3
             for i, test_case in enumerate(tc["test_cases"], start=start_number):
                 test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+                test_case["Dataset"] = ""
 
             print(f"Totale test case aggiornati: {len(tc['test_cases'])}")
 
@@ -959,6 +962,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+                        test_case["Dataset"] = ""
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 
@@ -1016,6 +1020,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+                        test_case["Dataset"] = ""
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 

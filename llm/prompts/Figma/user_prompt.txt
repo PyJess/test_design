@@ -3,3 +3,5 @@ Here you find the flow of the images:
 {flow}
 
 
+**Important**
+Ensure the output is in English.

@@ -11,7 +11,7 @@ Understand the Requirements
 - Consider both positive and negative scenarios.
 
 Generate Test Cases:
-For each requirement, produce one or more test cases.
+For each requirement, produce one or more indipendent test cases.
 Each test case must include the following fields:
 - Test Case ID: A unique identifier (e.g., TC-001, TC-002).
 - Requirement Reference (optional but recommended): The requirement or user story being validated.
@@ -40,6 +40,7 @@ Follow the schema exactly, with proper types and all required fields.
 Boolean or enum fields must use their correct types according to the schema.
 Ensure that Steps contain both "Step Description" and "Expected Result" for each step.
 Ensure the output is in English.
+The test cases **MUST** be indipendent between each others.
 
 
 JSON Schema Reference:
