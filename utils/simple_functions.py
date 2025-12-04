@@ -507,7 +507,7 @@ def from_en_to_it(testcase):
 }
 
 
-import docx2pdf
+# import docx2pdf
 from pdf2image import convert_from_path
 import os
 

@@ -138,7 +138,7 @@ import fitz
 from docx import Document
 from dotenv import load_dotenv
 from pathlib import Path
-from langchain_core.prompts import PromptTemplate  # <-- CAMBIATO: langchain_core invece di langchain
+from langchain_core.prompts import PromptTemplate  
 import os
 import json 
 import asyncio

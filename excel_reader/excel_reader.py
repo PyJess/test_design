@@ -64,17 +64,26 @@ def read_excel(file_excel):
     return results
 
 
+# def title_content_extraction(json_file):
+#     titles = []
+#     contents = []
+#     for test in json_file:
+#         titles.append(test["Titolo"])
+#         for step in test["contenuto"]:
+#             contents.append(step)
+#     return titles, contents
+
 def title_content_extraction(json_file):
     titles = []
     contents = []
     for test in json_file:
         titles.append(test["Titolo"])
-        for step in test["contenuto"]:
-            contents.append(step)
+        # CORREZIONE: Appende l'intera lista di step/contenuto associata al titolo.
+        contents.append(test["contenuto"]) 
     return titles, contents
-
 
 async def pipeline_excel(file_excel):
     json_file = read_excel(file_excel)
     titles, contents = title_content_extraction(json_file)
     return titles, contents
+

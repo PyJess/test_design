@@ -19,7 +19,7 @@ from utils.excel_fix_output import *
 from llm.llm import *
 import base64
 #from Processing.controllo_sintattico import fill_excel_file
-from pdf_reader.pdf_pipeline_tc import run_extraction_and_retrieval_pipeline
+from pdf_reader.pdf_pipeline_tc import run_extraction_and_retrieval_pipeline,agent_data_extraction
 from excel_reader.excel_reader import pipeline_excel
 
 llm_client = LLMClient()
@@ -136,7 +136,50 @@ async def gen_TC(paragraph, context, mapping):
         print("Risposta dall'LLM:")
         #print(response)
         return response
+    
 
+
+
+async def prepare_prompt_docx_excel(input: Dict, context:str, mapping: str = None) -> Tuple[List[Dict[str, str]], Dict[str, Any]]:
+    """Prepare prompt for the LLM"""
+
+    system_prompt = load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts","Excel_and_Docx",  "system_prompt.txt"))
+    user_prompt = load_file(os.path.join(os.path.dirname(__file__), "..", "llm", "prompts","Excel_and_Docx",  "user_prompt.txt")) 
+    schema = load_json(os.path.join(os.path.dirname(__file__), "..", "llm", "schema", "schema_output.json"))
+
+    user_prompt = user_prompt.replace("{requirements}", json.dumps(input))
+    user_prompt = user_prompt.replace("{test_case}"), json.dumps(input)
+    
+    mapping_as_string = mapping.to_json() 
+    user_prompt = user_prompt.replace("{mapping}", mapping_as_string)
+    context = "\n\n".join(context) if context else ""
+    user_prompt= user_prompt.replace("{context}", context)
+
+    print("finishing prepare prompt")
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt},
+    ]
+
+    return messages, schema
+
+
+async def gen_TC_docx_excel(requirements,test_case, context, mapping):
+        print("=== gen_TC ===")
+        print(f"Paragrafo: {requirements[:200]}...")
+        """Call LLM to generate test cases from paragraph"""
+        requirements = requirements.page_content if hasattr(requirements, 'page_content') else str(requirements)
+        test_case = test_case.page_content if hasattr(test_case, 'page_content') else str(requirements)
+        
+        messages, schema = await prepare_prompt_docx_excel(requirements,test_case, context, mapping)
+        print("starting calling llm")
+        # print(f"{messages}")
+        response = await llm_client.a_invoke_model(messages, schema)
+        print("Test Case generato con successo!")
+        print("Risposta dall'LLM:")
+        #print(response)
+        return response
 
 def create_vectordb(paragraph, vectorstore, k=3, similarity_threshold=0.75):
     docs_found = vectorstore.similarity_search_with_score(paragraph, k)
@@ -395,8 +438,8 @@ async def run_pipeline(dizionario: dict):
             for key, value in dizionario.items():
                 docx_file=value
                 
-                word_path = os.path.join("/tmp", docx_file.filename)
-                # word_path = os.path.join("", docx_file.filename)
+                # word_path = os.path.join("/tmp", docx_file.filename)
+                word_path = os.path.join("", docx_file.filename)
                 
                 with open(word_path, "wb") as f:
                     f.write(await docx_file.read())
@@ -665,172 +708,168 @@ async def run_pipeline(dizionario: dict):
                     "total_cases": len(tc["test_cases"])}
 
 
+    # if tipi == {"testo", "excel"}:
+    # #    print("need to add")
+    #    for key, value in dizionario.items():
+    #             docx_file=value
+    #             excel_file=value
+    #             # word_path = os.path.join("/tmp", docx_file.filename)
+    #             word_path_docx = os.path.join("", docx_file.filename)
+    #             # excel_path = os.path.join("/tmp", excel_file.filename)
+    #             excel_path = os.path.join("", excel_file.filename)
+
+    #             mapping = extract_field_mapping()
+    #             context = ""
+                
+    #             with open(word_path, "wb") as f:
+    #                 f.write(await docx_file.read())
+
+    #             word_path = Path(word_path)
+    #             if not word_path.exists():
+    #                 raise FileNotFoundError(f"Word non trovato: {word_path_docx}")
+                
+    #             if word_path.suffix.lower() == ".pdf":
+    #                 docx = await agent_data_extraction(word_path_docx)
+    #             if word_path.suffix.lower() == ".xlsx":
+    #                 titles,contents = await pipeline_excel(excel_path)
+    #             MAX_ATTEMPTS = 5
     if tipi == {"testo", "excel"}:
-        print("need to be implemented")
-        # for key, value in dizionario.items():
-        #     docx_file=value
-            
-        #     # word_path = os.path.join("/tmp", docx_file.filename)
-        #     word_path = os.path.join("", docx_file.filename)
-            
-        #     with open(word_path, "wb") as f:
-        #         f.write(await docx_file.read())
+        # Variabili per memorizzare i percorsi e i dati estratti
+        docx_input_path = None
+        excel_input_path = None
+        docx_requirements = None # DocX requirements data
+        titles = None            # Titles from Excel (will be updated)
+        contents = None          # Contents from Excel (will be updated)
 
-        #     word_path = Path(word_path)
-        #     if not word_path.exists():
-        #         raise FileNotFoundError(f"Word non trovato: {word_path}")
-        # 1. Inizializza le variabili path
-        # word_input_path = None
-        # excel_input_path = None
-        
-        # # 2. Scansiona il dizionario e salva i file in percorsi distinti
-        # for key, value in dizionario.items():
-        #     file_to_save = value
-        #     temp_path = os.path.join("", file_to_save.filename)
+        # 1. Separazione, salvataggio e pre-elaborazione dei file
+        for key, value in dizionario.items():
+            file_obj = value
+            temp_path = os.path.join("", file_obj.filename)
             
-        #     with open(temp_path, "wb") as f:
-        #         f.write(await file_to_save.read())
+            # Salva il file
+            with open(temp_path, "wb") as f:
+                f.write(await file_obj.read())
             
-        #     # Assegna il path alla variabile corretta in base alla chiave
-        #     if key.lower() == "testo":
-        #         word_input_path = Path(temp_path)
-        #         print(f"Percorso file Testo/Word: {word_input_path}")
-        #     elif key.lower() == "excel":
-        #         excel_input_path = Path(temp_path)
-        #         print(f"Percorso file Excel: {excel_input_path}")
-        #     else:
-        #         # Gestisci chiavi inattese se necessario
-        #         pass 
+            current_path = Path(temp_path)
+            if not current_path.exists():
+                 raise FileNotFoundError(f"File non trovato: {current_path}")
 
-        # # 3. Controlla che il file Excel esista (quello usato dalla pipeline)
-        # if not excel_input_path or not excel_input_path.exists():
-        #      raise FileNotFoundError(f"File Excel non trovato: {excel_input_path}")
-
-        # # 4. Esegui la pipeline usando il PERCORSO CORRETTO (excel_input_path)
-        # # Nota: La funzione pipeline_excel dovrebbe prendere l'excel_input_path
-        # titles, contents_of_title = await pipeline_excel(excel_input_path)
-
-        # # titles,contents_of_title = await pipeline_excel(word_path)
-        
-        # mapping = extract_field_mapping()
-        # context = ""
-        
-        # # all_pdf_test_cases = []
-        # MAX_ATTEMPTS = 5
-        
-        # async def process_single_section(title, content, context, mapping, max_attempts):
-        #     """Esegue gen_TC con logica di retry per una singola sezione."""
-        #     title_clean = title.strip().lower()
-            
-        #     attempts = 0
-        #     while attempts < max_attempts:
-        #         attempts += 1
-        #         print(f"-> Tentativo {attempts}/{max_attempts} per la sezione: {title_clean[:50]}...")
+            # Identifica e processa i file in base alla chiave
+            if key == "testo":
+                docx_input_path = current_path
+                # Assumendo che agent_data_extraction restituisca i requisiti strutturati
+                docx_requirements = await agent_data_extraction(str(docx_input_path))
                 
-        #         try:
-        #             # 1. CHIAMATA ALL'LLM
-        #             new_TC = await gen_TC(content, context, mapping)
-                    
-        #             # 2. CONVERSIONE E PARSING
-        #             if isinstance(new_TC, str):
-        #                 new_TC = json.loads(new_TC)
-                    
-        #             # 3. VERIFICA E SUCCESS
-        #             if isinstance(new_TC, dict) and "test_cases" in new_TC:
-        #                 # Ritorna i risultati e il titolo (necessario per l'accumulo)
-        #                 return new_TC["test_cases"], title 
-        #             else:
-        #                 print(f"Output LLM valido, ma manca la chiave 'test_cases'. Riprovo.")
+            elif key == "excel":
+                excel_input_path = current_path
+                # Assumendo che pipeline_excel restituisca titoli e contenuti
+                titles, contents = await pipeline_excel(str(excel_input_path))
+            
+            # ATTENZIONE: Il resto della logica (mapping, context, tasks, gather) 
+            # DEVE essere fuori da questo ciclo for.
 
-        #         except json.JSONDecodeError:
-        #             print(f"Tentativo {attempts} fallito: Errore di parsing JSON. Riprovo.")
-                    
-        #         except Exception as e:
-        #             print(f"Tentativo {attempts} fallito: Errore generico: {e}. Riprovo.")
-                    
-        #     # Fallimento permanente
-        #     print(f"Fallimento permanente dopo {max_attempts} tentativi per la sezione: {title_clean}")
-        #     return [], title 
+        # 2. Controllo e preparazione finale
+        if docx_requirements is None or titles is None or contents is None:
+            raise ValueError("Mancano i dati di base: requisiti (DocX) o test case di riferimento (Excel).")
 
-        # # 2. CREAZIONE DELLA LISTA DI TASK (COROUTINE)
-        # tasks = []
+        mapping = extract_field_mapping()
+        context = "" 
+        MAX_ATTEMPTS = 5
         
-        # for title, content in zip(titles, contents_of_title):
-        #     # Filtro: escludi intestazioni/sommari, ecc.
-        #     if not title:
-        #         continue
-        #     title_clean = title.strip().lower()
-        #     if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean:
-        #         continue
+        # 3. Creazione dei tasks per l'esecuzione parallela
+        tasks = [] 
+                    
+        async def process_single_section(title, content, context, mapping, max_attempts):
+            """Esegue gen_TC con logica di retry per una singola sezione."""
+            title_clean = title.strip().lower()
             
-        #     # Aggiungi il task alla lista
-        #     # Qui la funzione process_single_section viene CHIAMATA, e restituisce un oggetto coroutine.
-        #     task = process_single_section(title, content, context, mapping, MAX_ATTEMPTS)
-        #     tasks.append(task)
-            
-        # # 3. ESECUZIONE PARALLELA
-        # all_results = await asyncio.gather(*tasks)
-        
-        # # 4. ACCUMULO FINALE 
-        # all_pdf_test_cases = []
-        
-        # for test_cases_list, source_title in all_results:
-        #     # Aggiungi il campo _polarion e accumula
-        #     for tc in test_cases_list:
-        #         tc["_polarion"] = source_title
-        #     all_pdf_test_cases.extend(test_cases_list)
-            
-        # updated_json = {
-        #     "test_cases": all_pdf_test_cases,
-        #     "total_count": len(all_pdf_test_cases)
-        # }
-        # #     try:
-        # #         new_TC = await gen_TC(content, context, mapping)
+            attempts = 0
+            while attempts < max_attempts:
+                attempts += 1
+                print(f"-> Tentativo {attempts}/{max_attempts} per la sezione: {title_clean[:50]}...")
                 
-        # #         if isinstance(new_TC, str):
-        # #             new_TC = json.loads(new_TC) 
+                try:
+                    # 1. CHIAMATA ALL'LLM
+                    new_TC = await gen_TC_docx_excel(docx,content, context, mapping)
                     
-        # #         if isinstance(new_TC, dict) and "test_cases" in new_TC:
-        # #             for tc in new_TC["test_cases"]:
-        # #                 tc["_polarion"] = title 
-        # #             all_pdf_test_cases.extend(new_TC["test_cases"])
+                    # 2. CONVERSIONE E PARSING
+                    if isinstance(new_TC, str):
+                        new_TC = json.loads(new_TC)
                     
-        # #     except Exception as e:
-        # #         print(f"Errore generazione TC per {title}: {e}")
-            
-        # # updated_json = {
-        # #         "test_cases": all_pdf_test_cases,
-        # #         "total_count": len(all_pdf_test_cases)
-        # #     }
-    
+                    # 3. VERIFICA E SUCCESS
+                    if isinstance(new_TC, dict) and "test_cases" in new_TC:
+                        # Ritorna i risultati e il titolo (necessario per l'accumulo)
+                        return new_TC["test_cases"], title 
+                    else:
+                        print(f"Output LLM valido, ma manca la chiave 'test_cases'. Riprovo.")
 
-        # # Assegnazione ID
-        # start_number = 1
-        # prefix = "TC"
-        # padding = 3
-        # for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
-        #     test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
-
-        # print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
-
-        # # Salvataggio JSON e Excel
-        # #output_dir = word_path.parent.parent / "outputs"
-        # output_dir = Path(__file__).parent.parent / "outputs"
-        # output_dir.mkdir(exist_ok=True)
-        # output_json_path = output_dir / f"{word_path.stem}_feedbackAI.json"
-        # output_excel_path = output_dir / f"{word_path.stem}_feedbackAI.xlsx"
-
-        # save_updated_json(updated_json, output_json_path)
-        # convert_json_to_excel(updated_json, output_excel_path)
-
-        # #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
-
-        # output=fix_labels_with_order(output_excel_path)
-        # output_excel_path.unlink() 
-
-        # return {"status": "ok", "json_path": str(output_json_path), "excel_path": str(output),
-        #         "total_cases": len(updated_json["test_cases"])}
+                except json.JSONDecodeError:
+                    print(f"Tentativo {attempts} fallito: Errore di parsing JSON. Riprovo.")
+                    
+                except Exception as e:
+                    print(f"Tentativo {attempts} fallito: Errore generico: {e}. Riprovo.")
+                    
+            # Fallimento permanente
+            print(f"Fallimento permanente dopo {max_attempts} tentativi per la sezione: {title_clean}")
+            return [], title 
         
+            
+        for title, content in zip(titles, contents):
+            # Filtro: escludi intestazioni/sommari, ecc.
+            if not title or not content:
+                continue
+            title_clean = title.strip().lower()
+            if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean:
+                continue
+            
+            # Aggiungi il task alla lista
+            # Qui la funzione process_single_section viene CHIAMATA, e restituisce un oggetto coroutine.
+            task = process_single_section(title, content, context, mapping, MAX_ATTEMPTS)
+            tasks.append(task)
+            
+        # 3. ESECUZIONE PARALLELA
+        all_results = await asyncio.gather(*tasks)
+        
+        # 4. ACCUMULO FINALE 
+        all_pdf_test_cases = []
+        
+        for test_cases_list, source_title in all_results:
+            # Aggiungi il campo _polarion e accumula
+            for tc in test_cases_list:
+                tc["_polarion"] = source_title
+            all_pdf_test_cases.extend(test_cases_list)
+            
+        updated_json = {
+            "test_cases": all_pdf_test_cases,
+            "total_count": len(all_pdf_test_cases)
+        }
+        # Assegnazione ID
+        start_number = 1
+        prefix = "TC"
+        padding = 3
+        for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
+            test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
+            test_case["Dataset"] = ""
+
+        print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
+
+        # Salvataggio JSON e Excel
+        #output_dir = word_path.parent.parent / "outputs"
+        output_dir = Path(__file__).parent.parent / "outputs"
+        output_dir.mkdir(exist_ok=True)
+        output_json_path = output_dir / f"{word_path.stem}_feedbackAI.json"
+        output_excel_path = output_dir / f"{word_path.stem}_feedbackAI.xlsx"
+
+        save_updated_json(updated_json, output_json_path)
+        convert_json_to_excel(updated_json, output_excel_path)
+
+        #print(f"File salvati: \nJSON -> {output_json_path}\nExcel -> {output_excel_path}")
+
+        output=fix_labels_with_order(output_excel_path)
+        output_excel_path.unlink() 
+
+        return {"status": "ok", "json_path": output_json_path, "excel_path": output,
+                "total_cases": len(updated_json["test_cases"])}
         
     if tipi == {"testo", "image"}:
         print("text and image")
