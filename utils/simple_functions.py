@@ -130,12 +130,17 @@ def process_docx(docx_path, output_base):
     for i in range(len(headers) - 1):
         start_idx = headers[i][1]
         end_idx = headers[i + 1][1]
-        section_lines = text_lines[start_idx:end_idx]
+        #section_lines = text_lines[start_idx:end_idx]
+        if headers[i][0] == "== first line ==":
+            section_lines = text_lines[start_idx:end_idx]
+        else:
+            section_lines = text_lines[start_idx + 1:end_idx]
         chunk_text = "\n".join(section_lines).strip()
        
         header_cleaned = re.sub(r"\s*\{.*?\}", "", headers[i][0])
         header_cleaned = header_cleaned.replace("--", "–").strip(" *[]\n")
-        chunk_text = header_cleaned + "\n" + chunk_text
+        #chunk_text = header_cleaned + "\n" + chunk_text
+        chunk_text = chunk_text
         head.append(header_cleaned)
         chunks.append(chunk_text)
         #print(f" Paragrafo {i+1}: {chunk_text} \n\n")
