@@ -73,17 +73,36 @@ def read_excel(file_excel):
 #             contents.append(step)
 #     return titles, contents
 
-def title_content_extraction(json_file):
-    titles = []
-    contents = []
-    for test in json_file:
-        titles.append(test["Titolo"])
-        # CORREZIONE: Appende l'intera lista di step/contenuto associata al titolo.
-        contents.append(test["contenuto"]) 
-    return titles, contents
+# def title_content_extraction(json_file):
+#     titles = []
+#     contents = []
+#     for test in json_file:
+#         titles.append(test["Titolo"])
+#         # CORREZIONE: Appende l'intera lista di step/contenuto associata al titolo.
+#         contents.append(test["contenuto"]) 
+#     return titles, contents
 
 async def pipeline_excel(file_excel):
     json_file = read_excel(file_excel)
-    titles, contents = title_content_extraction(json_file)
-    return titles, contents
+    # titles, contents = title_content_extraction(json_file)
+    # return titles, contents
+    print(f"DEBUG: pipeline_excel ha trovato {len(json_file)} test case.")
 
+    return json_file
+# import asyncio
+# test = r"C:\Users\BencichWilliam\Downloads\test_showcasesisal\PRJ0015694 - AI Angel Numera\PRJ0015694_AI Numera desktop chrome sisal.xlsx"
+
+# path = Path(__file__).parent/"test.json"
+
+# test_elaborato= asyncio.run(pipeline_excel(test))
+
+
+# for title, content_list in zip(test_elaborato[0], test_elaborato[1]):
+#     print("************************************")
+#     print(f"**Titolo (Test Case):** {title}")
+#     print("####################################")
+    
+#     # Iterate over the individual steps/rows in the content list for this title
+#     for step_dict in content_list:
+#         print(step_dict) # Prints the dictionary representing one step/row
+#         print("------------------------------------")

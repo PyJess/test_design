@@ -355,6 +355,13 @@ class RunTestDesignNode:
         """Esegue la pipeline copertura requisiti su Excel e Word"""
         dictionary = state.dictionary 
         result = await run_pipeline(dictionary)
+        
+        if not isinstance(result, dict):
+            print(f"[FATAL ERROR] run_pipeline ha restituito una stringa: {result}")
+            raise TypeError(f"run_pipeline ha restituito un tipo inatteso ({type(result)}) invece di un dizionario. Contenuto: {result}")
+
+# Ora result è sicuramente un dizionario, e puoi usare .get()
+        print(f"[NODO] Excel path ricevuto: {result.get('excel_path')}") # OK 
         print(f"[NODO] Pipeline completata")
         print(f"[NODO] Excel path ricevuto: {result.get('excel_path')}")
         state.excel_path = result["excel_path"]
@@ -387,12 +394,30 @@ async def run_test_design(
         # Add the *path* to the state so the pipeline can find it
         # initial_state["excel_input_path"] = excel_path
     dictionary= {}
+    # if excel:
+    #     dictionary["excel"] = excel
+    # if text:
+    #     dictionary["text"] = text
+    # if image:
+    #     dictionary["image"] = image
+
+    # if dictionary:
+    #     initial_state = TestDesignState(dictionary=dictionary)
     if excel:
         dictionary["excel"] = excel
+        
+    # 2. Gestione Testo (Docx/PDF) - CAMBIA LA CHIAVE IN "testo"
     if text:
-        dictionary["text"] = text
+        # PRIMA ERA: dictionary["text"] = text
+        # CORREZIONE: Usa "testo" perché test_design.py controlla if tipi == {"testo", "excel"}
+        dictionary["testo"] = text 
+        
     if image:
         dictionary["image"] = image
+
+    # Controllo di sicurezza: Se mancano i file, ferma tutto subito
+    if dictionary and "excel" in dictionary and "testo" not in dictionary:
+        raise HTTPException(status_code=400, detail="Hai caricato l'Excel ma manca il file di Testo (DocX/PDF).")
 
     if dictionary:
         initial_state = TestDesignState(dictionary=dictionary)
