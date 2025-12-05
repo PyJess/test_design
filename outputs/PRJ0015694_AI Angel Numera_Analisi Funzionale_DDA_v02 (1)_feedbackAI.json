@@ -1,0 +1,3125 @@
+{
+  "test_cases": [
+    {
+      "Title": "Abbreviation Table Validation_XXX_RF_Application_TEST_Desktop_Verifying the display of abbreviations in the application",
+      "ID": "TC-001",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application containing the abbreviation table.",
+          "Expected Result": "The application opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the section of the application displaying the abbreviation table.",
+          "Expected Result": "The section displaying the abbreviation table is accessible."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the abbreviation 'SE' is present and displays 'SuperEnalotto'.",
+          "Expected Result": "'SE' is listed and corresponds to 'SuperEnalotto'."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Verify that the abbreviation 'RU' is present and displays 'Requisiti utente'.",
+          "Expected Result": "'RU' is listed and corresponds to 'Requisiti utente'."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Verify that the abbreviation 'RF' is present and displays 'Requisito Funzionale'.",
+          "Expected Result": "'RF' is listed and corresponds to 'Requisito Funzionale'."
+        },
+        {
+          "Step": 6,
+          "Step Description": "Verify that the abbreviation 'US' is present and displays 'Use Case'.",
+          "Expected Result": "'US' is listed and corresponds to 'Use Case'."
+        },
+        {
+          "Step": 7,
+          "Step Description": "Verify that the abbreviation 'FE/BE' is present and displays 'Front End/Back End'.",
+          "Expected Result": "'FE/BE' is listed and corresponds to 'Front End/Back End'."
+        },
+        {
+          "Step": 8,
+          "Step Description": "Verify that the abbreviation 'APP SEG' is present and displays 'SuperEnalotto e Giochi'.",
+          "Expected Result": "'APP SEG' is listed and corresponds to 'SuperEnalotto e Giochi'."
+        },
+        {
+          "Step": 9,
+          "Step Description": "Verify that the abbreviation 'APP SEVV' is present and displays 'SuperEnalotto Verifica Vincite'.",
+          "Expected Result": "'APP SEVV' is listed and corresponds to 'SuperEnalotto Verifica Vincite'."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the application displaying the abbreviation table.",
+      "Execution Mode": "Manual",
+      "Functionality": "Abbreviation Table",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "All abbreviations are correctly displayed in the application.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Definizioni e abbreviazioni",
+      "Partial Coverage Description": "Test covers only abbreviation display; does not test interaction functionalities."
+    },
+    {
+      "Title": "Missing Abbreviation Error Handling_XXX_RF_Application_TEST_Mobile_Check that missing abbreviation results in error message",
+      "ID": "TC-002",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application containing the abbreviation table.",
+          "Expected Result": "The application opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the section of the application displaying the abbreviation table.",
+          "Expected Result": "The section displaying the abbreviation table is accessible."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Simulate missing abbreviation entry (e.g., modify the data source).",
+          "Expected Result": "The application should have a mechanism to handle missing data."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Observe the application behavior when trying to load the table with missing abbreviation.",
+          "Expected Result": "An appropriate error message is displayed indicating missing abbreviations."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Mobile Phone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User has access to the mobile application and the ability to simulate data manipulation.",
+      "Execution Mode": "Manual",
+      "Functionality": "Error Handling for Missing Abbreviations",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The application handles missing abbreviation entries gracefully with an error message.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Definizioni e abbreviazioni",
+      "Partial Coverage Description": "Test covers only missing data handling; does not cover valid abbreviation scenarios."
+    },
+    {
+      "Title": "Mobile_Login_Functionality_001_AppIOS_TEST_iOS_performing login on iOS app",
+      "ID": "TC-003",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the Mobile App on an iOS device.",
+          "Expected Result": "The Mobile App launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the login screen by tapping the 'Login' button.",
+          "Expected Result": "The login screen is displayed with input fields for username and password."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enter valid credentials in the username and password fields.",
+          "Expected Result": "The credentials are accepted without error."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Tap the 'Submit' button to log in.",
+          "Expected Result": "The user is redirected to the Home page of the app."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "iOS",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14+, Mobile Application",
+      "Preconditions": "The user has a valid account and the app is installed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully logs in and navigates to the Home page.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Descrizione generale",
+      "Partial Coverage Description": "Covers only the login process; session management is not included."
+    },
+    {
+      "Title": "Mobile_Register_Functionality_002_AppAndroid_TEST_Android_testing user registration on Android app",
+      "ID": "TC-004",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the Android app on a Android device.",
+          "Expected Result": "The app opens successfully to the welcome screen."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Tap on the 'Register' link to navigate to the registration screen.",
+          "Expected Result": "The registration form is presented."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Fill in the registration form with valid data and tap 'Create Account'.",
+          "Expected Result": "The system successfully registers the user and shows a confirmation message."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Android",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android 10+, Mobile Application",
+      "Preconditions": "The app must be installed on the device.",
+      "Execution Mode": "Manual",
+      "Functionality": "Register",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User registration is successful and access to the application is granted.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Descrizione generale",
+      "Partial Coverage Description": "Covers user registration process; email verification is not included."
+    },
+    {
+      "Title": "Desktop_Password_Reset_Functionality_003_Desktop_TEST_Desktop_executing password reset on desktop app",
+      "ID": "TC-005",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the desktop application on a Windows PC.",
+          "Expected Result": "The desktop application launches without issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Forgot Password?' link on the login screen.",
+          "Expected Result": "The password reset page is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Enter the registered email address and submit the request.",
+          "Expected Result": "A confirmation message indicates that a password reset email has been sent."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "App",
+      "Device": "Windows",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Desktop Application",
+      "Preconditions": "User has a registered account and the application is installed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Password reset email is successfully sent to the user's registered email.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Descrizione generale",
+      "Partial Coverage Description": "Covers the initiation of password reset only; does not validate the link in the email."
+    },
+    {
+      "Title": "AI_Angel_Numerica_001_Functionality_GNTN_CLIENT_TEST_Desktop_initialization of AI Angel Numerica in GNTN Client",
+      "ID": "TC-006",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN game client application.",
+          "Expected Result": "The GNTN game client application launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the section for the new AI Angel Numerica feature.",
+          "Expected Result": "The AI Angel Numerica feature section is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the 'Start AI Angel Numerica' button.",
+          "Expected Result": "The AI Angel Numerica assistant is initialized and ready for interaction."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Client Application",
+      "Preconditions": "User must have the GNTN Client installed and access to the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Integration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI Angel Numerica assistant is initialized successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Scopo ed ambito di applicazione",
+      "Partial Coverage Description": "Covers only the initialization process; functionality interaction not tested."
+    },
+    {
+      "Title": "AI_Angel_Numerica_002_Functionality_GNTN_CLIENT_TEST_Desktop_interaction with AI Angel Numerica",
+      "ID": "TC-007",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN game client application and initialize AI Angel Numerica.",
+          "Expected Result": "AI Angel Numerica assistant is initialized."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Input a random number combination into the AI assistant.",
+          "Expected Result": "AI acknowledges the input and processes the combination."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the 'Get Combination' button.",
+          "Expected Result": "The AI generates and displays a random combination for SuperEnalotto."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Client Application",
+      "Preconditions": "User must have the GNTN Client initialized with AI Angel Numerica.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Interaction",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI generates and displays a valid number combination.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Scopo ed ambito di applicazione",
+      "Partial Coverage Description": "Focuses on AI interactions but does not cover error handling scenarios."
+    },
+    {
+      "Title": "AI_Angel_Numerica_003_Functionality_GNTN_CLIENT_TEST_Desktop_error handling of invalid input",
+      "ID": "TC-008",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN game client application and initialize AI Angel Numerica.",
+          "Expected Result": "AI Angel Numerica assistant is initialized."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter an invalid number combination (e.g., letters or special characters).",
+          "Expected Result": "AI raises an error message indicating invalid input."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Attempt to get a combination using the invalid input.",
+          "Expected Result": "AI does not process the request and provides appropriate feedback."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Low",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Client Application",
+      "Preconditions": "User must have the GNTN Client initialized with AI Angel Numerica.",
+      "Execution Mode": "Manual",
+      "Functionality": "Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI properly handles invalid input with an appropriate error message.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Scopo ed ambito di applicazione",
+      "Partial Coverage Description": "Focused on error handling; does not test valid scenario flows."
+    },
+    {
+      "Title": "Integration_GNTN_Vivocha_TEST_Desktop_Verifying the integration between GNTN game client and Vivocha AI",
+      "ID": "TC-009",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the GNTN game client application.",
+          "Expected Result": "The GNTN game client application starts successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Initiate interaction with the Vivocha AI through the specified integration point.",
+          "Expected Result": "The integration interface is displayed, indicating a successful connection with Vivocha AI."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Perform a test input to the Vivocha AI (e.g., sending a message).",
+          "Expected Result": "The input is processed, and a response is received within the expected time frame."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Application",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Game Client",
+      "Preconditions": "User must have the GNTN game client installed and a stable internet connection.",
+      "Execution Mode": "Manual",
+      "Functionality": "Integration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Integration with Vivocha AI performs correctly, and responses are received as expected.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Relazioni con altri sistemi",
+      "Partial Coverage Description": "Focuses primarily on the initial connection and basic input/output functionality."
+    },
+    {
+      "Title": "External Interaction_Scenario_TEST_Mobile_Testing AS IS interactions with external platforms from GNTN",
+      "ID": "TC-010",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN game client on a mobile device.",
+          "Expected Result": "The GNTN game client opens without issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the feature that interacts with the external platform.",
+          "Expected Result": "The user is navigated to the interaction feature without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Initiate an interaction with the external platform as specified in the current functionality.",
+          "Expected Result": "The interaction proceeds without errors and adheres to the existing behavior."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "Application",
+      "Device": "Android Device",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android, GNTN Game Client",
+      "Preconditions": "User must have the GNTN game client installed on their mobile device.",
+      "Execution Mode": "Manual",
+      "Functionality": "External Interaction",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Interactions with external platforms function as intended with no discrepancies.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Relazioni con altri sistemi",
+      "Partial Coverage Description": "Validates existing external interactions; no modifications to functionality are included."
+    },
+    {
+      "Title": "Login Functionality_001_Web_TEST_Desktop_Valid Credentials Submission",
+      "ID": "TC-011",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the web application's login page.",
+          "Expected Result": "The login page is displayed without issues."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter valid username and password.",
+          "Expected Result": "The input fields accept the credentials correctly."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "The user is directed to the dashboard/home page."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a registered account with valid credentials.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully logs in and is redirected to the dashboard/home page.",
+      "Country": "United States",
+      "Type": "Test Case",
+      "_polarion": "Limitazioni generali",
+      "Partial Coverage Description": "Covers login process with valid credentials only."
+    },
+    {
+      "Title": "Login Functionality_002_Web_TEST_Desktop_Invalid Credentials Handling",
+      "ID": "TC-012",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the login page of the web application.",
+          "Expected Result": "The login page is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter an invalid username and password.",
+          "Expected Result": "The input fields accept the invalid credentials."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "An error message is displayed indicating that the credentials are incorrect."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the login page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Error message displayed for incorrect credentials.",
+      "Country": "United States",
+      "Type": "Test Case",
+      "_polarion": "Limitazioni generali",
+      "Partial Coverage Description": "Focused on the error messaging for invalid login attempts only."
+    },
+    {
+      "Title": "Password Reset Functionality_001_Web_TEST_Desktop_Initiating Password Reset",
+      "ID": "TC-013",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the login page and click on 'Forgot Password'.",
+          "Expected Result": "The password reset instructions page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter a valid email address linked to the account.",
+          "Expected Result": "The email input accepts the valid address."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Submit' button.",
+          "Expected Result": "A confirmation message appears indicating that the password reset email has been sent."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access to the email account linked to their profile.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User receives a confirmation message for the password reset request.",
+      "Country": "United States",
+      "Type": "Test Case",
+      "_polarion": "Limitazioni generali",
+      "Partial Coverage Description": "Covers only the initiation of password reset; does not cover the actual reset process."
+    },
+    {
+      "Title": "Password Reset Functionality_002_Web_TEST_Desktop_Error Handling for Invalid Email",
+      "ID": "TC-014",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the login page and click 'Forgot Password'.",
+          "Expected Result": "The password reset instructions page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter an invalid email address not linked to any account.",
+          "Expected Result": "The email input acknowledges the invalid email format."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Submit' button.",
+          "Expected Result": "An error message informs the user that the email is not recognized."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the password reset page.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User receives an error for an unrecognized email address.",
+      "Country": "United States",
+      "Type": "Test Case",
+      "_polarion": "Limitazioni generali",
+      "Partial Coverage Description": "Covers error handling for invalid email input only."
+    },
+    {
+      "Title": "Integration_001_RF1_SuperEnalotto_CLIENT_TEST_Desktop",
+      "ID": "TC-015",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the GNTN Game Client.",
+          "Expected Result": "The GNTN Game Client opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the 'Numera' feature is introduced in the Client.",
+          "Expected Result": "The 'Numera' feature is displayed in the Client's interface."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Application",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Client",
+      "Preconditions": "User has the GNTN Game Client installed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Feature Integration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "'Numera' feature is correctly introduced in the GNTN Client.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Matrice di tracciabilità tra REQUISITI UTENTE, REQUISITI FUNZIONALI E USE CASE",
+      "Partial Coverage Description": "Only checks the introduction of 'Numera'; does not validate its functionalities."
+    },
+    {
+      "Title": "Onboarding Modal_001_RF2_SuperEnalotto_CLIENT_TEST_Desktop",
+      "ID": "TC-016",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the GNTN Game Client.",
+          "Expected Result": "The GNTN Game Client opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Access the onboarding modal in the Client.",
+          "Expected Result": "The onboarding modal is displayed correctly."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Application",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Client",
+      "Preconditions": "User must have the GNTN Game Client installed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding Modal",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The onboarding modal is displayed and is fully functional.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Matrice di tracciabilità tra REQUISITI UTENTE, REQUISITI FUNZIONALI E USE CASE",
+      "Partial Coverage Description": "Checks only the display of the onboarding modal; does not validate user input."
+    },
+    {
+      "Title": "AI Angel Functionality_001_RF3_SuperEnalotto_CLIENT_TEST_Desktop",
+      "ID": "TC-017",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the GNTN Game Client.",
+          "Expected Result": "The GNTN Game Client opens without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to the AI Angel feature in the SuperEnalotto section.",
+          "Expected Result": "The AI Angel feature is available and displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Application",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Client",
+      "Preconditions": "User must access the SuperEnalotto section.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Angel Feature",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The AI Angel feature operates as expected within the SuperEnalotto section.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Matrice di tracciabilità tra REQUISITI UTENTE, REQUISITI FUNZIONALI E USE CASE",
+      "Partial Coverage Description": "Checks only the display of AI Angel; functionality under multiple scenarios is not validated."
+    },
+    {
+      "Title": "Web Portal Responsiveness_001_RF5_SuperEnalotto_PORTAL_TEST_Web",
+      "ID": "TC-018",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the SuperEnalotto web portal.",
+          "Expected Result": "The portal loads without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Resize the browser window to various scales.",
+          "Expected Result": "The web portal maintains its responsiveness and layout integrity."
+        }
+      ],
+      "Test Group": "Web",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "SIT",
+      "Reference System": "Windows 10, SuperEnalotto Web Portal",
+      "Preconditions": "User has internet access.",
+      "Execution Mode": "Manual",
+      "Functionality": "Responsive Design",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The web portal is responsive across different browser sizes.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Matrice di tracciabilità tra REQUISITI UTENTE, REQUISITI FUNZIONALI E USE CASE",
+      "Partial Coverage Description": "Only checks responsiveness; performance under load is not covered."
+    },
+    {
+      "Title": "AI_Angel_Numera_Functionality_RF1_Client_Gioco_TEST_Mobile_IOS_Accessing AI Angel Numera functionality in the Game Client for IOS",
+      "ID": "TC-019",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the SuperEnalotto Game Client on an iOS device.",
+          "Expected Result": "The Game Client launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Locate the 'AI Angel Numera' feature in the application.",
+          "Expected Result": "The 'AI Angel Numera' feature is visible and accessible."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App IOS",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14, SuperEnalotto Game Client",
+      "Preconditions": "User must have the SuperEnalotto Game Client installed and an active account.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Angel Numera",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully accesses the 'AI Angel Numera' functionality.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi dele specifiche funzionali e non funzionali",
+      "Partial Coverage Description": "This test covers only the access part of the AI Angel Numera functionality."
+    },
+    {
+      "Title": "Onboarding_Procedure_RF2_Client_Gioco_TEST_Desktop_Android_Validating onboarding process for AI Angel Numera in Android",
+      "ID": "TC-020",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the SuperEnalotto Game Client on an Android device.",
+          "Expected Result": "The Game Client launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Begin the onboarding procedure for the 'AI Angel Numera' feature.",
+          "Expected Result": "Onboarding modal for 'AI Angel Numera' is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Follow the onboarding steps as instructed.",
+          "Expected Result": "User completes the onboarding process successfully."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Samsung Galaxy",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, SuperEnalotto Game Client",
+      "Preconditions": "User must have the SuperEnalotto Game Client installed and be logged in.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User completes the onboarding for 'AI Angel Numera' without issues.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi dele specifiche funzionali e non funzionali",
+      "Partial Coverage Description": "This test covers only the onboarding process; user interactions beyond onboarding are not assessed."
+    },
+    {
+      "Title": "AI_Angel_Numera_Interpretation_RF3_Client_Gioco_TEST_Desktop_Android_Testing AI Angel Numera interpretation feature in the Game Client",
+      "ID": "TC-021",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the SuperEnalotto Game Client on an Android device.",
+          "Expected Result": "The Game Client launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Access the 'AI Angel Numera' feature.",
+          "Expected Result": "The AI Angel Numera interface is loaded."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Describe a dream in the provided input area.",
+          "Expected Result": "The dream description is accepted without errors."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Submit the dream description for interpretation.",
+          "Expected Result": "The AI provides an interpretation of the dream."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App Android",
+      "Device": "Samsung Galaxy",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, SuperEnalotto Game Client",
+      "Preconditions": "User must have the SuperEnalotto Game Client installed and be logged in.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Angel Numera Interpretation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI provides an accurate interpretation based on the dream description.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi dele specifiche funzionali e non funzionali",
+      "Partial Coverage Description": "Test covers only the interpretation feature; validation of number generation is not included."
+    },
+    {
+      "Title": "Integration_AI_Angel_Numera_RF4_Client_Gioco_TEST_Desktop_Web_Testing integration of AI Angel Numera in the Game Client from Web",
+      "ID": "TC-022",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web version of the SuperEnalotto Game Client.",
+          "Expected Result": "The web application launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate to 'AI Angel Numera' functionality in the menu.",
+          "Expected Result": "'AI Angel Numera' feature is accessible from the web version."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Browser",
+      "Preconditions": "User must have an account and be logged in via the web client.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Angel Numera Integration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "'AI Angel Numera' functionality is integrated and accessible through the web client.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi dele specifiche funzionali e non funzionali",
+      "Partial Coverage Description": "Covers only the integration point; functionality beyond access is not validated."
+    },
+    {
+      "Title": "Responsiveness_Impact_RF5_Web_Portal_TEST_Desktop_Testing responsiveness of the web portal for AI Angel Numera feature",
+      "ID": "TC-023",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web portal for SuperEnalotto on different screen resolutions.",
+          "Expected Result": "The web portal displays correctly across all screen sizes."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Access 'AI Angel Numera' feature from the homepage.",
+          "Expected Result": "'AI Angel Numera' feature is displayed and functional across various resolutions."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Browser",
+      "Preconditions": "User must have an active account and be logged in.",
+      "Execution Mode": "Manual",
+      "Functionality": "Web Responsiveness",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Web portal is responsive and 'AI Angel Numera' functionality is accessible and functional on multiple resolutions.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi dele specifiche funzionali e non funzionali",
+      "Partial Coverage Description": "Validates responsiveness; does not cover performance under load."
+    },
+    {
+      "Title": "Chat Access_001_User_LoggedIn_TEST_Desktop_Verifying chat access for logged-in user",
+      "ID": "TC-024",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Set the variable window.isUserLoggedIn to 1.",
+          "Expected Result": "The system recognizes that the user is logged in."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Access the chat functionality.",
+          "Expected Result": "The chat is accessed without displaying the privacy banner."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged into the system.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Access",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User accesses the chat without seeing the privacy banner.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Differenza tra utente loggato e non loggato",
+      "Partial Coverage Description": "Covers access without a privacy banner; does not include chat features."
+    },
+    {
+      "Title": "Chat Access_002_User_NotLoggedIn_TEST_Desktop_Verifying chat access for non-logged-in user",
+      "ID": "TC-025",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Set the variable window.isUserLoggedIn to 0.",
+          "Expected Result": "The system recognizes that the user is not logged in."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Access the chat functionality.",
+          "Expected Result": "The chat is accessed and the privacy banner is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is not logged into the system.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Access",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User accesses the chat and sees the privacy banner.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Differenza tra utente loggato e non loggato",
+      "Partial Coverage Description": "Covers access with the privacy banner; chat functionalities not included."
+    },
+    {
+      "Title": "privacyLink_ClickHandling_001_WebApp_PRIVACY_INFO_TEST_Desktop_Testing the handling of the privacy link click",
+      "ID": "TC-026",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web application containing the privacy link in the banner.",
+          "Expected Result": "The web application is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Locate and click on the privacy link in the banner.",
+          "Expected Result": "The click action is captured, and the parameter 'CLICK_PRIVACY_INFO' is sent via the 'sendMessageToApp(data)' service."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the page with the privacy link in the banner.",
+      "Execution Mode": "Manual",
+      "Functionality": "Privacy Info Link Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The parameter 'CLICK_PRIVACY_INFO' is sent successfully to the Game Client.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Gestione link privacy",
+      "Partial Coverage Description": "Covers only click handling; document display verification not included."
+    },
+    {
+      "Title": "privacyLink_PostMessage_002_App_SENDING_POST_MESSAGE_TEST_Mobile_Testing the postMessage sent to the web container",
+      "ID": "TC-027",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Simulate the receipt of 'CLICK_PRIVACY_INFO' by the Game Client.",
+          "Expected Result": "The Game Client acknowledges the receipt of the notification."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Observe the action in the Game Client that triggers a postMessage to the web container.",
+          "Expected Result": "A postMessage is sent to the web container to prepare for opening the privacy document."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Smartphone",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS, Mobile Application",
+      "Preconditions": "User has triggered the privacy link click and received notifications on the Game Client.",
+      "Execution Mode": "Manual",
+      "Functionality": "PostMessage Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The web container is notified to prepare for opening the privacy document.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Gestione link privacy",
+      "Partial Coverage Description": "Covers sending postMessage; verification of document opening not included."
+    },
+    {
+      "Title": "privacyLink_DocumentOpenVerification_003_Backend_DOCUMENT_OPEN_TEST_Backend_Verifying the document opens correctly",
+      "ID": "TC-028",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "After postMessage is triggered, verify that the document link is accessible from the web container.",
+          "Expected Result": "The document link '[Web privacy policy](https://www.giochinumerici.info/content/dam/gntn/gntn/documents/privacy/Webprivacypolicy_CookieIT_SITIPUBBLICI_Aprile2023.pdf)' is reachable."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Open the document link in a new tab or window.",
+          "Expected Result": "The privacy policy document displays correctly without errors."
+        }
+      ],
+      "Test Group": "Backend",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Backend Application",
+      "Preconditions": "PostMessage has been successfully sent and the web container is ready to open the document.",
+      "Execution Mode": "Manual",
+      "Functionality": "Document Opening",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The privacy policy document opens without any loading issues.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Gestione link privacy",
+      "Partial Coverage Description": "Covers document opening; content accuracy not verified."
+    },
+    {
+      "Title": "Error Handling Chat Resource_001_CLIENT_ChatFunctionality_TEST_Mobile_Showing generic error modal when chat resource does not load",
+      "ID": "TC-029",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Attempt to open the chat service by clicking the 'Prova subito' button in the informational modal.",
+          "Expected Result": "The application attempts to load the chat resource."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Simulate a failure to load the chat resource.",
+          "Expected Result": "An error modal is displayed indicating that there was an issue loading the chat."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App IOS",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14, Chat Application",
+      "Preconditions": "User is on the informational modal screen and has internet connection.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Functionality",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The error modal is shown with message about loading failure.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Casi di errore",
+      "Partial Coverage Description": "Only tests for generic error handling; specific resource loading issues not included."
+    },
+    {
+      "Title": "Error Handling Chat Resource_002_CLIENT_ChatFunctionality_TEST_Android_Verifying error modal structure on failure to load chat",
+      "ID": "TC-030",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Click the 'Trova i numeri con i tuoi sogni' entry point in the client app.",
+          "Expected Result": "The application attempts to load the chat resource."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Force the chat resource to fail to load.",
+          "Expected Result": "An error modal appears, maintaining the structure described as 'AS IS' for error management."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App Android",
+      "Device": "Android Phone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, Chat Application",
+      "Preconditions": "User is within the main app UI and has internet access.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Functionality",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The error modal structure is correctly rendered as per existing requirements.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Casi di errore",
+      "Partial Coverage Description": "Validates only the appearance of the modal; functionality of the chat resource not evaluated."
+    },
+    {
+      "Title": "Onboarding Modal Display_First_Access_Test_Desktop_Verify modal appears for the first access",
+      "ID": "TC-031",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the SuperEnalotto application on a desktop device.",
+          "Expected Result": "The application opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if the onboarding modal is displayed.",
+          "Expected Result": "The onboarding modal is presented with an image, title, subtitle, and buttons."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "Application is installed and localStorage is empty.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Onboarding modal is displayed upon first access.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF2 – Creazione modale onboarding ed entrypoint nel Client di Gioco GNTN",
+      "Partial Coverage Description": "Tests only the appearance of the modal for the first access."
+    },
+    {
+      "Title": "Onboarding Modal Close_X_Button_Test_Desktop_Verify close on clicking 'x' button",
+      "ID": "TC-032",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the SuperEnalotto application and verify onboarding modal appears.",
+          "Expected Result": "Onboarding modal is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click the 'x' button on the onboarding modal.",
+          "Expected Result": "Onboarding modal closes and the user is returned to the game page."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the first access and modal is displayed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding Modal Closure",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Onboarding modal closes successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF2 – Creazione modale onboarding ed entrypoint nel Client di Gioco GNTN",
+      "Partial Coverage Description": "Tests only the close action through the 'x' button."
+    },
+    {
+      "Title": "Onboarding Modal Close_Now_Button_Test_Desktop_Verify close on clicking 'Not now'",
+      "ID": "TC-033",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the SuperEnalotto application and ensure the onboarding modal appears.",
+          "Expected Result": "Onboarding modal is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click the 'Not Now' button on the onboarding modal.",
+          "Expected Result": "Onboarding modal closes and returns the user to the game page."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the first access and modal is displayed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding Modal Closure",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Onboarding modal closes successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF2 – Creazione modale onboarding ed entrypoint nel Client di Gioco GNTN",
+      "Partial Coverage Description": "Tests only the close action through the 'Not now' button."
+    },
+    {
+      "Title": "Onboarding Modal Open_Second_Access_Test_Desktop_Verify modal appears on second access",
+      "ID": "TC-034",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the SuperEnalotto application on a desktop device for the second time.",
+          "Expected Result": "The application opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if the onboarding modal is displayed again.",
+          "Expected Result": "Onboarding modal appears with the intended elements."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has accessed the app previously and localStorage records one access.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Onboarding modal displays correctly on second access.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF2 – Creazione modale onboarding ed entrypoint nel Client di Gioco GNTN",
+      "Partial Coverage Description": "Verifies the modal's appearance again for the second access."
+    },
+    {
+      "Title": "Onboarding Modal Not_Display_Third_Access_Test_Desktop_Verify no modal shows on third access",
+      "ID": "TC-035",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the SuperEnalotto application on a desktop device for the third time.",
+          "Expected Result": "The application opens successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if the onboarding modal is displayed.",
+          "Expected Result": "The onboarding modal does not appear."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has accessed the app twice before and localStorage records two accesses.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Onboarding modal does not show on third access.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF2 – Creazione modale onboarding ed entrypoint nel Client di Gioco GNTN",
+      "Partial Coverage Description": "Confirms that no modal is displayed after the second access."
+    },
+    {
+      "Title": "Onboarding Modal Chat_Prova_Subito_Test_Desktop_Verify chat opens on 'Try Now' button click",
+      "ID": "TC-036",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the SuperEnalotto application and ensure onboarding modal is shown.",
+          "Expected Result": "Onboarding modal is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click the 'Try Now' button on the onboarding modal.",
+          "Expected Result": "The chat interface for AI Angel Numera opens."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the first access and modal is displayed.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding Chat Flow",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Chat interface opens as expected.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF2 – Creazione modale onboarding ed entrypoint nel Client di Gioco GNTN",
+      "Partial Coverage Description": "Focuses only on the chat opening action from the modal."
+    },
+    {
+      "Title": "OpenAI_001_AI_Feature_CHAT_TEST_Desktop_UserClicksOnCTA",
+      "ID": "TC-037",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Click on the 'Prova subito' button in the informative modal.",
+          "Expected Result": "The AI Chat (AI Angel Numera) opens and the user can start interacting."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the web application and the modal is displayed.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Chat Interaction",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI Chat opens successfully and is ready for user interaction.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF3 – Funzionalità AI Angel Numera nella modalità Schedina del SuperEnalotto",
+      "Partial Coverage Description": "Only tests the opening of the chat interface."
+    },
+    {
+      "Title": "MinimizeChat_002_AI_Feature_CHAT_TEST_Desktop_UserMinimizesChat",
+      "ID": "TC-038",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the AI Chat by clicking the 'Prova subito' button.",
+          "Expected Result": "The AI Chat opens."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click the minimize button ('_') in the chat header.",
+          "Expected Result": "The chat is minimized and not visible on the screen."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The AI Chat is currently open.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Chat Minimize",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI Chat is minimized and is in an invisible state.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF3 – Funzionalità AI Angel Numera nella modalità Schedina del SuperEnalotto",
+      "Partial Coverage Description": "Only tests the minimize functionality of the chat."
+    },
+    {
+      "Title": "CloseChat_003_AI_Feature_CHAT_TEST_Desktop_UserClosesChat",
+      "ID": "TC-039",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the AI Chat by clicking the 'Prova subito' button.",
+          "Expected Result": "The AI Chat opens."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click the close button ('x') in the chat header.",
+          "Expected Result": "The AI Chat closes completely."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The AI Chat is currently open.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Chat Close",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "AI Chat closes successfully and is removed from the screen.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF3 – Funzionalità AI Angel Numera nella modalità Schedina del SuperEnalotto",
+      "Partial Coverage Description": "Only tests the close functionality of the chat."
+    },
+    {
+      "Title": "InsertCombination_004_AI_Feature_CHAT_TEST_Desktop_UserInsertsCombination",
+      "ID": "TC-040",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the AI Chat by clicking the 'Prova subito' button.",
+          "Expected Result": "The AI Chat opens."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on 'Insert' button to insert the AI generated combination.",
+          "Expected Result": "The combination is inserted into the game slip and the chat is closed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The AI Chat is currently open and a combination is available.",
+      "Execution Mode": "Manual",
+      "Functionality": "Insert Combination",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The combination is inserted into the game slip and the chat is removed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF3 – Funzionalità AI Angel Numera nella modalità Schedina del SuperEnalotto",
+      "Partial Coverage Description": "Only tests the insertion of combinations from chat."
+    },
+    {
+      "Title": "ResumeConversation_005_AI_Feature_CHAT_TEST_Desktop_UserResumesConversation",
+      "ID": "TC-041",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Minimize the AI Chat by clicking the minimize button.",
+          "Expected Result": "The chat is minimized."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the chat icon in the UI to restore the chat.",
+          "Expected Result": "The AI Chat is restored and the conversation history is available."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has minimized the AI Chat.",
+      "Execution Mode": "Manual",
+      "Functionality": "Resume Conversation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The AI Chat is resumed successfully, showing the previous conversation history.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF3 – Funzionalità AI Angel Numera nella modalità Schedina del SuperEnalotto",
+      "Partial Coverage Description": "Only tests the resuming of the chat functionality."
+    },
+    {
+      "Title": "PostMessage Integration_Mobile_IOS_Test_Mobile_Ensure PostMessage events are handled correctly within the app",
+      "ID": "TC-042",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the mobile application on an iOS device.",
+          "Expected Result": "The application launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Trigger an event from Numera that sends a PostMessage to the app.",
+          "Expected Result": "The event is received by the application without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Validate that the correct data from the PostMessage is displayed to the user.",
+          "Expected Result": "The application displays the correct event information as intended."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14, Mobile Application",
+      "Preconditions": "The mobile application is installed on an iOS device, and Numera is sending events.",
+      "Execution Mode": "Manual",
+      "Functionality": "PostMessage Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The app handles PostMessage events correctly and displays relevant information.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF4 – Integrazione Client di Gioco nelle APP",
+      "Partial Coverage Description": "Covers only the reception of PostMessage events; further processing not included."
+    },
+    {
+      "Title": "PostMessage Integration_Mobile_Android_Test_Mobile_Ensure PostMessage events are handled correctly within the app",
+      "ID": "TC-043",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the mobile application on an Android device.",
+          "Expected Result": "The application launches successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Trigger an event from Numera that sends a PostMessage to the app.",
+          "Expected Result": "The event is received by the application without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Validate that the correct data from the PostMessage is displayed to the user.",
+          "Expected Result": "The application displays the correct event information as intended."
+        }
+      ],
+      "Test Group": "Mobile Android",
+      "Channel": "App",
+      "Device": "Android Phone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, Mobile Application",
+      "Preconditions": "The mobile application is installed on an Android device, and Numera is sending events.",
+      "Execution Mode": "Manual",
+      "Functionality": "PostMessage Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The app handles PostMessage events correctly and displays relevant information.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF4 – Integrazione Client di Gioco nelle APP",
+      "Partial Coverage Description": "Covers only the reception of PostMessage events; further processing not included."
+    },
+    {
+      "Title": "PostMessage Integration_App_IOS_Test_App_Ensure PostMessage events are passed to the webview correctly",
+      "ID": "TC-044",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application containing the webview on an iOS device.",
+          "Expected Result": "The application launches successfully and the webview is accessible."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Trigger a PostMessage event from Numera to the webview.",
+          "Expected Result": "The event is received by the webview without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Validate that the webview displays the correct data from the PostMessage event.",
+          "Expected Result": "The webview shows the relevant event information as intended."
+        }
+      ],
+      "Test Group": "App IOS",
+      "Channel": "App",
+      "Device": "iPhone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14, Mobile Application with WebView",
+      "Preconditions": "The mobile application is installed with an accessible webview, and Numera is sending events.",
+      "Execution Mode": "Manual",
+      "Functionality": "WebView PostMessage Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The webview correctly handles PostMessage events and displays the information.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF4 – Integrazione Client di Gioco nelle APP",
+      "Partial Coverage Description": "Covers only the handling of PostMessage events in webview; webview functionality not tested."
+    },
+    {
+      "Title": "PostMessage Integration_App_Android_Test_App_Ensure PostMessage events are passed to the webview correctly",
+      "ID": "TC-045",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application containing the webview on an Android device.",
+          "Expected Result": "The application launches successfully and the webview is accessible."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Trigger a PostMessage event from Numera to the webview.",
+          "Expected Result": "The event is received by the webview without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Validate that the webview displays the correct data from the PostMessage event.",
+          "Expected Result": "The webview shows the relevant event information as intended."
+        }
+      ],
+      "Test Group": "App Android",
+      "Channel": "App",
+      "Device": "Android Phone",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, Mobile Application with WebView",
+      "Preconditions": "The mobile application is installed with an accessible webview, and Numera is sending events.",
+      "Execution Mode": "Manual",
+      "Functionality": "WebView PostMessage Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The webview correctly handles PostMessage events and displays the information.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF4 – Integrazione Client di Gioco nelle APP",
+      "Partial Coverage Description": "Covers only the handling of PostMessage events in webview; webview functionality not tested."
+    },
+    {
+      "Title": "iframe height adjustment_XXX_REQUIREMENT_Client SuperEnalotto_TEST_Desktop_Validate iframe height increase to 570px",
+      "ID": "TC-046",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the SuperEnalotto web portal on a desktop device.",
+          "Expected Result": "The SuperEnalotto web portal is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Inspect the height of the iframe element in the client.",
+          "Expected Result": "The iframe height should be 570px."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is connected to the internet and has access to the SuperEnalotto web portal.",
+      "Execution Mode": "Manual",
+      "Functionality": "Client Display",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The iframe height is successfully adjusted to 570px.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF5 – Impatti Portale Web Full Responsive",
+      "Partial Coverage Description": "Covers only the height adjustment; other responsive behaviors are not verified."
+    },
+    {
+      "Title": "Privacy policy link handling_XXX_REQUIREMENT_Client SuperEnalotto_TEST_Desktop_Verify opening of privacy policy document",
+      "ID": "TC-047",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the SuperEnalotto web portal on a desktop device.",
+          "Expected Result": "The SuperEnalotto web portal is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Trigger a postMessage event from the game client containing the URL for the privacy policy document.",
+          "Expected Result": "The postMessage is received by the web portal."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the webpage for the action performed in response to the postMessage.",
+          "Expected Result": "The privacy policy document should be opened in a new tab."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is connected to the internet and has access to the SuperEnalotto web portal.",
+      "Execution Mode": "Manual",
+      "Functionality": "Privacy Policy Access",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The privacy policy document is successfully opened in a new tab.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "RF5 – Impatti Portale Web Full Responsive",
+      "Partial Coverage Description": "Covers only the opening of the document; the content of the document is not validated."
+    },
+    {
+      "Title": "Analytics Tracking_001_Web_Client_TEST_Desktop",
+      "ID": "TC-048",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the web client application for the game.",
+          "Expected Result": "The game client web application is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Interact with various features in the game client (e.g., play a game, access the leaderboard).",
+          "Expected Result": "The features are accessed successfully without any errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the network requests sent to the analytics tracking endpoint.",
+          "Expected Result": "Analytics data is sent correctly to the tracking endpoint."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is logged into the game client with a valid account.",
+      "Execution Mode": "Manual",
+      "Functionality": "Analytics Tracking",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Analytics tracking is successfully monitored for user interactions.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi della specifica non funzionale – tracciamenti analytics",
+      "Partial Coverage Description": "Focus on tracking data sending; does not verify analytics data interpretation."
+    },
+    {
+      "Title": "Analytics Tracking_002_MobileApp_Test_Android",
+      "ID": "TC-049",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Install and open the mobile game application on an Android device.",
+          "Expected Result": "The mobile game application starts successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Navigate through different sections of the application (e.g., Play, Leaderboard).",
+          "Expected Result": "All sections are navigated without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the analytics tracking during navigation to specific features.",
+          "Expected Result": "Tracking information is sent to the appropriate analytics service."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Mobile Android",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Android 11, Mobile Application",
+      "Preconditions": "User has installed the latest version of the mobile app.",
+      "Execution Mode": "Manual",
+      "Functionality": "Analytics Tracking",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Analytics data is captured during user interactions within the mobile app.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi della specifica non funzionale – tracciamenti analytics",
+      "Partial Coverage Description": "Tests tracking feature visits; does not include event-based tracking."
+    },
+    {
+      "Title": "Analytics Tracking_003_App_Client_TEST_iOS",
+      "ID": "TC-050",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game application on an iOS device.",
+          "Expected Result": "The game app launches properly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Perform various interactions (e.g., playing a game, viewing user profile).",
+          "Expected Result": "Interactions are performed without any malfunctions."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify that the analytics logs are generated for the interactions.",
+          "Expected Result": "Analytics logs are present and accurately reflect the user's actions."
+        }
+      ],
+      "Test Group": "Mobile IOS",
+      "Channel": "App",
+      "Device": "Mobile IOS",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14, Mobile Application",
+      "Preconditions": "User is authenticated in the game app.",
+      "Execution Mode": "Manual",
+      "Functionality": "Analytics Tracking",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Analytics tracking functions correctly for all user actions.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Analisi della specifica non funzionale – tracciamenti analytics",
+      "Partial Coverage Description": "Focus on actions logged, not on aggregated result analysis."
+    },
+    {
+      "Title": "User_Login_Functionality_001_Web_TEST_Desktop_Verification of successful login using valid credentials",
+      "ID": "TC-051",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the application's login page.",
+          "Expected Result": "The login page is displayed with username and password fields."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Input a valid username and password.",
+          "Expected Result": "The entered values are correctly displayed in their respective fields."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "The user is redirected to the dashboard page."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be registered and have valid credentials.",
+      "Execution Mode": "Manual",
+      "Functionality": "User Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully logs in and is directed to the dashboard.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "CASI D'USO",
+      "Partial Coverage Description": "Covers successful login only; failed login scenarios not included."
+    },
+    {
+      "Title": "Password_Reset_Functionality_002_Web_TEST_Desktop_Verification of password reset process using registered email",
+      "ID": "TC-052",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Access the login page and click on 'Forgot Password'.",
+          "Expected Result": "The password reset page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter the registered email address and submit the form.",
+          "Expected Result": "A message indicating that a reset email has been sent is displayed."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the email inbox for password reset instructions.",
+          "Expected Result": "An email with password reset instructions is received."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have a registered email address.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Password reset process is initiated successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "CASI D'USO",
+      "Partial Coverage Description": "Only tests the sending of the reset email; does not verify email content."
+    },
+    {
+      "Title": "User_Registration_Functionality_003_Web_TEST_Desktop_Verification of successful user registration with valid input",
+      "ID": "TC-053",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the registration page.",
+          "Expected Result": "Registration form is displayed with required fields."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Input valid details (username, email, password) into the registration form.",
+          "Expected Result": "Entered values are displayed correctly in the respective fields."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Submit the registration form.",
+          "Expected Result": "A confirmation message indicating successful registration is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must not already have an account.",
+      "Execution Mode": "Manual",
+      "Functionality": "User Registration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User registration is completed successfully.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "CASI D'USO",
+      "Partial Coverage Description": "Tests only successful registration; does not cover validation of inputs."
+    },
+    {
+      "Title": "Game Client_After Combination Enter_First_Row_Schedina_TEST_Desktop_User enters the combination in the first available row",
+      "ID": "TC-054",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "User opens the game page in ticket mode.",
+          "Expected Result": "The game page is displayed with available ticket options."
+        },
+        {
+          "Step": 2,
+          "Step Description": "User clicks on the CTA \"Find Numbers with Your Dreams\".",
+          "Expected Result": "The chat with AI Angel Numera is initiated."
+        },
+        {
+          "Step": 3,
+          "Step Description": "User describes their dream to the AI Angel Numera.",
+          "Expected Result": "AI Angel Numera provides a combination based on the user’s dream description."
+        },
+        {
+          "Step": 4,
+          "Step Description": "User clicks the \"Insert\" button.",
+          "Expected Result": "The combination is sent to the game client."
+        },
+        {
+          "Step": 5,
+          "Step Description": "The game client receives the combination through the *sendMessageToApp(data)* call.",
+          "Expected Result": "The combination is successfully received."
+        },
+        {
+          "Step": 6,
+          "Step Description": "User checks the first available row of the ticket.",
+          "Expected Result": "The first empty row is displayed to the user."
+        },
+        {
+          "Step": 7,
+          "Step Description": "Client fills the first available row with the received combination.",
+          "Expected Result": "The first row of the ticket is successfully filled with the combination."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "At least one combination must be available/empty on the ticket.",
+      "Execution Mode": "Manual",
+      "Functionality": "Combination Insertion",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The combination is inserted into the first available row of the ticket.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 1 - Compilazione schedina vuota (Happy flow)",
+      "Partial Coverage Description": "Covers normal flow of entering a combination; error scenarios not included."
+    },
+    {
+      "Title": "Game Client_Empty Ticket_Validation_INSERT_Test_Desktop_Verifying Invalid Insertion",
+      "ID": "TC-055",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "User opens the game page in ticket mode.",
+          "Expected Result": "The game page is displayed with available ticket options."
+        },
+        {
+          "Step": 2,
+          "Step Description": "User clicks on the CTA \"Insert\" without any input.",
+          "Expected Result": "An error message is displayed indicating that the ticket cannot be filled without a combination."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "The game page is open and the ticket is empty.",
+      "Execution Mode": "Manual",
+      "Functionality": "Combination Insertion Validation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Error message indicates the ticket cannot be completed with an empty form.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 1 - Compilazione schedina vuota (Happy flow)",
+      "Partial Coverage Description": "Covers invalid combination insertion; valid flow is not tested."
+    },
+    {
+      "Title": "AI Integration_001_Client_GNTN_TEST_Desktop_AI Angel Numera Combination Insertion",
+      "ID": "TC-056",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game SE page in combination entry mode.",
+          "Expected Result": "The game SE page is displayed with the option to enter combinations."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Manually enter or select random/favorite four combinations.",
+          "Expected Result": "Four combinations appear in the entry fields."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the 'Find numbers with your dreams' button.",
+          "Expected Result": "The system initiates a call to the Vivocha scripts."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Wait for the chat to start.",
+          "Expected Result": "The chat interface opens for the user to describe their dream."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Describe a dream to the AI Angel Numera.",
+          "Expected Result": "The AI processes the description and generates a combination."
+        },
+        {
+          "Step": 6,
+          "Step Description": "Click on the 'Insert' button to send the generated combination.",
+          "Expected Result": "The combination is sent to the Client GNTN through Vivocha."
+        },
+        {
+          "Step": 7,
+          "Step Description": "Confirm that the chat closes.",
+          "Expected Result": "The chat interface is no longer visible."
+        },
+        {
+          "Step": 8,
+          "Step Description": "Check the entry fields for the fifth combination.",
+          "Expected Result": "The fifth combination from the AI Angel Numera is inserted in the available slot."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "At least one combination must be available for entry.",
+      "Execution Mode": "Manual",
+      "Functionality": "AI Integration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The fifth combination is successfully inserted from the AI Angel Numera.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 2 – Compilazione schedina parzialmente valorizzata (da 1 a 8)",
+      "Partial Coverage Description": "Covers only combination insertion; error handling not included."
+    },
+    {
+      "Title": "AI Integration_002_Client_GNTN_TEST_Desktop_Empty Slot Handling for AI Combination",
+      "ID": "TC-057",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game SE page in combination entry mode.",
+          "Expected Result": "The game SE page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter three combinations manually.",
+          "Expected Result": "Three combinations are visible in the entry fields."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the 'Find numbers with your dreams' button.",
+          "Expected Result": "Call to Vivocha scripts is initiated."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Describe a dream to the AI Angel Numera.",
+          "Expected Result": "AI generates a combination based on the description."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Click on the 'Insert' button.",
+          "Expected Result": "The combination is sent to the Client GNTN."
+        },
+        {
+          "Step": 6,
+          "Step Description": "Check the combination entry.",
+          "Expected Result": "The first available empty slot is filled with the AI-generated combination."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "Only three out of five combination slots are filled.",
+      "Execution Mode": "Manual",
+      "Functionality": "Combination Slot Management",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The AI-generated combination is inserted into the first available empty slot.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 2 – Compilazione schedina parzialmente valorizzata (da 1 a 8)",
+      "Partial Coverage Description": "Only the handling of available slots is covered; input validation missing."
+    },
+    {
+      "Title": "insert_combination_AI_001_Client_InsertCombination_TEST_Desktop_User inserts combination from AI Angel Numera",
+      "ID": "TC-058",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game page in combination mode.",
+          "Expected Result": "The game page loads successfully in combination mode."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Manually fill in the first 9 combinations.",
+          "Expected Result": "9 combinations are filled in the selection fields."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the CTA 'Find the numbers with your dreams'.",
+          "Expected Result": "The system initiates a call to the game client towards the Vivocha scripts."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Chat window opens and user describes their dream.",
+          "Expected Result": "The chat interface appears and the user is able to send their dream description."
+        },
+        {
+          "Step": 5,
+          "Step Description": "AI Angel Numera provides a combination based on the user's dream.",
+          "Expected Result": "The AI provides a new combination."
+        },
+        {
+          "Step": 6,
+          "Step Description": "User clicks on 'Insert'.",
+          "Expected Result": "The system prepares to send the combination to the game client."
+        },
+        {
+          "Step": 7,
+          "Step Description": "Vivocha sends the combination to the game client via sendMessageToApp(data).",
+          "Expected Result": "The combination is transmitted to the game client successfully."
+        },
+        {
+          "Step": 8,
+          "Step Description": "Ensure the combination is inserted in the last available row of the combination sheet.",
+          "Expected Result": "The new combination is added to the first available line of the sheet."
+        },
+        {
+          "Step": 9,
+          "Step Description": "Close the chat and verify that quick actions are hidden, displaying only the 'Clear all' CTA.",
+          "Expected Result": "The chat is closed and only the 'Clear all' option is visible."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "At least one combination must be empty/available.",
+      "Execution Mode": "Manual",
+      "Functionality": "Insert AI Combination",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully inserts the AI-generated combination into the game sheet.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 3 – Compilazione schedina con ultima combinazione disponibile (9 compilate)",
+      "Partial Coverage Description": "Covers insertion of AI generated combination; does not cover invalid input cases."
+    },
+    {
+      "Title": "handle_empty_combination_slot_002_Client_ManageCombinations_TEST_Desktop_User checks empty slots",
+      "ID": "TC-059",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game page in combination mode.",
+          "Expected Result": "The game page loads successfully in combination mode."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check if at least one of the first 9 combination slots is empty.",
+          "Expected Result": "At least one slot is confirmed to be empty."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Attempt to insert a combination from AI Angel Numera.",
+          "Expected Result": "The system allows the insertion since there is an available slot."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the game page with multiple slots.",
+      "Execution Mode": "Manual",
+      "Functionality": "Verify Empty Slots",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User can identify that there is at least one empty slot available for combination insertion.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 3 – Compilazione schedina con ultima combinazione disponibile (9 compilate)",
+      "Partial Coverage Description": "Checks that the system recognizes empty slots for combination insertion."
+    },
+    {
+      "Title": "Game Client UI_AngleNumerAI_003_UI_ACTION_DESKTOP_Validate_Hidden_CTA",
+      "ID": "TC-060",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game client page in the betting slip mode.",
+          "Expected Result": "The game client page is displayed with the betting slip interface."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Manually fill in all 10 combinations in the betting slip.",
+          "Expected Result": "All 10 combinations are correctly filled in the betting slip."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Observe the interface for any displayed CTAs related to AI Angel Numera.",
+          "Expected Result": "The CTAs related to AI Angel Numera are not displayed, only 'Clear All' is visible."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Game Client",
+      "Preconditions": "All combinations must be filled in manually.",
+      "Execution Mode": "Manual",
+      "Functionality": "User Interface",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "CTAs for AI Angel Numera are not displayed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 4 – Schedina con tutte le combinazioni compilate",
+      "Partial Coverage Description": "Validates the absence of AI-specific CTAs; does not cover error handling."
+    },
+    {
+      "Title": "Game Client Clear All_AngleNumerAI_004_UI_ACTION_DESKTOP_Validate_Clear_Actions",
+      "ID": "TC-061",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the game client and ensure all 10 combinations are filled.",
+          "Expected Result": "The betting slip displays all 10 entered combinations."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Clear All' button.",
+          "Expected Result": "The game client clears the betting slip and shows all available quick actions."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, GNTN Game Client",
+      "Preconditions": "All combinations in the betting slip must be filled before executing this test.",
+      "Execution Mode": "Manual",
+      "Functionality": "Clearing Actions",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The betting slip is cleared, and all quick actions are shown.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 4 – Schedina con tutte le combinazioni compilate",
+      "Partial Coverage Description": "Validates clearing functionality without checking if actions restore correctly."
+    },
+    {
+      "Title": "Chat Persistence_001_GAME_Client_Test_Desktop_Check if chat persists after minimizing",
+      "ID": "TC-062",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the gaming client and navigate to the SE game page.",
+          "Expected Result": "The SE game page is displayed successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Find Numbers with Your Dreams' CTA.",
+          "Expected Result": "The chat with AI Angel Numera initiates."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Describe a dream in the chat interface.",
+          "Expected Result": "The AI Angel Numera responds with a number combination."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Minimize the chat window.",
+          "Expected Result": "The chat window is minimized successfully."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Click on the 'Next' button to proceed to the next step.",
+          "Expected Result": "The user navigates to the next step in the game."
+        },
+        {
+          "Step": 6,
+          "Step Description": "Return to the SE game page and click on 'Continue the conversation' button.",
+          "Expected Result": "The chat reopens with the previous messages intact."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has launched the chat with AI Angel Numera.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Persistence",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The chat is displayed in its previous state with all interactions preserved.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 5 – Ripresa della conversazione dopo passaggio a step di pagamento",
+      "Partial Coverage Description": "Tests only the persistence feature, not the chat content analysis."
+    },
+    {
+      "Title": "Chat Resumption_002_GAME_Client_Test_Desktop_Test chat resumes correctly after returning",
+      "ID": "TC-063",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Launch the gaming client and go to the SE game's chat.",
+          "Expected Result": "The gaming client opens with the SE game chat ready."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Find Numbers with Your Dreams' CTA.",
+          "Expected Result": "The chat with AI Angel Numera starts as expected."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Engage in conversation with AI Angel Numera.",
+          "Expected Result": "AI responds correctly to user messages."
+        },
+        {
+          "Step": 4,
+          "Step Description": "Click to minimize the chat before switching.",
+          "Expected Result": "The chat window is minimized and still active in the background."
+        },
+        {
+          "Step": 5,
+          "Step Description": "Return to the SE gaming page after playing.",
+          "Expected Result": "The gaming page loads successfully."
+        },
+        {
+          "Step": 6,
+          "Step Description": "Click on 'Continue the conversation'.",
+          "Expected Result": "The chat window resumes at the last message."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has ongoing chat interaction with AI Angel Numera.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Resumption",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The chat session resumes correctly with the latest messages intact.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 5 – Ripresa della conversazione dopo passaggio a step di pagamento",
+      "Partial Coverage Description": "Focuses on the chat resumption feature only."
+    },
+    {
+      "Title": "Chat Restore Functionality_001_Client_GNTN_TEST_Desktop_Verifying chat restoration after switching game modes",
+      "ID": "TC-064",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "User opens the SE game page in ticket mode.",
+          "Expected Result": "The SE game page is displayed without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "User clicks on the CTA 'Find the numbers with your dreams'.",
+          "Expected Result": "The client initiates a call to Vivocha scripts successfully."
+        },
+        {
+          "Step": 3,
+          "Step Description": "User describes their dream in the chat.",
+          "Expected Result": "AI Angel Numera provides a combination response."
+        },
+        {
+          "Step": 4,
+          "Step Description": "User minimizes the chat and switches to another game mode.",
+          "Expected Result": "User can switch modes without issues."
+        },
+        {
+          "Step": 5,
+          "Step Description": "User navigates back to the ticket game page and clicks 'Continue the conversation'.",
+          "Expected Result": "The chat is restored to the exact state it was left at."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, SE Gaming Client",
+      "Preconditions": "User has initiated the Numera chat.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Restoration",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User can continue the chat seamlessly without losing any information.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 6 - Ripresa della conversazione dopo passaggio ad altre modalità di gioco",
+      "Partial Coverage Description": "Only covers the chat restoration; functionality during the new game mode not tested."
+    },
+    {
+      "Title": "Chat Interaction Stability_002_Client_GNTN_TEST_Desktop_Testing message retention during chat",
+      "ID": "TC-065",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "User initiates a chat with AI Angel Numera.",
+          "Expected Result": "The chat window opens and displays the initial message."
+        },
+        {
+          "Step": 2,
+          "Step Description": "User sends a message in the chat.",
+          "Expected Result": "The message appears in the chat window."
+        },
+        {
+          "Step": 3,
+          "Step Description": "User minimizes the chat and navigates away to another game mode.",
+          "Expected Result": "The chat remains open and minimized."
+        },
+        {
+          "Step": 4,
+          "Step Description": "User returns to the original game mode.",
+          "Expected Result": "The chat is still present in the minimized state."
+        },
+        {
+          "Step": 5,
+          "Step Description": "User restores the chat.",
+          "Expected Result": "All messages, including the user message, are displayed correctly."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, SE Gaming Client",
+      "Preconditions": "User has initiated the Numera chat and sent messages.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat Interaction Stability",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User messages are retained successfully while switching modes.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 6 - Ripresa della conversazione dopo passaggio ad altre modalità di gioco",
+      "Partial Coverage Description": "Focuses on message retention only; does not cover functionality of the AI responses."
+    },
+    {
+      "Title": "Chat State Preservation_003_Client_GNTN_TEST_Desktop_Ensuring all chat state elements are maintained",
+      "ID": "TC-066",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "User initiates the chat and interacts with AI Angel Numera.",
+          "Expected Result": "Chat initializes correctly with initial messages."
+        },
+        {
+          "Step": 2,
+          "Step Description": "User sends several messages and receives responses.",
+          "Expected Result": "All exchanges between user and AI are logged accurately."
+        },
+        {
+          "Step": 3,
+          "Step Description": "User minimizes the chat and switches to another game mode.",
+          "Expected Result": "The chat remains active in the background."
+        },
+        {
+          "Step": 4,
+          "Step Description": "User clicks 'Continue the conversation' after returning.",
+          "Expected Result": "The chat restores with all previous messages intact and input field unchanged."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, SE Gaming Client",
+      "Preconditions": "User has started a conversation with AI Angel Numera.",
+      "Execution Mode": "Manual",
+      "Functionality": "Chat State Preservation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "All chat history and input fields are preserved accurately.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Caso d'uso 6 - Ripresa della conversazione dopo passaggio ad altre modalità di gioco",
+      "Partial Coverage Description": "Covers message preservation; does not evaluate AI response correctness."
+    },
+    {
+      "Title": "login_validation_XXX_USECASE_Login_TEST_web_validating user login functionality",
+      "ID": "TC-067",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web application login page.",
+          "Expected Result": "The login page is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter valid username and password, then click 'Login'.",
+          "Expected Result": "The user is successfully logged in and redirected to the dashboard."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a valid account and is connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User is logged in successfully and dashboard is displayed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Data mapping e layout del caso d'uso",
+      "Partial Coverage Description": "Covers successful login functionality only."
+    },
+    {
+      "Title": "login_error_handling_XXX_USECASE_Login_TEST_web_attempting to login with invalid credentials",
+      "ID": "TC-068",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web application login page.",
+          "Expected Result": "The login page is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter invalid username and password, then click 'Login'.",
+          "Expected Result": "An error message indicating invalid credentials is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User sees an error message: 'Invalid username or password'.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Data mapping e layout del caso d'uso",
+      "Partial Coverage Description": "Tests error handling for invalid login only."
+    },
+    {
+      "Title": "password_reset_functionality_XXX_USECASE_Password_Reset_TEST_web_testing the password reset process",
+      "ID": "TC-069",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the 'Forgot Password' page.",
+          "Expected Result": "Forgot Password page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter a registered email and submit the request.",
+          "Expected Result": "A confirmation message for the reset email being sent is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a registered account.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User receives confirmation about the password reset email.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Data mapping e layout del caso d'uso",
+      "Partial Coverage Description": "Only covering the sending of the reset email."
+    },
+    {
+      "Title": "password_reset_error_handling_XXX_USECASE_Password_Reset_TEST_web_testing invalid email scenarios",
+      "ID": "TC-070",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the 'Forgot Password' page.",
+          "Expected Result": "Forgot Password page is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter an unregistered email and submit the request.",
+          "Expected Result": "An error message indicating the email is not registered is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "Password Reset Error Handling",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User sees an error message: 'Email not registered'.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Data mapping e layout del caso d'uso",
+      "Partial Coverage Description": "Only testing invalid email inputs, not other error scenarios."
+    },
+    {
+      "Title": "App Launch_001_Mobile_Application_TEST_Mobile_Checking the application launch",
+      "ID": "TC-071",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Locate and tap the application icon on the mobile device.",
+          "Expected Result": "The application starts loading."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Wait for the application to load completely.",
+          "Expected Result": "The home screen of the application is displayed."
+        }
+      ],
+      "Test Group": "Mobile",
+      "Channel": "App",
+      "Device": "Mobile",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "iOS 14, Mobile Application",
+      "Preconditions": "The application is installed on the mobile device.",
+      "Execution Mode": "Manual",
+      "Functionality": "Application Launch",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Application launches successfully and displays the home screen.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DESCRIZIONE DELLE INTEGRAZIONI CON SERVIZI E APPLICATIVI",
+      "Partial Coverage Description": "Only verifies successful application launch; does not cover features beyond the home screen."
+    },
+    {
+      "Title": "Login Functionality_002_Web_Application_TEST_Desktop_Verifying the login process",
+      "ID": "TC-072",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the web application login page.",
+          "Expected Result": "The login page is displayed with username and password fields."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter a valid username and password.",
+          "Expected Result": "Input fields accept the user credentials."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click on the 'Login' button.",
+          "Expected Result": "The user is redirected to the dashboard/home page."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must have a valid account.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully logs in and is redirected to the home page.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DESCRIZIONE DELLE INTEGRAZIONI CON SERVIZI E APPLICATIVI",
+      "Partial Coverage Description": "Covers only the login process; does not test forgotten passwords or account recovery."
+    },
+    {
+      "Title": "Logout Process_003_Web_Application_TEST_Desktop_Verifying the logout functionality",
+      "ID": "TC-073",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Ensure the user is logged into the application.",
+          "Expected Result": "User is redirected to the dashboard/home page."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Click on the 'Logout' button in the application.",
+          "Expected Result": "The user is logged out and redirected to the login page."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User must be logged into the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Logout",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully logs out and is redirected to the login page.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "DESCRIZIONE DELLE INTEGRAZIONI CON SERVIZI E APPLICATIVI",
+      "Partial Coverage Description": "Tests only the logout functionality; does not verify session expiry or login persistence."
+    },
+    {
+      "Title": "Requirements Analysis Reference_001_SuperEnalotto_TEST_Desktop_Verifying user requirements documentation is referenced",
+      "ID": "TC-074",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the requirements documentation for the SuperEnalotto game.",
+          "Expected Result": "The documentation is displayed correctly with all sections visible."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Verify that the user requirements section titled 'RU Improvement Client di gioco SuperEnalotto Inserimento dell'esperienza in AI Numera_v0.7' is present.",
+          "Expected Result": "The specified user requirements section is found in the documentation."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Check the upload date of the user requirements on the documentation.",
+          "Expected Result": "The upload date is displayed as '04/07/2025'."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has access rights to view the requirements documentation.",
+      "Execution Mode": "Manual",
+      "Functionality": "Requirements Documentation",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User requirements section is successfully found and its details are accurate.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Documenti di riferimento",
+      "Partial Coverage Description": "Coverage only includes user requirements; does not verify figure links."
+    },
+    {
+      "Title": "Figma Link Verification_002_SuperEnalotto_TEST_Desktop_Checking Figma resource accessibility",
+      "ID": "TC-075",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the Figma design link for 'SuperEnalotto'.",
+          "Expected Result": "The Figma design page is displayed without errors."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Confirm that the design specifications are visible.",
+          "Expected Result": "All design elements and specifications are displayed correctly in the Figma interface."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a valid Figma account and the link is accessible.",
+      "Execution Mode": "Manual",
+      "Functionality": "Design Accessibility",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "The Figma design is accessible and displays correctly.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Documenti di riferimento",
+      "Partial Coverage Description": "Covers only design accessibility; does not verify design accuracy."
+    },
+    {
+      "Title": "UX Specifications Document Access_003_SuperEnalotto_TEST_Desktop_Verifying UX specs document availability",
+      "ID": "TC-076",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Navigate to the UX specifications document link.",
+          "Expected Result": "The UX specifications page loads successfully."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Check for specific elements outlined in the UX specifications.",
+          "Expected Result": "All specified UX elements are documented and accessible."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has the rights to access the UX specifications document.",
+      "Execution Mode": "Manual",
+      "Functionality": "UX Specifications Access",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "UX specifications are correctly displayed and documented.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Documenti di riferimento",
+      "Partial Coverage Description": "Covers checking accessibility; does not verify UX design accuracy."
+    },
+    {
+      "Title": "login_functionality_001_Web_TEST_Desktop_verifying login for non-logged user",
+      "ID": "TC-077",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the login page of the web application.",
+          "Expected Result": "The login page is displayed correctly with input fields for username and password."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter valid username and password.",
+          "Expected Result": "The username and password fields accept input without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "User is successfully logged in and the Home page is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has a valid account and is connected to the internet.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully logs in and is redirected to the Home page.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Appendice",
+      "Partial Coverage Description": "Test focuses solely on login functionality; does not cover session timeout behavior."
+    },
+    {
+      "Title": "login_functionality_002_Web_TEST_Desktop_verifying login with invalid credentials",
+      "ID": "TC-078",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the login page of the web application.",
+          "Expected Result": "The login page is displayed correctly with input fields for username and password."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Enter invalid username and password.",
+          "Expected Result": "The username and password fields accept input without errors."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Login' button.",
+          "Expected Result": "An error message indicating invalid credentials is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "High",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User has an internet connection.",
+      "Execution Mode": "Manual",
+      "Functionality": "Login",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "Error message displayed for invalid credentials, login not performed.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Appendice",
+      "Partial Coverage Description": "Covers scenarios of invalid login; does not check account lockout conditions."
+    },
+    {
+      "Title": "privacy_policy_access_001_Web_TEST_Desktop_testing access to privacy policy link",
+      "ID": "TC-079",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the home page of the web application.",
+          "Expected Result": "The home page is displayed correctly."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Find and click on the 'Privacy Policy' link in the footer.",
+          "Expected Result": "The privacy policy page is displayed."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is on the home page of the application.",
+      "Execution Mode": "Manual",
+      "Functionality": "Privacy Policy Access",
+      "Test Type": "functional",
+      "No Regression Test": "No",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User successfully navigates to the privacy policy page.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Appendice",
+      "Partial Coverage Description": "Tests access to privacy policy; does not check the content accuracy."
+    },
+    {
+      "Title": "onboarding_info_modal_001_Web_TEST_Desktop_testing the onboarding information modal",
+      "ID": "TC-080",
+      "Steps": [
+        {
+          "Step": 1,
+          "Step Description": "Open the application for the first time.",
+          "Expected Result": "The onboarding information modal is displayed."
+        },
+        {
+          "Step": 2,
+          "Step Description": "Read the information provided in the modal.",
+          "Expected Result": "The information in the modal is clear and understandable."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Click the 'Continue' button on the modal.",
+          "Expected Result": "The modal is closed and the user is redirected to the main application screen."
+        }
+      ],
+      "Test Group": "Desktop",
+      "Channel": "Web",
+      "Device": "Computer",
+      "Priority": "Medium",
+      "Test Stage": "UAT",
+      "Reference System": "Windows 10, Web Application",
+      "Preconditions": "User is accessing the application for the first time.",
+      "Execution Mode": "Manual",
+      "Functionality": "Onboarding Information",
+      "Test Type": "functional",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "",
+      "Expected Result": "User is able to read onboarding information and proceed without issues.",
+      "Country": "Italy",
+      "Type": "Test Case",
+      "_polarion": "Appendice",
+      "Partial Coverage Description": "Tests the display of onboarding modals; does not verify content accuracy."
+    }
+  ],
+  "total_count": 80
+}

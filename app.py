@@ -410,13 +410,13 @@ async def run_test_design(
     if text:
         # PRIMA ERA: dictionary["text"] = text
         # CORREZIONE: Usa "testo" perché test_design.py controlla if tipi == {"testo", "excel"}
-        dictionary["testo"] = text 
+        dictionary["text"] = text 
         
     if image:
         dictionary["image"] = image
 
     # Controllo di sicurezza: Se mancano i file, ferma tutto subito
-    if dictionary and "excel" in dictionary and "testo" not in dictionary:
+    if dictionary and "excel" in dictionary and "text" not in dictionary:
         raise HTTPException(status_code=400, detail="Hai caricato l'Excel ma manca il file di Testo (DocX/PDF).")
 
     if dictionary:
