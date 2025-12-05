@@ -565,7 +565,7 @@ async def run_pipeline(dizionario: dict):
                         if not title:
                             continue
                         title_clean = title.strip().lower()
-                        if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean:
+                        if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean or "appendice" in title_clean or "appendix" in title_clean:
                             continue
                         
                         # Aggiungi il task alla lista
@@ -615,7 +615,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
-                        test_case["Dataset"] = ""
+                        test_case["Dataset"] = "*"
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 
@@ -650,7 +650,10 @@ async def run_pipeline(dizionario: dict):
                         if not head:
                             continue
                         head_clean = head.strip().lower()
-                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
+                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean or "appendice" in head_clean or "appendix" in head_clean:
+                            continue
+                        par_clean = par.strip() if par else ""
+                        if not par_clean or par_clean.upper() == "NA":
                             continue
                         filtered_paragraphs.append(par)
                         filtered_headers.append(head)
@@ -675,7 +678,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
-                        test_case["Dataset"] = ""
+                        test_case["Dataset"] = "*"
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 
@@ -1048,7 +1051,7 @@ async def run_pipeline(dizionario: dict):
                         if not title or not content:
                             continue
                         title_clean = title.strip().lower()
-                        if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean:
+                        if "== first line ==" in title_clean or "sommario" in title_clean or "summary" in title_clean or "introduzione" in title_clean or "introduction" in title_clean or "appendice" in title_clean or "appendix" in title_clean:
                             continue
                         
                         # Aggiungi il task alla lista
@@ -1078,7 +1081,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
-                        test_case["Dataset"] = ""
+                        test_case["Dataset"] = "*"
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 
@@ -1112,7 +1115,10 @@ async def run_pipeline(dizionario: dict):
                         if not head:
                             continue
                         head_clean = head.strip().lower()
-                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean:
+                        if "== first line ==" in head_clean or "sommario" in head_clean or "summary" in head_clean or "introduzione" in head_clean or "introduction" in head_clean or "appendice" in head_clean or "appendix" in head_clean:
+                            continue
+                        par_clean = par.strip() if par else ""
+                        if not par_clean or par_clean.upper() == "NA":
                             continue
                         filtered_paragraphs.append(par)
                         filtered_headers.append(head)
@@ -1136,7 +1142,7 @@ async def run_pipeline(dizionario: dict):
                     padding = 3
                     for i, test_case in enumerate(updated_json["test_cases"], start=start_number):
                         test_case["ID"] = f"{prefix}-{str(i).zfill(padding)}"
-                        test_case["Dataset"] = ""
+                        test_case["Dataset"] = "*"
 
                     print(f"Totale test case aggiornati: {len(updated_json['test_cases'])}")
 

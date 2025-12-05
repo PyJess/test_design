@@ -25,6 +25,7 @@ Each test case must include the following fields:
 - Reference System: Indicate the software where the test is executed and the Channel ( e.g., Seneca Test Designer desktop, or Zenit desktop)
 - Functionality: Very generic topic or feature covered by this test case. (e.g, Log-In)
 - Test Group: A value between mobileIOS, mobileAndroid, appIOS, appAndroid, desktop and terminale.  
+- Automation MUST have the same value as No Regression Test
 
 Quality Expectations
 Clarity: Test steps and expected results must be precise and unambiguous.
@@ -143,7 +144,7 @@ JSON Schema Reference:
             "Automation": {
               "type": "string",
               "enum": ["Yes", "No"]
-              "description": "Indicates whether this test should be considered for automation."
+              "description": "Same value as No Regression Test"
             },
             "Dataset": {
               "type": "string",
@@ -239,7 +240,7 @@ Example:
       "Execution Mode": "Manual",
       "Functionality": "Login",
       "Test Type": "functional",
-      "No Regression Test": "Yes",
+      "No Regression Test": "No",
       "Automation": "No",
       "Dataset": "Valid user credentials",
       "Expected Result": "User successfully logs in and Home Page is displayed.",
@@ -274,7 +275,7 @@ Example:
       "Functionality": "Password Reset",
       "Test Type": "functional",
       "No Regression Test": "Yes",
-      "Automation": "No",
+      "Automation": "Yes",
       "Dataset": "Registered user email",
       "Expected Result": "Password reset process is successfully triggered.",
       "Country": "Italy",
