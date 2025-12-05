@@ -1,150 +1,155 @@
 {
   "test_cases": [
     {
-      "Title": "random_numbers_selection_001_Screen1_Screen2_TEST_Mobile_initiating the random number selection process",
+      "Title": "Number Selection_001_VinciCasa_APP_TEST_Mobile_selecting the first number",
       "ID": "TC-001",
       "Steps": [
         {
           "Step": 1,
-          "Step Description": "Open the application and navigate to the 'Inserisci 12 numeri' screen.",
-          "Expected Result": "The 'Inserisci 12 numeri' screen is displayed."
+          "Step Description": "Open the VinciCasa application.",
+          "Expected Result": "The home screen of the VinciCasa app is displayed."
         },
         {
           "Step": 2,
-          "Step Description": "Tap the 'Numeri casuali' button.",
-          "Expected Result": "Navigates to the 'Scelgo 12 numeri' screen."
+          "Step Description": "Tap on the number 1 on the combination selection screen.",
+          "Expected Result": "The number 1 is highlighted and added to the selection."
         }
       ],
       "Test Group": "Mobile",
-      "Channel": "Mobile App",
+      "Channel": "App",
       "Device": "Smartphone",
       "Priority": "Medium",
       "Test Stage": "UAT",
-      "Reference System": "iOS, Mobile Application",
-      "Preconditions": "The application is installed and the user is on the main screen.",
+      "Reference System": "iOS, VinciCasa App",
+      "Preconditions": "User has the VinciCasa app installed and is on the combination selection screen.",
       "Execution Mode": "Manual",
-      "Functionality": "Random Number Selection",
+      "Functionality": "Number Selection",
       "Test Type": "functional",
-      "No Regression Test": true,
-      "Automation": false,
-      "Dataset": "N/A",
-      "Expected Result": "User is navigating to the number selection screen.",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "*",
+      "Expected Result": "The total combinations selected is updated to 1.",
       "Country": "Italy",
       "Type": "Test Case",
       "_polarion": "Image from Figma",
-      "Partial Coverage Description": "Covers only the initiation of random number selection."
+      "Partial Coverage Description": "Covers only selection of the first number; does not verify combination limits."
     },
     {
-      "Title": "confirm_selection_002_Screen2_Screen3_TEST_Mobile_confirming the selection of random numbers",
+      "Title": "Multiple Number Selection_002_VinciCasa_APP_TEST_Mobile_selecting multiple numbers",
       "ID": "TC-002",
       "Steps": [
         {
           "Step": 1,
-          "Step Description": "On the 'Scelgo 12 numeri' screen, tap the 'Casuali' button to confirm the selection.",
-          "Expected Result": "User is taken to the 'Hai scelto 12 di 12 numeri' screen."
+          "Step Description": "Open the VinciCasa application.",
+          "Expected Result": "The home screen of the VinciCasa app is displayed."
         },
         {
           "Step": 2,
-          "Step Description": "Check the message displayed on the screen.",
-          "Expected Result": "The message 'Hai scelto 12 di 12 numeri' is correctly displayed."
+          "Step Description": "Select numbers 1, 2, and 3 on the combination selection screen.",
+          "Expected Result": "Numbers 1, 2, and 3 are highlighted and added to the selection."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Verify the total combinations selected.",
+          "Expected Result": "The total combinations displayed is 3."
         }
       ],
       "Test Group": "Mobile",
-      "Channel": "Mobile App",
+      "Channel": "App",
       "Device": "Smartphone",
-      "Priority": "High",
+      "Priority": "Medium",
       "Test Stage": "UAT",
-      "Reference System": "iOS, Mobile Application",
-      "Preconditions": "User is on the 'Scelgo 12 numeri' screen after initiating the random selection.",
+      "Reference System": "iOS, VinciCasa App",
+      "Preconditions": "User has the VinciCasa app installed and is on the combination selection screen.",
       "Execution Mode": "Manual",
-      "Functionality": "Confirm Selection",
+      "Functionality": "Multiple Number Selection",
       "Test Type": "functional",
-      "No Regression Test": true,
-      "Automation": false,
-      "Dataset": "N/A",
-      "Expected Result": "Selection is confirmed and the appropriate message is displayed.",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "*",
+      "Expected Result": "The total combinations selected is updated to 3.",
       "Country": "Italy",
       "Type": "Test Case",
       "_polarion": "Image from Figma",
-      "Partial Coverage Description": "Covers the confirmation of random number selection only."
+      "Partial Coverage Description": "Tests selection of multiple numbers but does not cover validation of maximum combinations."
     },
     {
-      "Title": "manual_and_random_selection_003_Screen4_Screen5_TEST_Mobile_selecting 5 manual and additional random numbers",
+      "Title": "Combination Limit_003_VinciCasa_APP_TEST_Mobile_checking combination limit",
       "ID": "TC-003",
       "Steps": [
         {
           "Step": 1,
-          "Step Description": "Open the application and navigate to the 'Inserisci 12 numeri' screen.",
-          "Expected Result": "The 'Inserisci 12 numeri' screen is displayed."
+          "Step Description": "Open the VinciCasa application.",
+          "Expected Result": "The home screen of the VinciCasa app is displayed."
         },
         {
           "Step": 2,
-          "Step Description": "Enter 5 manual numbers in the input fields.",
-          "Expected Result": "The entered numbers are accepted and displayed correctly."
+          "Step Description": "Select numbers from 1 to 5 on the combination selection screen.",
+          "Expected Result": "Numbers 1 to 5 are highlighted and added to the selection."
         },
         {
           "Step": 3,
-          "Step Description": "Tap the 'Numeri casuali' button.",
-          "Expected Result": "Navigates to the 'Scelgo 12 numeri' screen with the first 5 numbers displayed."
-        },
-        {
-          "Step": 4,
-          "Step Description": "Tap the 'Casuali' button to select additional random numbers.",
-          "Expected Result": "User is taken to the 'Hai scelto 12 di 12 numeri' screen."
+          "Step Description": "Attempt to select a sixth number (e.g., number 6).",
+          "Expected Result": "The app prevents the selection and shows a message indicating the limit is reached."
         }
       ],
       "Test Group": "Mobile",
-      "Channel": "Mobile App",
+      "Channel": "App",
       "Device": "Smartphone",
-      "Priority": "Medium",
+      "Priority": "High",
       "Test Stage": "UAT",
-      "Reference System": "iOS, Mobile Application",
-      "Preconditions": "User is on the 'Inserisci 12 numeri' screen.",
+      "Reference System": "iOS, VinciCasa App",
+      "Preconditions": "User has the VinciCasa app installed and is on the combination selection screen.",
       "Execution Mode": "Manual",
-      "Functionality": "Manual and Random Number Selection",
+      "Functionality": "Combination Limit Enforcement",
       "Test Type": "functional",
-      "No Regression Test": true,
-      "Automation": false,
-      "Dataset": "First 5 numbers input by user",
-      "Expected Result": "User successfully enters 5 manual numbers and confirms random selection.",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "*",
+      "Expected Result": "Error message displayed stating maximum combinations reached.",
       "Country": "Italy",
       "Type": "Test Case",
       "_polarion": "Image from Figma",
-      "Partial Coverage Description": "Covers manual input and subsequent random selections."
+      "Partial Coverage Description": "Tests the enforcement of the combination limit but not its configuration."
     },
     {
-      "Title": "confirm_final_selection_004_Screen6_Screen4_TEST_Mobile_confirm the final number selection",
+      "Title": "Save Favorites_004_VinciCasa_APP_TEST_Mobile_saving favorites",
       "ID": "TC-004",
       "Steps": [
         {
           "Step": 1,
-          "Step Description": "On the 'Hai scelto 12 di 12 numeri' screen, tap 'Conferma'.",
-          "Expected Result": "User is navigated back to the 'Inserisci 12 numeri' screen."
+          "Step Description": "Open the VinciCasa application.",
+          "Expected Result": "The home screen of the VinciCasa app is displayed."
         },
         {
           "Step": 2,
-          "Step Description": "Verify the numbers are displayed in the input field.",
-          "Expected Result": "The selected numbers are correctly displayed for user verification."
+          "Step Description": "Select a few numbers for the combination.",
+          "Expected Result": "The selected numbers are highlighted."
+        },
+        {
+          "Step": 3,
+          "Step Description": "Tap on the 'Salva nei preferiti' (Save in Favorites) button.",
+          "Expected Result": "The app confirms that the current selections have been saved as favorites."
         }
       ],
       "Test Group": "Mobile",
-      "Channel": "Mobile App",
+      "Channel": "App",
       "Device": "Smartphone",
       "Priority": "Medium",
       "Test Stage": "UAT",
-      "Reference System": "iOS, Mobile Application",
-      "Preconditions": "User has previously confirmed the selection of numbers.",
+      "Reference System": "iOS, VinciCasa App",
+      "Preconditions": "User has the VinciCasa app installed and has made selections.",
       "Execution Mode": "Manual",
-      "Functionality": "Final Confirmation of Numbers",
+      "Functionality": "Saving Favorites",
       "Test Type": "functional",
-      "No Regression Test": true,
-      "Automation": false,
-      "Dataset": "Previously selected numbers",
-      "Expected Result": "Final selection is confirmed and displayed correctly.",
+      "No Regression Test": "Yes",
+      "Automation": "No",
+      "Dataset": "*",
+      "Expected Result": "The current selections are successfully saved in the favorites.",
       "Country": "Italy",
       "Type": "Test Case",
       "_polarion": "Image from Figma",
-      "Partial Coverage Description": "Covers only the confirmation of the final number selection."
+      "Partial Coverage Description": "Covers saving functionality but does not validate the state of saved favorites."
     }
   ]
 }
